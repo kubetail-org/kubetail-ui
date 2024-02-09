@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormControl appends custom className 1`] = `
+<DocumentFragment>
+  <input
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium extra-class"
+  />
+</DocumentFragment>
+`;
+
+exports[`FormControl inherits id from FormGroup.controlId 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-1"
+  >
+    <input
+      class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+      id="input-id"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormControl renders \`disabled=false\` properly 1`] = `
+<DocumentFragment>
+  <input
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+  />
+</DocumentFragment>
+`;
+
+exports[`FormControl renders \`disabled\` properly 1`] = `
+<DocumentFragment>
+  <input
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    disabled=""
+  />
+</DocumentFragment>
+`;
+
+exports[`FormControl renders as textarea properly 1`] = `
+<DocumentFragment>
+  <textarea
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+  >
+    contents
+  </textarea>
+</DocumentFragment>
+`;
+
+exports[`FormControl renders properly 1`] = `
+<DocumentFragment>
+  <input
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    type="text"
+    value="content"
+  />
+</DocumentFragment>
+`;

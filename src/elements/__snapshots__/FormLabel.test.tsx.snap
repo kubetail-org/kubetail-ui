@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormLabel appends custom className 1`] = `
+<DocumentFragment>
+  <label
+    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 extra-class"
+  />
+</DocumentFragment>
+`;
+
+exports[`FormLabel inherits id from FormGroup.controlId 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-1"
+  >
+    <label
+      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      for="input-id"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormLabel renders contents properly 1`] = `
+<DocumentFragment>
+  <label
+    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+  >
+    contents
+  </label>
+</DocumentFragment>
+`;
