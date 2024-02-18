@@ -35,12 +35,16 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PopoverContent = exports.PopoverTrigger = exports.Popover = void 0;
+exports.PopoverTrigger = exports.PopoverContent = exports.PopoverClose = exports.PopoverAnchor = exports.Popover = void 0;
 const React = __importStar(require("react"));
 const PopoverPrimitive = __importStar(require("@radix-ui/react-popover"));
 const utils_1 = require("@/lib/utils");
 const Popover = PopoverPrimitive.Root;
 exports.Popover = Popover;
+const PopoverAnchor = PopoverPrimitive.Anchor;
+exports.PopoverAnchor = PopoverAnchor;
+const PopoverClose = PopoverPrimitive.Close;
+exports.PopoverClose = PopoverClose;
 const PopoverTrigger = PopoverPrimitive.Trigger;
 exports.PopoverTrigger = PopoverTrigger;
 const PopoverContent = React.forwardRef((_a, ref) => {
