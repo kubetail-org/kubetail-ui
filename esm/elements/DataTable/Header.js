@@ -13,7 +13,7 @@
 // limitations under the License.
 import React, { createContext, useMemo } from 'react';
 import { cn } from '@/lib/utils';
-const baseCls = 'bg-gray-50';
+const baseCls = 'bg-chrome-50';
 const noop = () => { };
 export const Context = createContext({
     sortBy: null,

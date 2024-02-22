@@ -16,7 +16,7 @@ import React from 'react';
 
 import { cn } from '@/lib/utils';
 
-const baseCN = 'animate-spin mr-2 text-gray-200 fill-gray-500';
+const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';
 
 type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg';
 

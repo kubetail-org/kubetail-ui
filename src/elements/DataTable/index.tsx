@@ -59,7 +59,7 @@ const DataTable = ({
     <Context.Provider value={context}>
       <div className={cn(baseCls, className)}>
         <table className={cn(
-          'min-w-full divide-y divide-gray-30',
+          'min-w-full divide-y divide-chrome-30',
           size && sizeCNMap[size],
         )}
         >

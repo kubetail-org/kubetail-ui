@@ -50,7 +50,7 @@ exports[`FormCheck renders properly 1`] = `
       type="checkbox"
     />
     <label
-      class="ml-2 block text-sm text-gray-900"
+      class="ml-2 block text-sm text-chrome-900"
     >
       My Label
     </label>

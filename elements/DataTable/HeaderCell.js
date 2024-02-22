@@ -52,8 +52,8 @@ const react_1 = __importStar(require("react"));
 const utils_1 = require("@/lib/utils");
 const index_js_1 = require("./index.js");
 const Header_js_1 = require("./Header.js");
-const baseCN = 'text-left font-semibold text-gray-900 select-none';
-const sortIconCN = 'ml-2 flex-none text-gray-400 group-hover:visible group-focus:visible';
+const baseCN = 'text-left font-semibold text-chrome-900 select-none';
+const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible';
 const sizeCNMap = {
     xs: 'px-2 py-1.5',
     sm: 'px-2 py-1.5',

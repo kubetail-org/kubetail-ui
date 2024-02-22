@@ -21,8 +21,8 @@ import { Context as TableContext } from './index.js';
 import type { DataTableSize } from './index.js';
 import { Context as HeaderContext } from './Header.js';
 
-const baseCN = 'text-left font-semibold text-gray-900 select-none';
-const sortIconCN = 'ml-2 flex-none text-gray-400 group-hover:visible group-focus:visible';
+const baseCN = 'text-left font-semibold text-chrome-900 select-none';
+const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible';
 
 const sizeCNMap: Record<DataTableSize, string> = {
   xs: 'px-2 py-1.5',
