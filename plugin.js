@@ -56,6 +56,21 @@ module.exports = plugin(
         '--ring': hexToRgb(colors.blue[200]),
         '--secondary': hexToRgb(colors.blue[100]),
         '--secondary-foreground': hexToRgb(colors.gray[800]),
+        '--chrome-50': hexToRgb(colors.gray[50]),
+        '--chrome-100': hexToRgb(colors.gray[100]),
+        '--chrome-200': hexToRgb(colors.gray[200]),
+        '--chrome-300': hexToRgb(colors.gray[300]),
+        '--chrome-400': hexToRgb(colors.gray[400]),
+        '--chrome-500': hexToRgb(colors.gray[500]),
+        '--chrome-600': hexToRgb(colors.gray[600]),
+        '--chrome-700': hexToRgb(colors.gray[700]),
+        '--chrome-800': hexToRgb(colors.gray[800]),
+        '--chrome-900': hexToRgb(colors.gray[900]),
+        '--chrome-950': hexToRgb(colors.gray[950]),
+        '--chrome-foreground': hexToRgb(colors.gray[800]),
+        '--chrome-foreground-muted': hexToRgb(colors.gray[500]),
+        '--chrome-foreground-subtle': hexToRgb(colors.gray[300]),
+        '--chrome-divider': hexToRgb(colors.gray[300]),
       },
       '.dark': {
         '--accent': hexToRgb(colors.amber[200]),
@@ -73,6 +88,19 @@ module.exports = plugin(
         '--ring': hexToRgb(colors.blue[200]),
         '--secondary': hexToRgb(colors.blue[100]),
         '--secondary-foreground': hexToRgb(colors.gray[800]),
+        '--chrome-50': hexToRgb(colors.gray[950]),
+        '--chrome-100': hexToRgb(colors.gray[900]),
+        '--chrome-200': hexToRgb(colors.gray[800]),
+        '--chrome-300': hexToRgb(colors.gray[700]),
+        '--chrome-400': hexToRgb(colors.gray[600]),
+        '--chrome-500': hexToRgb(colors.gray[500]),
+        '--chrome-600': hexToRgb(colors.gray[400]),
+        '--chrome-700': hexToRgb(colors.gray[300]),
+        '--chrome-800': hexToRgb(colors.gray[200]),
+        '--chrome-900': hexToRgb(colors.gray[100]),
+        '--chrome-950': hexToRgb(colors.gray[50]),
+        '--chrome-foreground': hexToRgb(colors.white),
+        '--chrome-divider': hexToRgb(colors.gray[700]),
       },
       '*': {
         '@apply border-border': ''
@@ -85,7 +113,7 @@ module.exports = plugin(
     });
   },
   {
-    darkMode: ['class'],
+    darkMode: 'selector',
     theme: {
       screens: {
         'sm': '576px',
@@ -138,6 +166,21 @@ module.exports = plugin(
             DEFAULT: "rgb(var(--secondary))",
             foreground: "rgb(var(--secondary-foreground))",
           },
+          chrome: {
+            50: "rgb(var(--chrome-50))",
+            100: "rgb(var(--chrome-100))",
+            200: "rgb(var(--chrome-200))",
+            300: "rgb(var(--chrome-300))",
+            400: "rgb(var(--chrome-400))",
+            500: "rgb(var(--chrome-500))",
+            600: "rgb(var(--chrome-600))",
+            700: "rgb(var(--chrome-700))",
+            800: "rgb(var(--chrome-800))",
+            900: "rgb(var(--chrome-900))",
+            950: "rgb(var(--chrome-950))",
+            foreground: "rgb(var(--chrome-foreground))",
+            divider: "rgb(var(--chrome-divider))",
+          }
         }
       }
     },

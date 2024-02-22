@@ -16,7 +16,7 @@ import React from 'react';
 
 import { cn } from '@/lib/utils';
 
-const baseCls = 'divide-y divide-gray-200 bg-white';
+const baseCls = 'divide-y divide-chrome-200 bg-background';
 
 const Body = ({ className, ...props }: React.ComponentPropsWithoutRef<'tbody'>) => (
   <tbody {...props} className={cn(baseCls, className)} />

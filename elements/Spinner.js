@@ -18,7 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const utils_1 = require("@/lib/utils");
-const baseCN = 'animate-spin mr-2 text-gray-200 fill-gray-500';
+const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';
 const sizeCNMap = {
     xs: 'w-4 h-4',
     sm: 'w-6 h-6',

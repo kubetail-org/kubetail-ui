@@ -20,7 +20,7 @@ export const Default: Story = {
 
 export const CustomStyling: Story = {
   args: {
-    className: 'bg-gray-300',
-    children: 'This is a container with a gray background.'
+    className: 'bg-chrome-300',
+    children: 'This is a container with a chrome background.'
   },
 };

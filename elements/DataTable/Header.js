@@ -50,7 +50,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Context = void 0;
 const react_1 = __importStar(require("react"));
 const utils_1 = require("@/lib/utils");
-const baseCls = 'bg-gray-50';
+const baseCls = 'bg-chrome-50';
 const noop = () => { };
 exports.Context = (0, react_1.createContext)({
     sortBy: null,

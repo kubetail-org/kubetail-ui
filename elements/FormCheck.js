@@ -31,7 +31,7 @@ const react_1 = __importDefault(require("react"));
 const utils_1 = require("@/lib/utils");
 const wrapperBaseCls = 'flex items-center';
 const inputBaseCls = 'h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50';
-const labelBaseCls = 'ml-2 block text-sm text-gray-900';
+const labelBaseCls = 'ml-2 block text-sm text-chrome-900';
 const FormCheck = react_1.default.forwardRef((_a, ref) => {
     var { as = 'input', className, id, label } = _a, props = __rest(_a, ["as", "className", "id", "label"]);
     const Tag = as;

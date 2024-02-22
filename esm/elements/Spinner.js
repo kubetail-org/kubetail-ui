@@ -13,7 +13,7 @@
 // limitations under the License.
 import React from 'react';
 import { cn } from '@/lib/utils';
-const baseCN = 'animate-spin mr-2 text-gray-200 fill-gray-500';
+const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';
 const sizeCNMap = {
     xs: 'w-4 h-4',
     sm: 'w-6 h-6',
