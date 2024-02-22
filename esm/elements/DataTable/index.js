@@ -34,7 +34,7 @@ const DataTable = ({ className, children, size = 'md', }) => {
     const context = useMemo(() => value, [value]);
     return (React.createElement(Context.Provider, { value: context },
         React.createElement("div", { className: cn(baseCls, className) },
-            React.createElement("table", { className: cn('min-w-full divide-y divide-chrome-30', size && sizeCNMap[size]) }, children))));
+            React.createElement("table", { className: cn('min-w-full divide-y divide-chrome-300', size && sizeCNMap[size]) }, children))));
 };
 DataTable.displayName = 'DataTable';
 const DataTableExport = Object.assign(DataTable, {
