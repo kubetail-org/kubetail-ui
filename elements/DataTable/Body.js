@@ -29,7 +29,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const utils_1 = require("@/lib/utils");
-const baseCls = 'divide-y divide-chrome-200 bg-white';
+const baseCls = 'divide-y divide-chrome-200 bg-background';
 const Body = (_a) => {
     var { className } = _a, props = __rest(_a, ["className"]);
     return (react_1.default.createElement("tbody", Object.assign({}, props, { className: (0, utils_1.cn)(baseCls, className) })));
