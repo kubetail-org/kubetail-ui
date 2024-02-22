@@ -113,7 +113,7 @@ module.exports = plugin(
     });
   },
   {
-    darkMode: ['class'],
+    darkMode: 'selector',
     theme: {
       screens: {
         'sm': '576px',
