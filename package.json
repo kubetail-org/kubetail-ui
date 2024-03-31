@@ -1,7 +1,6 @@
 {
   "name": "kubetail-ui",
   "version": "0.1.2",
-  "private": true,
   "sideEffects": false,
   "description": "Kubetail shared component library",
   "repository": "https://github.com/log-monster/kubetail-ui.git",
