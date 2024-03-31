@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useMemo } from 'react';
+import { createContext, forwardRef, useMemo } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -20,14 +20,14 @@ type ContextState = {
   controlId: string | undefined,
 };
 
-const Context = React.createContext({} as ContextState); // for passing `controlId`
+const Context = createContext({} as ContextState); // for passing `controlId`
 const baseCls = 'space-y-1';
 
 interface Props extends React.ComponentPropsWithoutRef<'div'> {
   controlId?: string;
 }
 
-const FormGroup = React.forwardRef((
+const FormGroup = forwardRef((
   {
     className,
     controlId,

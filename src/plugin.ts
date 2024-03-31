@@ -12,28 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-"use strict";
+import forms from '@tailwindcss/forms';
+import plugin from 'tailwindcss/plugin';
+import colors from 'tailwindcss/colors';
 
-const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
+const formsPlugin = forms();
 
 // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-function hexToRgb(hex) {
+function hexToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
-    return r + r + g + g + b + b;
-  });
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+  const hexFixed = hex.replace(shorthandRegex, (_, r, g, b) => (r + r + g + g + b + b));
 
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexFixed);
   return result ? `${parseInt(result[1], 16)} ${parseInt(result[2], 16)} ${parseInt(result[3], 16)}` : '';
 }
 
-// define plugin
-module.exports = plugin(
-  function (apiArgs) {
+/**
+ * Plugin
+ */
+export default plugin(
+  (apiArgs) => {
     // initialize forms plugin
-    const formsPlugin = require('@tailwindcss/forms')();
+    // @ts-expect-error Expected 0 arguments, but got 1.
     formsPlugin.handler(apiArgs);
 
     // add custom styles
@@ -103,9 +104,9 @@ module.exports = plugin(
         '--chrome-divider': hexToRgb(colors.gray[700]),
       },
       '*': {
-        '@apply border-border': ''
+        '@apply border-border': '',
       },
-      'body': {
+      body: {
         '@apply bg-background text-foreground': '',
         'font-feature-settings': '"rlig" 1, "calt" 1',
         '@apply antialiased': '',
@@ -116,11 +117,11 @@ module.exports = plugin(
     darkMode: 'selector',
     theme: {
       screens: {
-        'sm': '576px',
-        'md': '768px',
-        'lg': '992px',
-        'xl': '1200px',
-        '2xl': '1400px'
+        sm: '576px',
+        md: '768px',
+        lg: '992px',
+        xl: '1200px',
+        '2xl': '1400px',
       },
       extend: {
         maxWidth: {
@@ -128,61 +129,61 @@ module.exports = plugin(
           'max-w-screen-md': '720px',
           'max-w-screen-lg': '960px',
           'max-w-screen-xl': '1140px',
-          'max-w-screen-2xl': '1320px'
+          'max-w-screen-2xl': '1320px',
         },
         colors: {
           accent: {
-            DEFAULT: "rgb(var(--accent))",
-            foreground: "rgb(var(--accent-foreground))",
+            DEFAULT: 'rgb(var(--accent))',
+            foreground: 'rgb(var(--accent-foreground))',
           },
           background: {
-            DEFAULT: "rgb(var(--background))",
+            DEFAULT: 'rgb(var(--background))',
           },
           border: {
-            DEFAULT: "rgb(var(--border))"
+            DEFAULT: 'rgb(var(--border))',
           },
           danger: {
-            DEFAULT: "rgb(var(--danger))",
-            foreground: "rgb(var(--danger-foreground))",
+            DEFAULT: 'rgb(var(--danger))',
+            foreground: 'rgb(var(--danger-foreground))',
           },
           foreground: {
-            DEFAULT: "rgb(var(--foreground))",
+            DEFAULT: 'rgb(var(--foreground))',
           },
           input: {
-            DEFAULT: "rgb(var(--input))",
+            DEFAULT: 'rgb(var(--input))',
           },
           muted: {
-            DEFAULT: "rgb(var(--muted))",
-            foreground: "rgb(var(--muted-foreground))",
+            DEFAULT: 'rgb(var(--muted))',
+            foreground: 'rgb(var(--muted-foreground))',
           },
           primary: {
-            DEFAULT: "rgb(var(--primary))",
-            foreground: "rgb(var(--primary-foreground))",
+            DEFAULT: 'rgb(var(--primary))',
+            foreground: 'rgb(var(--primary-foreground))',
           },
           ring: {
-            DEFAULT: "rgb(var(--ring))"
+            DEFAULT: 'rgb(var(--ring))',
           },
           secondary: {
-            DEFAULT: "rgb(var(--secondary))",
-            foreground: "rgb(var(--secondary-foreground))",
+            DEFAULT: 'rgb(var(--secondary))',
+            foreground: 'rgb(var(--secondary-foreground))',
           },
           chrome: {
-            50: "rgb(var(--chrome-50))",
-            100: "rgb(var(--chrome-100))",
-            200: "rgb(var(--chrome-200))",
-            300: "rgb(var(--chrome-300))",
-            400: "rgb(var(--chrome-400))",
-            500: "rgb(var(--chrome-500))",
-            600: "rgb(var(--chrome-600))",
-            700: "rgb(var(--chrome-700))",
-            800: "rgb(var(--chrome-800))",
-            900: "rgb(var(--chrome-900))",
-            950: "rgb(var(--chrome-950))",
-            foreground: "rgb(var(--chrome-foreground))",
-            divider: "rgb(var(--chrome-divider))",
-          }
-        }
-      }
+            50: 'rgb(var(--chrome-50))',
+            100: 'rgb(var(--chrome-100))',
+            200: 'rgb(var(--chrome-200))',
+            300: 'rgb(var(--chrome-300))',
+            400: 'rgb(var(--chrome-400))',
+            500: 'rgb(var(--chrome-500))',
+            600: 'rgb(var(--chrome-600))',
+            700: 'rgb(var(--chrome-700))',
+            800: 'rgb(var(--chrome-800))',
+            900: 'rgb(var(--chrome-900))',
+            950: 'rgb(var(--chrome-950))',
+            foreground: 'rgb(var(--chrome-foreground))',
+            divider: 'rgb(var(--chrome-divider))',
+          },
+        },
+      },
     },
-  }
+  },
 );

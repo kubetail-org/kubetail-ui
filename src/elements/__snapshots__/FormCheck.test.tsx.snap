@@ -1,4 +1,62 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormCheck > appends custom className to wrapper element 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center extra-class"
+  >
+    <input
+      class="h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50"
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormCheck > renders \`disabled=false\` properly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <input
+      class="h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50"
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormCheck > renders \`disabled\` properly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <input
+      class="h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50"
+      disabled=""
+      type="checkbox"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FormCheck > renders properly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <input
+      class="h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50"
+      type="checkbox"
+    />
+    <label
+      class="ml-2 block text-sm text-chrome-900"
+    >
+      My Label
+    </label>
+  </div>
+</DocumentFragment>
+`;
 
 exports[`FormCheck appends custom className to wrapper element 1`] = `
 <DocumentFragment>
