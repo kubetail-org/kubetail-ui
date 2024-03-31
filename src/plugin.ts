@@ -12,16 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-"use strict";
+import forms from '@tailwindcss/forms';
+import plugin from 'tailwindcss/plugin';
+import colors from 'tailwindcss/colors';
 
-const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
+const formsPlugin = forms();
 
 // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-function hexToRgb(hex) {
+function hexToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+  hex = hex.replace(shorthandRegex, function (_, r, g, b) {
     return r + r + g + g + b + b;
   });
 
@@ -29,11 +30,15 @@ function hexToRgb(hex) {
   return result ? `${parseInt(result[1], 16)} ${parseInt(result[2], 16)} ${parseInt(result[3], 16)}` : '';
 }
 
-// define plugin
-module.exports = plugin(
+/**
+ * Plugin
+ */
+export default plugin(
   function (apiArgs) {
     // initialize forms plugin
-    const formsPlugin = require('@tailwindcss/forms')();
+    //formsPlugin(apiArgs);
+    //const formsPlugin = FormsPlugin();
+    // @ts-expect-error Expected 0 arguments, but got 1.
     formsPlugin.handler(apiArgs);
 
     // add custom styles
