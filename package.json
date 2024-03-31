@@ -45,6 +45,11 @@
   "devDependencies": {
     "@jest/types": "^29.6.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-interactions": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/addon-mdx-gfm": "^8.0.5",
+    "@storybook/react-webpack5": "^8.0.5",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.2",
     "@types/jest": "^29.5.12",
@@ -66,12 +71,16 @@
     "glob": "^10.3.12",
     "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup-plugin-auto-external": "^2.0.0",
+    "storybook": "^8.0.5",
+    "storybook-dark-mode": "^4.0.1",
     "typescript": "^5.4.3",
     "vite": "^5.2.7",
-    "vitest": "^1.4.0"
+    "vitest": "^1.4.0",
+    "webpack": "^5.91.0"
   },
   "peerDependencies": {
     "@heroicons/react": "^2.0.15",
