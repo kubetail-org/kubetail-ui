@@ -33,6 +33,10 @@
   "files": [
     "/dist"
   ],
+  "publishConfig": {
+    "@kubetail-org:registry": "https://npm.pkg.github.com",
+    "git-checks": false
+  },
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint \"./src/**/*.ts{,x}\"",
