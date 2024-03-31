@@ -1,4 +1,4 @@
-name: Kubetail-UI Package
+name: test
 
 on:
   push:
