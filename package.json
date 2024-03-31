@@ -34,8 +34,7 @@
     "/dist"
   ],
   "publishConfig": {
-    "@kubetail-org:registry": "https://npm.pkg.github.com",
-    "git-checks": false
+    "@kubetail-org:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "tsc && vite build",
