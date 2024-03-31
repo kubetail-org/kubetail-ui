@@ -36,18 +36,21 @@
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint \"./src/**/*.ts{,x}\"",
-    "test": "jest",
+    "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.2",
     "@types/node": "^20.12.2",
     "@types/react": "^18.2.73",
     "@types/rollup-plugin-auto-external": "^2.0.5",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "glob": "^10.3.12",
+    "jsdom": "^24.0.0",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
