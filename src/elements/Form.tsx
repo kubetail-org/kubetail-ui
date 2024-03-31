@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
+import { forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -27,7 +27,7 @@ import FormSelect from './FormSelect.js';
 
 const baseCls = 'space-y-8';
 
-const Form = React.forwardRef((
+const Form = forwardRef((
   {
     className,
     ...props

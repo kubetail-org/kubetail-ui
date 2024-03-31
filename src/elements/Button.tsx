@@ -15,7 +15,7 @@
 import { useButtonProps } from '@restart/ui/Button';
 import type { ButtonProps } from '@restart/ui/Button';
 import { cva, type VariantProps } from 'class-variance-authority';
-import React from 'react';
+import { forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -48,7 +48,7 @@ export const buttonVariants = cva(
   },
 );
 
-const Button = React.forwardRef((
+const Button = forwardRef((
   {
     as,
     children,

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -24,7 +24,7 @@ interface Props extends React.ComponentPropsWithoutRef<'select'> {
   id?: string;
 }
 
-const FormSelect = React.forwardRef((
+const FormSelect = forwardRef((
   {
     className,
     id,

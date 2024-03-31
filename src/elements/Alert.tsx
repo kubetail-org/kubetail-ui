@@ -13,7 +13,6 @@
 // limitations under the License.
 
 import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
-import React from 'react';
 
 type Props = {
   children?: React.ReactNode;

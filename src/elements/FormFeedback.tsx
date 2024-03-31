@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
-
 import { cn } from '@/lib/utils';
 
 const baseCls = 'text-base font-medium text-danger !mt-0 !-mb-4';
