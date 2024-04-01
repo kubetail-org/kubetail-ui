@@ -1,56 +1,33 @@
 {
   "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "target": "ESNext",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "declaration": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
 
-    /* bundler mode */
-    "moduleResolution": "node",
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    //"isolatedModules": true,
-    "preserveConstEnums": false,
+    "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* linting */
+    /* Linting */
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
-    /* import paths */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-
-    /* misc */
-    "types": [
-      "vitest/globals"
-    ]
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src/**/*.js",
     "src/**/*.ts",
-    "src/**/*.tsx",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "src/**/*.test.ts",
-    "src/**/*.test.tsx",
-    "src/**/*.mdx",
-    "src/**/*.stories.tsx"
-  ]
+    "dist"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -3,8 +3,6 @@ import resolveConfig from "tailwindcss/resolveConfig";
 
 import tailwindConfig from "../tailwind.config.js";
 
-export const bodyStyles = window.getComputedStyle(document.body);
-
 export const fullConfig = resolveConfig(tailwindConfig);
 
 export const rgbToHex = (rgb) => {
@@ -16,12 +14,14 @@ export const rgbToHex = (rgb) => {
 
 # Tailwind Configuration
 
-To add kubetail-ui's custom Tailwind theme to your project, add the kubetail-ui Tailwind plugin 
-and content folder to your Tailwind config file (tailwind.config.js):
+To add Kubetail-UI's custom Tailwind theme to your project, add the kubetail-ui Tailwind
+plugin and content folder to your Tailwind config file (tailwind.config.js):
 
-```javascript
+```typescript
+import kubetailUIPlugin from './src/plugin';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     ...
     "./node_modules/kubetail-ui/esm/**/*.js",
@@ -29,7 +29,7 @@ module.exports = {
   ...
   plugins: [
     ...
-    require('kubetail-ui/plugin'),
+    kubetailUIPlugin,
   ],
 }
 ```
@@ -98,3 +98,19 @@ module.exports = {
     </div>
   </div>
 ))}
+
+<h3>chrome</h3>
+{['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950'].map(level => {
+  const fgColor = (parseInt(level, 10) >= 500) ? 'text-white' : 'text-black';
+
+  return (
+    <div key={level}>
+      <div
+        className={`p-[10px] text-xs ${fgColor}`}
+        style={{ backgroundColor: fullConfig.theme.colors.chrome[level] }}
+      >
+        {level}
+      </div>
+    </div>
+  );
+})}

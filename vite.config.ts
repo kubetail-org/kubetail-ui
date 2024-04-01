@@ -1,43 +1,24 @@
-// Copyright 2024 Andres Morey
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 /// <reference types="vitest" />
+import { resolve } from 'path';
+
 import typescript from '@rollup/plugin-typescript';
 import react from '@vitejs/plugin-react';
 import { glob } from 'glob';
-import { resolve } from 'path';
 import autoExternal from 'rollup-plugin-auto-external';
 import { defineConfig } from 'vite';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-  ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
+  plugins: [react()],
   build: {
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
         resolve(__dirname, 'src/plugin.ts'),
-        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), { ignore: ['**/*\.test\.tsx', '**/*\.stories\.tsx'] })
+        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), { ignore: ['**/*\.test\.tsx'] }),
       ],
       name: 'kubetail-ui',
-      formats: ["es", "cjs"],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       plugins: [
@@ -45,7 +26,9 @@ export default defineConfig({
           sourceMap: false,
           declaration: true,
           outDir: "dist",
-          include: ['src/**/*']
+          include: 'src/**/*',
+          exclude: 'src/**/*.stories.ts',
+          allowImportingTsExtensions: false // https://github.com/rollup/plugins/discussions/1536
         }),
         autoExternal(),
       ],
@@ -69,6 +52,6 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['vitest.setup.ts']
-  }
+    setupFiles: ['vitest.setup.ts'],
+  },
 });
