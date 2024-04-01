@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import * as colors from 'tailwindcss/colors';
 
 import '../tailwind.css';
 
@@ -6,16 +7,16 @@ import { withThemeByClassName } from "@storybook/addon-themes";
 
 const preview: Preview = {
   parameters: {
-    appPreviewBg: {
+    backgrounds: {
       default: 'white',
       values: [
         {
           name: 'light',
-          value: 'red',
+          value: colors.white,
         },
         {
           name: 'dark',
-          value: 'blue',
+          value: colors.neutral[800],
         },
       ],
     },
@@ -28,12 +29,12 @@ const preview: Preview = {
   },
 
   decorators: [withThemeByClassName({
-      themes: {
-          // nameOfTheme: 'classNameForTheme',
-          light: '',
-          dark: 'dark',
-      },
-      defaultTheme: 'light',
+    themes: {
+      // nameOfTheme: 'classNameForTheme',
+      light: '',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
   })]
 };
 
