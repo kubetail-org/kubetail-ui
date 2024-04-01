@@ -19,7 +19,8 @@ module.exports = {
   ignorePatterns: [
     'dist',
     '.eslintrc.cjs',
-    'vite.config.ts'
+    'vite.config.ts',
+    'vitest.setup.ts'
   ],
   plugins: [
     'react-refresh'
