@@ -26,9 +26,12 @@ module.exports = {
     'react-refresh'
   ],
   rules: {
+    'import/extensions': 'off',
+    'import/prefer-default-export': 'off',
     'react/function-component-definition': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
+    'react-refresh/only-export-components': 'off'
   },
 }

@@ -10,12 +10,17 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
+  },
   build: {
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
         resolve(__dirname, 'src/plugin.ts'),
-        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), { ignore: ['**/*\.test\.tsx'] }),
+        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), { ignore: ['**/*\.test\.tsx', '**/*\.stories\.tsx'] }),
       ],
       name: 'kubetail-ui',
       formats: ['es', 'cjs'],
@@ -27,7 +32,10 @@ export default defineConfig({
           declaration: true,
           outDir: "dist",
           include: 'src/**/*',
-          exclude: 'src/**/*.stories.ts',
+          exclude: [
+            'src/**/*.stories.ts',
+            'src/**/*.stories.tsx'
+          ],
           allowImportingTsExtensions: false // https://github.com/rollup/plugins/discussions/1536
         }),
         autoExternal(),
