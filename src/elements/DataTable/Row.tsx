@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
-const Row = (props: React.ComponentPropsWithoutRef<'tr'>) => (
+const Row = (props: ComponentPropsWithoutRef<'tr'>) => (
   <tr {...props} />
 );
 

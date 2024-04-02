@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 
 import Button from './Button';
 import type { ButtonVariantProps } from './Button';
@@ -21,23 +20,23 @@ const ButtonTemplate: Story = {
       <table>
         <thead>
           <th className="text-left pr-3">size</th>
-            <th className="text-left">{"<button>"}</th>
-            <th className="text-left">as="a"</th>
-            <th className="text-left">disabled</th>
-          </thead>
+          <th className="text-left">{'<button>'}</th>
+          <th className="text-left">as=&quot;a&quot;</th>
+          <th className="text-left">disabled</th>
+        </thead>
         <tbody>
           {(['xs', 'sm', 'md', 'lg', 'xl'] as ButtonVariantProps['size'][]).map((size) => (
             <tr key={size}>
               <td className="pr-3">{size}</td>
-              <td className="pr-2"><Button { ...args } size={size}>{text}</Button></td>
-              <td className="pr-2"><Button { ...args } size={size} as="a">{text}</Button></td>
-              <td className="pr-2"><Button { ...args } size={size} disabled>{text}</Button></td>
+              <td className="pr-2"><Button {...args} size={size}>{text}</Button></td>
+              <td className="pr-2"><Button {...args} size={size} as="a">{text}</Button></td>
+              <td className="pr-2"><Button {...args} size={size} disabled>{text}</Button></td>
             </tr>
           ))}
         </tbody>
       </table>
     );
-  }
+  },
 };
 
 export const Primary: Story = {

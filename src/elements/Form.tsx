@@ -12,22 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
+import { forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import FormCheck from './FormCheck.js';
-import FormControl from './FormControl.js';
-import FormFeedback from './FormFeedback.js';
-import FormFieldset from './FormFieldset.js';
-import FormGroup from './FormGroup.js';
-import FormLabel from './FormLabel.js';
-import FormOption from './FormOption.js';
-import FormSelect from './FormSelect.js';
+import FormCheck from './FormCheck';
+import FormControl from './FormControl';
+import FormFeedback from './FormFeedback';
+import FormFieldset from './FormFieldset';
+import FormGroup from './FormGroup';
+import FormLabel from './FormLabel';
+import FormOption from './FormOption';
+import FormSelect from './FormSelect';
 
 const baseCls = 'space-y-8';
 
-const Form = React.forwardRef((
+const Form = forwardRef((
   {
     className,
     ...props

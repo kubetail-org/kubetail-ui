@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as FormGroupContext } from './FormGroup.js';
+import { Context as FormGroupContext } from './FormGroup';
 
 const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50';
 
@@ -24,7 +24,7 @@ interface Props extends React.ComponentPropsWithoutRef<'select'> {
   id?: string;
 }
 
-const FormSelect = React.forwardRef((
+const FormSelect = forwardRef((
   {
     className,
     id,

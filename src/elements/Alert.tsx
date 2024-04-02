@@ -13,12 +13,15 @@
 // limitations under the License.
 
 import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import type { ReactNode } from 'react';
 
 type Props = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
+/**
+ * UI component for displaying alerts
+ */
 const Alert = ({ children }: Props) => (
   <div className="rounded-md bg-yellow-50 p-4">
     <div className="flex">

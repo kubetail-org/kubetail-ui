@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
+import { forwardRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -26,7 +26,7 @@ interface Props extends React.ComponentPropsWithoutRef<'input'> {
   label?: React.ReactNode;
 }
 
-const FormCheck = React.forwardRef((
+const FormCheck = forwardRef((
   {
     as = 'input',
     className,

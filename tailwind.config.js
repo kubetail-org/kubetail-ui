@@ -1,12 +1,12 @@
+import kubetailUIPlugin from './src/plugin';
 
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: ['selector'],
   content: [
     './src/**/*.{js,jsx,ts,tsx,mdx}'
   ],
-  safelist: [
-    'dark'
-  ],
   plugins: [
-    require('./plugin')
+    kubetailUIPlugin
   ]
 };

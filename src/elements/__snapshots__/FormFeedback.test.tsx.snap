@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormFeedback appends custom className 1`] = `
+exports[`FormFeedback > appends custom className 1`] = `
 <DocumentFragment>
   <div
     class="text-base font-medium text-danger !mt-0 !-mb-4 extra-class"
@@ -8,7 +8,7 @@ exports[`FormFeedback appends custom className 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormFeedback renders contents properly 1`] = `
+exports[`FormFeedback > renders contents properly 1`] = `
 <DocumentFragment>
   <div
     class="text-base font-medium text-danger !mt-0 !-mb-4"

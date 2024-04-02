@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as FormGroupContext } from './FormGroup.js';
+import { Context as FormGroupContext } from './FormGroup';
 
 const baseCls = 'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70';
 
@@ -25,7 +25,7 @@ interface Props extends React.ComponentPropsWithoutRef<'label'> {
   htmlFor?: string;
 }
 
-const FormLabel = React.forwardRef((
+const FormLabel = forwardRef((
   {
     as = 'label',
     className,

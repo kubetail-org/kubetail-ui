@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
-
 import { cn } from '@/lib/utils';
 
 const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';

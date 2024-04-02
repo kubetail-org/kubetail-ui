@@ -13,13 +13,14 @@
 // limitations under the License.
 
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as TableContext } from './index.js';
-import type { DataTableSize } from './index.js';
-import { Context as HeaderContext } from './Header.js';
+import { Context as TableContext } from './index';
+import type { DataTableSize } from './index';
+import { Context as HeaderContext } from './Header';
 
 const baseCN = 'text-left font-semibold text-chrome-900 select-none';
 const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible';
@@ -32,7 +33,7 @@ const sizeCNMap: Record<DataTableSize, string> = {
   xl: 'px-3 py-3.5',
 };
 
-interface Props extends React.ComponentPropsWithoutRef<'th'> {
+interface Props extends ComponentPropsWithoutRef<'th'> {
   sortField?: string;
   initialSortDirection?: 'ASC' | 'DESC';
 }

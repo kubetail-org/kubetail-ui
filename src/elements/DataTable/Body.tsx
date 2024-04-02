@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
 const baseCls = 'divide-y divide-chrome-200 bg-background';
 
-const Body = ({ className, ...props }: React.ComponentPropsWithoutRef<'tbody'>) => (
+const Body = ({ className, ...props }: ComponentPropsWithoutRef<'tbody'>) => (
   <tbody {...props} className={cn(baseCls, className)} />
 );
 

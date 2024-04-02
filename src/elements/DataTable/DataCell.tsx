@@ -12,12 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as TableContext } from './index.js';
-import type { DataTableSize } from './index.js';
+import { Context as TableContext } from './index';
+import type { DataTableSize } from './index';
 
 const baseCls = 'whitespace-nowrap';
 
@@ -29,7 +30,7 @@ const sizeCNMap: Record<DataTableSize, string> = {
   xl: 'px-3 py-3.5',
 };
 
-const DataCell = ({ className, ...props }: React.ComponentPropsWithoutRef<'td'>) => {
+const DataCell = ({ className, ...props }: ComponentPropsWithoutRef<'td'>) => {
   const { size } = useContext(TableContext);
 
   return (

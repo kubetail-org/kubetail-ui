@@ -12,7 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { createContext, useMemo } from 'react';
+import { createContext, useMemo } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
@@ -26,7 +27,7 @@ export type SortBy = {
 
 type OnSortByChange = (newSortBy: SortBy) => void;
 
-interface Props extends React.ComponentPropsWithoutRef<'thead'> {
+interface Props extends ComponentPropsWithoutRef<'thead'> {
   sortBy?: SortBy;
   onSortByChange?: OnSortByChange;
 }

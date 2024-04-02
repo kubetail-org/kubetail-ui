@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FormCheck appends custom className to wrapper element 1`] = `
+exports[`FormCheck > appends custom className to wrapper element 1`] = `
 <DocumentFragment>
   <div
     class="flex items-center extra-class"
@@ -13,7 +13,7 @@ exports[`FormCheck appends custom className to wrapper element 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormCheck renders \`disabled=false\` properly 1`] = `
+exports[`FormCheck > renders \`disabled=false\` properly 1`] = `
 <DocumentFragment>
   <div
     class="flex items-center"
@@ -26,7 +26,7 @@ exports[`FormCheck renders \`disabled=false\` properly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormCheck renders \`disabled\` properly 1`] = `
+exports[`FormCheck > renders \`disabled\` properly 1`] = `
 <DocumentFragment>
   <div
     class="flex items-center"
@@ -40,7 +40,7 @@ exports[`FormCheck renders \`disabled\` properly 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FormCheck renders properly 1`] = `
+exports[`FormCheck > renders properly 1`] = `
 <DocumentFragment>
   <div
     class="flex items-center"

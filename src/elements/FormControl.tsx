@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { useContext } from 'react';
+import { forwardRef, useContext } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as FormGroupContext } from './FormGroup.js';
-import FormControlFeedback from './FormControlFeedback.js';
+import { Context as FormGroupContext } from './FormGroup';
+import FormControlFeedback from './FormControlFeedback';
 
 const baseCls = 'flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium';
 
@@ -26,7 +26,7 @@ interface Props extends React.ComponentPropsWithoutRef<'input'> {
   id?: string;
 }
 
-const FormControl = React.forwardRef((
+const FormControl = forwardRef((
   {
     as = 'input',
     className,

@@ -12,15 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import React, { createContext, useMemo } from 'react';
+import { createContext, useMemo } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import Body from './Body.js';
-import DataCell from './DataCell.js';
-import Header from './Header.js';
-import HeaderCell from './HeaderCell.js';
-import Row from './Row.js';
+import Body from './Body';
+import DataCell from './DataCell';
+import Header from './Header';
+import HeaderCell from './HeaderCell';
+import Row from './Row';
 
 export type DataTableSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -42,7 +43,7 @@ const sizeCNMap: Record<DataTableSize, string> = {
   xl: 'text-base',
 };
 
-interface Props extends React.PropsWithChildren {
+interface Props extends PropsWithChildren {
   className?: string;
   size?: DataTableSize;
 }
