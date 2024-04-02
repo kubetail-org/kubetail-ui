@@ -1,0 +1,1 @@
+"use strict";const c=require("react/jsx-runtime"),t=require("../lib/utils.cjs"),x="container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl px-4",a=({as:e="div",children:s,className:n})=>{const r=e;return c.jsx(r,{className:t.cn(x,n),children:s})};module.exports=a;

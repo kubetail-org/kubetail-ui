@@ -1,0 +1,1 @@
+"use strict";const c=require("react/jsx-runtime"),i=require("react"),o=require("../lib/utils.cjs"),a="space-y-8",e=i.forwardRef(({className:s,...t},r)=>c.jsx("fieldset",{...t,ref:r,className:o.cn(a,s)}));e.displayName="FormFieldset";module.exports=e;

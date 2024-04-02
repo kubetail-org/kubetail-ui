@@ -1,0 +1,1 @@
+"use strict";const n=require("react/jsx-runtime"),c=require("../lib/utils.cjs"),a="text-sm font-medium text-danger !-mb-6",e=({as:t="div",className:s,...o})=>{const r=t;return n.jsx(r,{...o,className:c.cn(a,s)})};e.displayName="FormControlFeedback";module.exports=e;
