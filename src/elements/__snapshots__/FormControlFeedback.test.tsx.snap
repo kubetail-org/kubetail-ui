@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormControlFeedback > appends custom className 1`] = `
+<DocumentFragment>
+  <div
+    class="text-sm font-medium text-danger !-mb-6 extra-class"
+  />
+</DocumentFragment>
+`;
+
+exports[`FormControlFeedback > renders contents properly 1`] = `
+<DocumentFragment>
+  <div
+    class="text-sm font-medium text-danger !-mb-6"
+  >
+    contents
+  </div>
+</DocumentFragment>
+`;

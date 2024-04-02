@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FormGroup > appends custom className 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-1 extra-class"
+  />
+</DocumentFragment>
+`;
+
+exports[`FormGroup > renders contents properly 1`] = `
+<DocumentFragment>
+  <div
+    class="space-y-1"
+  >
+    contents
+  </div>
+</DocumentFragment>
+`;
