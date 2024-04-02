@@ -1,1 +1,0 @@
-"use strict";const i=require("react/jsx-runtime"),o=require("../../lib/utils.cjs"),a="divide-y divide-chrome-200 bg-background",s=({className:e,...t})=>i.jsx("tbody",{...t,className:o.cn(a,e)});s.displayName="DataTableBody";module.exports=s;
