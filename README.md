@@ -31,20 +31,22 @@ Open [http://localhost:6006](http://localhost:6006) in your browser to see the c
 1. Install `kubetail-ui` package (replace X.Y.Z with desired version)
 
 ```bash
-pnpm add git+ssh://git@github.com/kubetail-org/kubetail-ui.git#vX.Y.Z
+pnpm add -D @kubetail/ui
 ```
 
 2. Modify your Tailwind config file
 
 ```javascript
-module.exports = {
+import kubetailUIPlugin from '@kubetail/ui/plugin';
+
+export default {
   content: [
     ...
-    "./node_modules/kubetail-ui/esm/*.js"
+    './node_modules/@kubetail/ui/**/*.js',
   ],
   plugins: [
     ...
-    require('kubetail-ui/plugin')
-  ]
-}
+    kubetailUIPlugin,
+  ],
+};
 ```
