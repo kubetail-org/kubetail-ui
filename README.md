@@ -28,7 +28,7 @@ Open [http://localhost:6006](http://localhost:6006) in your browser to see the c
 
 ## Integrate kubetail-ui into your Tailwind CSS project
 
-1. Install `kubetail-ui` package (replace X.Y.Z with desired version)
+1. Install `@kubetail/ui` package
 
 ```bash
 pnpm add -D @kubetail/ui
