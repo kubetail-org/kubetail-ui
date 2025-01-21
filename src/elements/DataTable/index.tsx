@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { createContext, useMemo } from 'react';
+import { useMemo } from 'react';
 import type { PropsWithChildren } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -22,16 +22,8 @@ import DataCell from './DataCell';
 import Header from './Header';
 import HeaderCell from './HeaderCell';
 import Row from './Row';
-
-export type DataTableSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-
-type DataTableContext = {
-  size: DataTableSize;
-};
-
-export const Context = createContext<DataTableContext>({
-  size: 'md',
-});
+import { Context } from './shared';
+import type { DataTableSize } from './shared';
 
 const baseCls = 'overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg';
 
@@ -53,8 +45,7 @@ const DataTable = ({
   children,
   size = 'md',
 }: Props) => {
-  const value = { size };
-  const context = useMemo(() => value, [value]);
+  const context = useMemo(() => ({ size }), [size]);
 
   return (
     <Context.Provider value={context}>

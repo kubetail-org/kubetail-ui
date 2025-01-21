@@ -15,8 +15,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: () => {
-    const [date, setDate] = useState<Date | undefined>(new Date())
- 
+    const [date, setDate] = useState<Date | undefined>(new Date());
+
     return (
       <Calendar
         mode="single"
@@ -24,6 +24,6 @@ export const Default: Story = {
         onSelect={setDate}
         className="rounded-md border"
       />
-    )
+    );
   },
 };
