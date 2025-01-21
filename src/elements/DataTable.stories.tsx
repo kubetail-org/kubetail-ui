@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useState, useEffect } from 'react';
 
 import DataTable from './DataTable';
-import type { SortBy } from './DataTable/Header'
+import type { SortBy } from './DataTable/Header';
 
 const meta = {
   title: 'Elements/DataTable',
@@ -42,7 +42,7 @@ export const Default: Story = {
 
 export const Sortable: Story = {
   render: () => {
-    const [sortBy, setSortBy] = useState<SortBy>({ field: "COL1", direction: "ASC" });
+    const [sortBy, setSortBy] = useState<SortBy>({ field: 'COL1', direction: 'ASC' });
 
     const handleSortByChange = (newSortBy: SortBy) => {
       setSortBy(newSortBy);
@@ -94,17 +94,20 @@ export const Dynamic: Story = {
     useEffect(() => {
       setTimeout(() => {
         setData(randData());
-      }, 2000)
+      }, 2000);
     });
 
     return (
       <DataTable>
         <DataTable.Body>
           {data.map((val, i) => (
-            <DataTable.Row key={i}>
-              <DataTable.DataCell>{val[0]}</DataTable.DataCell>
-              <DataTable.DataCell>{val[1]}</DataTable.DataCell>
-            </DataTable.Row>
+            <>
+              {/* eslint-disable-next-line react/no-array-index-key */}
+              <DataTable.Row key={i}>
+                <DataTable.DataCell>{val[0]}</DataTable.DataCell>
+                <DataTable.DataCell>{val[1]}</DataTable.DataCell>
+              </DataTable.Row>
+            </>
           ))}
         </DataTable.Body>
       </DataTable>

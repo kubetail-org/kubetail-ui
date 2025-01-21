@@ -18,9 +18,9 @@ import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as TableContext } from './index';
-import type { DataTableSize } from './index';
 import { Context as HeaderContext } from './Header';
+import { Context as TableContext } from './shared';
+import type { DataTableSize } from './shared';
 
 const baseCN = 'text-left font-semibold text-chrome-900 select-none';
 const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible';
@@ -48,8 +48,17 @@ const HeaderCell = ({
   const { size } = useContext(TableContext);
 
   const { sortBy, onSortByChange } = useContext(HeaderContext);
+
   const sortDirection = sortBy && sortBy.field === sortField
     ? sortBy.direction : initialSortDirection;
+
+  const handleKeyPress = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      let newDirection = sortDirection;
+      if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC';
+      if (sortField) onSortByChange({ field: sortField, direction: newDirection });
+    }
+  };
 
   return (
     <th
@@ -63,11 +72,14 @@ const HeaderCell = ({
       {sortField && (
         <span
           className="group inline-flex cursor-pointer"
+          role="button"
+          tabIndex={0}
           onClick={() => {
             let newDirection = sortDirection;
             if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC';
             onSortByChange({ field: sortField, direction: newDirection });
           }}
+          onKeyDown={handleKeyPress}
         >
           {children}
           <span className={cn(sortIconCN, sortBy?.field === sortField ? 'visible' : 'invisible')}>
