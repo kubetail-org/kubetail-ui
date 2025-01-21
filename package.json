@@ -85,6 +85,7 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
     "@radix-ui/react-popover": "^1.1.4",
     "@radix-ui/react-tabs": "^1.1.2",
     "@restart/ui": "^1.9.3",

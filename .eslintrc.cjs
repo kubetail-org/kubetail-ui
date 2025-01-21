@@ -26,6 +26,7 @@ module.exports = {
     'react-refresh'
   ],
   rules: {
+    '@typescript-eslint/indent': 'off',
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
     'object-curly-newline': 'off',
