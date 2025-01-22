@@ -49,7 +49,7 @@ export const Default: Story = {
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <DropdownMenuCheckboxItem
-                  checked={true}
+                  checked
                 >
                   English
                 </DropdownMenuCheckboxItem>
