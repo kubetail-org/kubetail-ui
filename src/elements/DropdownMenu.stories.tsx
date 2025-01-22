@@ -3,10 +3,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from './DropdownMenu';
@@ -37,6 +42,26 @@ export const Default: Story = {
           <DropdownMenuItem>
             Option 2
           </DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>
+              Language
+            </DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                <DropdownMenuCheckboxItem
+                  checked
+                >
+                  English
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>
+                  Spanish
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>
+                  Go
+                </DropdownMenuCheckboxItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
