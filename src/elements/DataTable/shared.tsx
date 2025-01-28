@@ -12,26 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import type { ElementType, ReactNode } from 'react';
+import { createContext } from 'react';
 
-import { cn } from '@/lib/utils';
+export type DataTableSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-const baseCN = 'container mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl px-4';
-
-type Props = {
-  as?: ElementType;
-  children?: ReactNode;
-  className?: string;
+type DataTableContext = {
+  size: DataTableSize;
 };
 
-const Container = ({ as = 'div', children, className }: Props) => {
-  const Tag = as;
-
-  return (
-    <Tag className={cn(baseCN, className)}>
-      {children}
-    </Tag>
-  );
-};
-
-export default Container;
+export const Context = createContext<DataTableContext>({
+  size: 'md',
+});

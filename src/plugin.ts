@@ -51,7 +51,9 @@ export default plugin(
         '--foreground': hexToRgb(colors.gray[900]),
         '--input': hexToRgb(colors.gray[300]),
         '--muted': hexToRgb(colors.gray[100]),
-        '--muted-foreground': hexToRgb(colors.gray[800]),
+        '--muted-foreground': hexToRgb(colors.gray[400]),
+        '--popover': hexToRgb(colors.white),
+        '--popover-foreground': hexToRgb(colors.gray[900]),
         '--primary': hexToRgb('#456EDE'),
         '--primary-foreground': hexToRgb(colors.white),
         '--ring': hexToRgb(colors.blue[200]),
@@ -83,7 +85,9 @@ export default plugin(
         '--foreground': hexToRgb(colors.white),
         '--input': hexToRgb(colors.gray[300]),
         '--muted': hexToRgb(colors.gray[100]),
-        '--muted-foreground': hexToRgb(colors.gray[800]),
+        '--muted-foreground': hexToRgb(colors.gray[600]),
+        '--popover': hexToRgb(colors.neutral[800]),
+        '--popover-foreground': hexToRgb(colors.white),
         '--primary': hexToRgb(colors.blue[500]),
         '--primary-foreground': hexToRgb(colors.white),
         '--ring': hexToRgb(colors.blue[200]),
@@ -155,6 +159,10 @@ export default plugin(
           muted: {
             DEFAULT: 'rgb(var(--muted))',
             foreground: 'rgb(var(--muted-foreground))',
+          },
+          popover: {
+            DEFAULT: 'rgb(var(--popover))',
+            foreground: 'rgb(var(--popover-foreground))',
           },
           primary: {
             DEFAULT: 'rgb(var(--primary))',

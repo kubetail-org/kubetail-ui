@@ -17,8 +17,8 @@ import type { ComponentPropsWithoutRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import { Context as TableContext } from './index';
-import type { DataTableSize } from './index';
+import { Context as TableContext } from './shared';
+import type { DataTableSize } from './shared';
 
 const baseCls = 'whitespace-nowrap';
 

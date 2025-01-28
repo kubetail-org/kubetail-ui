@@ -48,11 +48,13 @@ const Header = ({
   onSortByChange,
   ...props
 }: Props) => {
-  const value = {
-    sortBy: sortBy || null,
-    onSortByChange: onSortByChange || noop,
-  };
-  const context = useMemo(() => value, [value]);
+  const context = useMemo(
+    () => ({
+      sortBy: sortBy || null,
+      onSortByChange: onSortByChange || noop,
+    }),
+    [sortBy, onSortByChange],
+  );
 
   return (
     <Context.Provider value={context}>
