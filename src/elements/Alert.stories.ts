@@ -16,3 +16,10 @@ export const Default: Story = {
     children: 'This is an alert message',
   },
 };
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
+    children: 'This is a destructive alert message',
+  },
+}
