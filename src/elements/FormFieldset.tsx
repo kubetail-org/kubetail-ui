@@ -12,26 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-const baseCls = 'space-y-8';
+const baseCls = 'space-y-8'
 
-const FormFieldset = forwardRef((
-  {
-    className,
-    ...props
-  }: React.ComponentPropsWithoutRef<'fieldset'>,
-  ref: React.ForwardedRef<HTMLFieldSetElement>,
-) => (
-  <fieldset
-    {...props}
-    ref={ref}
-    className={cn(baseCls, className)}
-  />
-));
+const FormFieldset = forwardRef(({ className, ...props }: React.ComponentPropsWithoutRef<'fieldset'>, ref: React.ForwardedRef<HTMLFieldSetElement>) => <fieldset {...props} ref={ref} className={cn(baseCls, className)} />)
 
-FormFieldset.displayName = 'FormFieldset';
+FormFieldset.displayName = 'FormFieldset'
 
-export default FormFieldset;
+export default FormFieldset

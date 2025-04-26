@@ -1,30 +1,17 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import Button from './Button';
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-} from './DropdownMenu';
+import Button from './Button'
+import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger, DropdownMenuSeparator } from './DropdownMenu'
 
 const meta = {
   title: 'Elements/DropdownMenu',
   tags: ['autodocs'],
   component: DropdownMenu,
-} satisfies Meta<typeof DropdownMenu>;
+} satisfies Meta<typeof DropdownMenu>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => (
@@ -36,29 +23,15 @@ export const Default: Story = {
         <DropdownMenuLabel>Label 1</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Option 1
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Option 2
-          </DropdownMenuItem>
+          <DropdownMenuItem>Option 1</DropdownMenuItem>
+          <DropdownMenuItem>Option 2</DropdownMenuItem>
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
-              Language
-            </DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger>Language</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuCheckboxItem
-                  checked
-                >
-                  English
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                  Spanish
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                  Go
-                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem checked>English</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>Spanish</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>Go</DropdownMenuCheckboxItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
@@ -66,4 +39,4 @@ export const Default: Story = {
       </DropdownMenuContent>
     </DropdownMenu>
   ),
-};
+}

@@ -12,43 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { createContext, forwardRef, useMemo } from 'react';
+import { createContext, forwardRef, useMemo } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 type ContextState = {
-  controlId: string | undefined,
-};
-
-const Context = createContext({} as ContextState); // for passing `controlId`
-const baseCls = 'space-y-1';
-
-interface Props extends React.ComponentPropsWithoutRef<'div'> {
-  controlId?: string;
+  controlId: string | undefined
 }
 
-const FormGroup = forwardRef((
-  {
-    className,
-    controlId,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLDivElement>,
-) => {
-  const context = useMemo(() => ({ controlId }), [controlId]);
+const Context = createContext({} as ContextState) // for passing `controlId`
+const baseCls = 'space-y-1'
+
+interface Props extends React.ComponentPropsWithoutRef<'div'> {
+  controlId?: string
+}
+
+const FormGroup = forwardRef(({ className, controlId, ...props }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
+  const context = useMemo(() => ({ controlId }), [controlId])
 
   return (
     <Context.Provider value={context}>
-      <div
-        {...props}
-        ref={ref}
-        className={cn(baseCls, className)}
-      />
+      <div {...props} ref={ref} className={cn(baseCls, className)} />
     </Context.Provider>
-  );
-});
+  )
+})
 
-FormGroup.displayName = 'FormGroup';
+FormGroup.displayName = 'FormGroup'
 
-export { Context };
-export default FormGroup;
+export { Context }
+export default FormGroup

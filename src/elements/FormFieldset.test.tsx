@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormFieldset from './FormFieldset';
+import FormFieldset from './FormFieldset'
 
 describe('Form', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<FormFieldset>contents</FormFieldset>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormFieldset>contents</FormFieldset>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<FormFieldset className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<FormFieldset className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

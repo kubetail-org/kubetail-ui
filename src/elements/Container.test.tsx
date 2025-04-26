@@ -12,23 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import Container from './Container';
+import Container from './Container'
 
 describe('Container', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<Container>contents</Container>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<Container>contents</Container>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<Container className="text-red-100" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<Container className="text-red-100" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders custom tagName properly', () => {
-    const { asFragment } = render(<Container as="header" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<Container as="header" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

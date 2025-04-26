@@ -12,43 +12,43 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormControl from './FormControl';
-import FormGroup from './FormGroup';
+import FormControl from './FormControl'
+import FormGroup from './FormGroup'
 
 describe('FormControl', () => {
   it('renders properly', () => {
-    const { asFragment } = render(<FormControl type="text" defaultValue="content" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormControl type="text" defaultValue="content" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<FormControl className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormControl className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders `disabled` properly', () => {
-    const { asFragment } = render(<FormControl disabled />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormControl disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders `disabled=false` properly', () => {
-    const { asFragment } = render(<FormControl disabled={false} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormControl disabled={false} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders as textarea properly', () => {
-    const { asFragment } = render(<FormControl as="textarea" defaultValue="contents" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormControl as="textarea" defaultValue="contents" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('inherits id from FormGroup.controlId', () => {
     const { asFragment } = render(
       <FormGroup controlId="input-id">
         <FormControl />
       </FormGroup>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

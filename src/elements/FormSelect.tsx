@@ -12,38 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { forwardRef, useContext } from 'react';
+import { forwardRef, useContext } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import { Context as FormGroupContext } from './FormGroup';
+import { Context as FormGroupContext } from './FormGroup'
 
-const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50';
+const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50'
 
 interface Props extends React.ComponentPropsWithoutRef<'select'> {
-  id?: string;
+  id?: string
 }
 
-const FormSelect = forwardRef((
-  {
-    className,
-    id,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLSelectElement>,
-) => {
-  const { controlId } = useContext(FormGroupContext);
+const FormSelect = forwardRef(({ className, id, ...props }: Props, ref: React.ForwardedRef<HTMLSelectElement>) => {
+  const { controlId } = useContext(FormGroupContext)
 
-  return (
-    <select
-      {...props}
-      ref={ref}
-      id={id || controlId}
-      className={cn(baseCls, className)}
-    />
-  );
-});
+  return <select {...props} ref={ref} id={id || controlId} className={cn(baseCls, className)} />
+})
 
-FormSelect.displayName = 'FormSelect';
+FormSelect.displayName = 'FormSelect'
 
-export default FormSelect;
+export default FormSelect

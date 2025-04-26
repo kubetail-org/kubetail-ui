@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormFeedback from './FormFeedback';
+import FormFeedback from './FormFeedback'
 
 describe('FormFeedback', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<FormFeedback>contents</FormFeedback>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormFeedback>contents</FormFeedback>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<FormFeedback className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<FormFeedback className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

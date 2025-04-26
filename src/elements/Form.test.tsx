@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import Form from './Form';
+import Form from './Form'
 
 describe('Form', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<Form>My form</Form>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<Form>My form</Form>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<Form className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<Form className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

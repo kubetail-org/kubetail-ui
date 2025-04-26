@@ -12,28 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormCheck from './FormCheck';
+import FormCheck from './FormCheck'
 
 describe('FormCheck', () => {
   it('renders properly', () => {
-    const { asFragment } = render(<FormCheck label="My Label" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormCheck label="My Label" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className to wrapper element', () => {
-    const { asFragment } = render(<FormCheck className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormCheck className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders `disabled` properly', () => {
-    const { asFragment } = render(<FormCheck disabled />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormCheck disabled />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('renders `disabled=false` properly', () => {
-    const { asFragment } = render(<FormCheck disabled={false} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<FormCheck disabled={false} />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

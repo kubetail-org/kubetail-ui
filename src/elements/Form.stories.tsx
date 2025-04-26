@@ -1,47 +1,35 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import Button from './Button';
-import Form from './Form';
+import Button from './Button'
+import Form from './Form'
 
 const meta = {
   title: 'Elements/Form',
   tags: ['autodocs'],
   component: Form,
-} satisfies Meta<typeof Form>;
+} satisfies Meta<typeof Form>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 type TemplateProps = {
-  formData?: Record<string, string>;
-  formErrors?: Record<string, string>;
-};
+  formData?: Record<string, string>
+  formErrors?: Record<string, string>
+}
 
 const Template = ({ formData = {}, formErrors = {} }: TemplateProps): Story => ({
   render: ({ ...args }) => (
     <Form {...args}>
       <Form.Group>
         <Form.Label htmlFor="input1">Input 1</Form.Label>
-        <Form.Control
-          id="input1"
-          placeholder="input-1 placeholder"
-          defaultValue={formData.input1}
-        />
-        {formErrors.input1 && (
-          <Form.Control.Feedback>{formErrors.input1}</Form.Control.Feedback>
-        )}
+        <Form.Control id="input1" placeholder="input-1 placeholder" defaultValue={formData.input1} />
+        {formErrors.input1 && <Form.Control.Feedback>{formErrors.input1}</Form.Control.Feedback>}
       </Form.Group>
       <Form.Group>
         <Form.Label htmlFor="input2">Input 2</Form.Label>
-        <Form.Control
-          id="input2"
-          placeholder="input-2 placeholder"
-          defaultValue={formData.input2}
-        />
-        {formErrors.input2 && (
-          <Form.Control.Feedback>{formErrors.input2}</Form.Control.Feedback>
-        )}
+        <Form.Control id="input2" placeholder="input-2 placeholder" defaultValue={formData.input2} />
+        {formErrors.input2 && <Form.Control.Feedback>{formErrors.input2}</Form.Control.Feedback>}
       </Form.Group>
       <Form.Group>
         <Form.Label htmlFor="select1">Select 1</Form.Label>
@@ -67,11 +55,11 @@ const Template = ({ formData = {}, formErrors = {} }: TemplateProps): Story => (
       </Form.Group>
     </Form>
   ),
-});
+})
 
 export const Empty: Story = {
   ...Template({}),
-};
+}
 
 export const WithData: Story = {
   ...Template({
@@ -80,7 +68,7 @@ export const WithData: Story = {
       input2: 'user data 2',
     },
   }),
-};
+}
 
 export const WithErrors: Story = {
   ...Template({
@@ -89,4 +77,4 @@ export const WithErrors: Story = {
       input2: 'Error in input 2',
     },
   }),
-};
+}

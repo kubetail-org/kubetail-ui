@@ -12,20 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { useMemo } from 'react';
-import type { PropsWithChildren } from 'react';
+import { useMemo } from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import Body from './Body';
-import DataCell from './DataCell';
-import Header from './Header';
-import HeaderCell from './HeaderCell';
-import Row from './Row';
-import { Context } from './shared';
-import type { DataTableSize } from './shared';
+import Body from './Body'
+import DataCell from './DataCell'
+import Header from './Header'
+import HeaderCell from './HeaderCell'
+import Row from './Row'
+import { Context } from './shared'
+import type { DataTableSize } from './shared'
 
-const baseCls = 'overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg';
+const baseCls = 'overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg'
 
 const sizeCNMap: Record<DataTableSize, string> = {
   xs: 'text-xs',
@@ -33,56 +33,43 @@ const sizeCNMap: Record<DataTableSize, string> = {
   md: 'text-sm',
   lg: 'text-base',
   xl: 'text-base',
-};
-
-interface Props extends PropsWithChildren {
-  className?: string;
-  size?: DataTableSize;
 }
 
-const DataTable = ({
-  className,
-  children,
-  size = 'md',
-}: Props) => {
-  const context = useMemo(() => ({ size }), [size]);
+interface Props extends PropsWithChildren {
+  className?: string
+  size?: DataTableSize
+}
+
+const DataTable = ({ className, children, size = 'md' }: Props) => {
+  const context = useMemo(() => ({ size }), [size])
 
   return (
     <Context.Provider value={context}>
       <div className={cn(baseCls, className)}>
-        <table className={cn(
-          'min-w-full divide-y divide-chrome-300',
-          size && sizeCNMap[size],
-        )}
-        >
-          {children}
-        </table>
+        <table className={cn('min-w-full divide-y divide-chrome-300', size && sizeCNMap[size])}>{children}</table>
       </div>
     </Context.Provider>
-  );
-};
-
-DataTable.displayName = 'DataTable';
-
-type DataTableType = typeof DataTable;
-
-interface DataTableExportType extends DataTableType {
-  Body: typeof Body;
-  DataCell: typeof DataCell;
-  Header: typeof Header;
-  HeaderCell: typeof HeaderCell;
-  Row: typeof Row;
+  )
 }
 
-const DataTableExport: DataTableExportType = Object.assign(
-  DataTable,
-  {
-    Body,
-    DataCell,
-    Header,
-    HeaderCell,
-    Row,
-  },
-);
+DataTable.displayName = 'DataTable'
 
-export default DataTableExport;
+type DataTableType = typeof DataTable
+
+interface DataTableExportType extends DataTableType {
+  Body: typeof Body
+  DataCell: typeof DataCell
+  Header: typeof Header
+  HeaderCell: typeof HeaderCell
+  Row: typeof Row
+}
+
+const DataTableExport: DataTableExportType = Object.assign(DataTable, {
+  Body,
+  DataCell,
+  Header,
+  HeaderCell,
+  Row,
+})
+
+export default DataTableExport

@@ -1,18 +1,18 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState, useEffect } from 'react';
+import type { Meta, StoryObj } from '@storybook/react'
+import { useState, useEffect } from 'react'
 
-import DataTable from './DataTable';
-import type { SortBy } from './DataTable/Header';
+import DataTable from './DataTable'
+import type { SortBy } from './DataTable/Header'
 
 const meta = {
   title: 'Elements/DataTable',
   tags: ['autodocs'],
   component: DataTable,
-} satisfies Meta<typeof DataTable>;
+} satisfies Meta<typeof DataTable>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => (
@@ -38,26 +38,29 @@ export const Default: Story = {
       </DataTable.Body>
     </DataTable>
   ),
-};
+}
 
 export const Sortable: Story = {
   render: () => {
-    const [sortBy, setSortBy] = useState<SortBy>({ field: 'COL1', direction: 'ASC' });
+    const [sortBy, setSortBy] = useState<SortBy>({ field: 'COL1', direction: 'ASC' })
 
     const handleSortByChange = (newSortBy: SortBy) => {
-      setSortBy(newSortBy);
-    };
+      setSortBy(newSortBy)
+    }
 
     return (
       <DataTable>
-        <DataTable.Header
-          sortBy={sortBy}
-          onSortByChange={handleSortByChange}
-        >
+        <DataTable.Header sortBy={sortBy} onSortByChange={handleSortByChange}>
           <DataTable.Row>
-            <DataTable.HeaderCell sortField="COL1" initialSortDirection="ASC">col1</DataTable.HeaderCell>
-            <DataTable.HeaderCell sortField="COL2" initialSortDirection="DESC">col2</DataTable.HeaderCell>
-            <DataTable.HeaderCell sortField="COL3" initialSortDirection="ASC">col3</DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL1" initialSortDirection="ASC">
+              col1
+            </DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL2" initialSortDirection="DESC">
+              col2
+            </DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL3" initialSortDirection="ASC">
+              col3
+            </DataTable.HeaderCell>
             <DataTable.HeaderCell>col4</DataTable.HeaderCell>
           </DataTable.Row>
         </DataTable.Header>
@@ -76,26 +79,26 @@ export const Sortable: Story = {
           </DataTable.Row>
         </DataTable.Body>
       </DataTable>
-    );
+    )
   },
-};
+}
 
 export const Dynamic: Story = {
   render: () => {
-    const rand = () => Math.random().toString();
+    const rand = () => Math.random().toString()
 
-    const randData = () => ([
+    const randData = () => [
       [rand(), rand()],
       [rand(), rand()],
-    ]);
+    ]
 
-    const [data, setData] = useState(randData());
+    const [data, setData] = useState(randData())
 
     useEffect(() => {
       setTimeout(() => {
-        setData(randData());
-      }, 2000);
-    });
+        setData(randData())
+      }, 2000)
+    })
 
     return (
       <DataTable>
@@ -111,6 +114,6 @@ export const Dynamic: Story = {
           ))}
         </DataTable.Body>
       </DataTable>
-    );
+    )
   },
-};
+}

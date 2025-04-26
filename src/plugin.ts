@@ -12,20 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import forms from '@tailwindcss/forms';
-import plugin from 'tailwindcss/plugin';
-import colors from 'tailwindcss/colors';
+import forms from '@tailwindcss/forms'
+import plugin from 'tailwindcss/plugin'
+import colors from 'tailwindcss/colors'
 
-const formsPlugin = forms();
+const formsPlugin = forms()
 
 // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 function hexToRgb(hex: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
-  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  const hexFixed = hex.replace(shorthandRegex, (_, r, g, b) => (r + r + g + g + b + b));
+  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
+  const hexFixed = hex.replace(shorthandRegex, (_, r, g, b) => r + r + g + g + b + b)
 
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexFixed);
-  return result ? `${parseInt(result[1], 16)} ${parseInt(result[2], 16)} ${parseInt(result[3], 16)}` : '';
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexFixed)
+  return result ? `${parseInt(result[1], 16)} ${parseInt(result[2], 16)} ${parseInt(result[3], 16)}` : ''
 }
 
 /**
@@ -35,10 +35,10 @@ export default plugin(
   (apiArgs) => {
     // initialize forms plugin
     // @ts-expect-error Expected 0 arguments, but got 1.
-    formsPlugin.handler(apiArgs);
+    formsPlugin.handler(apiArgs)
 
     // add custom styles
-    const { addBase } = apiArgs;
+    const { addBase } = apiArgs
 
     addBase({
       ':root': {
@@ -115,7 +115,7 @@ export default plugin(
         'font-feature-settings': '"rlig" 1, "calt" 1',
         '@apply antialiased': '',
       },
-    });
+    })
   },
   {
     darkMode: 'selector',
@@ -194,4 +194,4 @@ export default plugin(
       },
     },
   },
-);
+)

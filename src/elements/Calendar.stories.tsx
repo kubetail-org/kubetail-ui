@@ -1,29 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react'
+import { useState } from 'react'
 
-import { Calendar } from './Calendar';
+import { Calendar } from './Calendar'
 
 const meta = {
   title: 'Elements/Calendar',
   tags: ['autodocs'],
   component: Calendar,
-} satisfies Meta<typeof Calendar>;
+} satisfies Meta<typeof Calendar>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => {
-    const [date, setDate] = useState<Date | undefined>(new Date());
+    const [date, setDate] = useState<Date | undefined>(new Date())
 
-    return (
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="rounded-md border"
-      />
-    );
+    return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border" />
   },
-};
+}

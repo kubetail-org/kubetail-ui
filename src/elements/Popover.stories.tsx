@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Popover, PopoverContent, PopoverTrigger } from './Popover';
+import { Popover, PopoverContent, PopoverTrigger } from './Popover'
 
 const meta = {
   title: 'Elements/Popover',
   tags: ['autodocs'],
   component: Popover,
-} satisfies Meta<typeof Popover>;
+} satisfies Meta<typeof Popover>
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: () => (
@@ -19,4 +19,4 @@ export const Default: Story = {
       <PopoverContent>Place content for the popover here.</PopoverContent>
     </Popover>
   ),
-};
+}

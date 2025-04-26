@@ -12,16 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import type { ComponentPropsWithoutRef } from 'react';
+import type { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-const baseCls = 'divide-y divide-chrome-200 bg-background';
+const baseCls = 'divide-y divide-chrome-200 bg-background'
 
-const Body = ({ className, ...props }: ComponentPropsWithoutRef<'tbody'>) => (
-  <tbody {...props} className={cn(baseCls, className)} />
-);
+const Body = ({ className, ...props }: ComponentPropsWithoutRef<'tbody'>) => <tbody {...props} className={cn(baseCls, className)} />
 
-Body.displayName = 'DataTableBody';
+Body.displayName = 'DataTableBody'
 
-export default Body;
+export default Body
