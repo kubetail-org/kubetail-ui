@@ -12,19 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { forwardRef, ComponentProps } from "react" 
+import { forwardRef, ComponentProps } from 'react';
 
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils';
 
-const Input = forwardRef<HTMLInputElement, ComponentProps<"input">>(({ className, type, ...props }, ref) => <input
+const Input = forwardRef<HTMLInputElement, ComponentProps<'input'>>(({ className, type, ...props }, ref) => (
+  <input
     {...props}
     type={type}
     ref={ref}
     className={cn(
-      "w-full rounded-md focus-visible:ring-ring shadow-sm focus-visible:outline-0 border border-border/80 file:border-0 file:focus:ring-1 file:focus:ring-ring file:h-10 file:text-muted-foreground file:focus:outline-none file:focus:ring-0 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground text-muted-foreground disabled:opacity-50 disabled:border-border/70 disabled:cursor-not-allowed text-foreground file:text-sm file:font-medium px-3",
+      'w-full rounded-md focus-visible:ring-ring shadow-sm focus-visible:outline-0 border border-border/80 file:border-0 file:focus:ring-1 file:focus:ring-ring file:h-10 file:text-muted-foreground file:focus:outline-none file:focus:ring-0 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground text-muted-foreground disabled:opacity-50 disabled:border-border/70 disabled:cursor-not-allowed text-foreground file:text-sm file:font-medium px-3',
       className,
     )}
-    />)
-Input.displayName = "Input"
+  />
+));
+Input.displayName = 'Input';
 
-export { Input }
+export { Input };
