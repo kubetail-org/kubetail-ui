@@ -22,4 +22,4 @@ export const Destructive: Story = {
     variant: 'destructive',
     children: 'This is a destructive alert message',
   },
-}
+};
