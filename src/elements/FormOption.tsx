@@ -12,22 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'
 
-const FormOption = forwardRef((
-  {
-    className,
-    ...props
-  }: React.ComponentPropsWithoutRef<'option'>,
-  ref: React.ForwardedRef<HTMLOptionElement>,
-) => (
-  <option
-    {...props}
-    ref={ref}
-    className={className}
-  />
-));
+const FormOption = forwardRef(({ className, ...props }: React.ComponentPropsWithoutRef<'option'>, ref: React.ForwardedRef<HTMLOptionElement>) => <option {...props} ref={ref} className={className} />)
 
-FormOption.displayName = 'FormOption';
+FormOption.displayName = 'FormOption'
 
-export default FormOption;
+export default FormOption

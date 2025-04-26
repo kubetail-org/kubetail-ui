@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
-import type { ReactNode } from 'react';
+import { ExclamationTriangleIcon } from '@heroicons/react/24/solid'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children?: ReactNode;
-};
+  children?: ReactNode
+}
 
 /**
  * UI component for displaying alerts
@@ -31,13 +31,11 @@ const Alert = ({ children }: Props) => (
       <div className="ml-3">
         <h3 className="text-sm font-medium text-yellow-800">Attention</h3>
         <div className="mt-2 text-sm text-yellow-700">
-          <div>
-            {children}
-          </div>
+          <div>{children}</div>
         </div>
       </div>
     </div>
   </div>
-);
+)
 
-export default Alert;
+export default Alert

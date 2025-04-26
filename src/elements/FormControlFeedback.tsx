@@ -12,29 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-const baseCls = 'text-sm font-medium text-danger !-mb-6';
+const baseCls = 'text-sm font-medium text-danger !-mb-6'
 
 interface Props extends React.ComponentPropsWithoutRef<'div'> {
-  as?: React.ElementType;
+  as?: React.ElementType
 }
 
-const FormControlFeedback = ({
-  as = 'div',
-  className,
-  ...props
-}: Props) => {
-  const Tag = as;
+const FormControlFeedback = ({ as = 'div', className, ...props }: Props) => {
+  const Tag = as
 
-  return (
-    <Tag
-      {...props}
-      className={cn(baseCls, className)}
-    />
-  );
-};
+  return <Tag {...props} className={cn(baseCls, className)} />
+}
 
-FormControlFeedback.displayName = 'FormControlFeedback';
+FormControlFeedback.displayName = 'FormControlFeedback'
 
-export default FormControlFeedback;
+export default FormControlFeedback

@@ -12,50 +12,35 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { forwardRef } from 'react';
+import { forwardRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-const wrapperBaseCls = 'flex items-center';
-const inputBaseCls = 'h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50';
-const labelBaseCls = 'ml-2 block text-sm text-chrome-900';
+const wrapperBaseCls = 'flex items-center'
+const inputBaseCls = 'h-4 w-4 text-primary-600 rounded border-input bg-background ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50'
+const labelBaseCls = 'ml-2 block text-sm text-chrome-900'
 
 interface Props extends React.ComponentPropsWithoutRef<'input'> {
-  as?: React.ElementType;
-  id?: string;
-  label?: React.ReactNode;
+  as?: React.ElementType
+  id?: string
+  label?: React.ReactNode
 }
 
-const FormCheck = forwardRef((
-  {
-    as = 'input',
-    className,
-    id,
-    label,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLInputElement>,
-) => {
-  const Tag = as;
+const FormCheck = forwardRef(({ as = 'input', className, id, label, ...props }: Props, ref: React.ForwardedRef<HTMLInputElement>) => {
+  const Tag = as
 
   return (
     <div className={cn(wrapperBaseCls, className)}>
-      <Tag
-        {...props}
-        ref={ref}
-        id={id}
-        type="checkbox"
-        className={inputBaseCls}
-      />
+      <Tag {...props} ref={ref} id={id} type="checkbox" className={inputBaseCls} />
       {label && (
         <label htmlFor={id} className={labelBaseCls}>
           {label}
         </label>
       )}
     </div>
-  );
-});
+  )
+})
 
-FormCheck.displayName = 'FormCheck';
+FormCheck.displayName = 'FormCheck'
 
-export default FormCheck;
+export default FormCheck

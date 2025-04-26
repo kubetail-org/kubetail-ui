@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import type { ComponentPropsWithoutRef } from 'react';
+import type { ComponentPropsWithoutRef } from 'react'
 
-const Row = (props: ComponentPropsWithoutRef<'tr'>) => (
-  <tr {...props} />
-);
+const Row = (props: ComponentPropsWithoutRef<'tr'>) => <tr {...props} />
 
-Row.displayName = 'DataTableRow';
+Row.displayName = 'DataTableRow'
 
-export default Row;
+export default Row

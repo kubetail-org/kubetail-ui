@@ -12,28 +12,28 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormGroup from './FormGroup';
-import FormLabel from './FormLabel';
+import FormGroup from './FormGroup'
+import FormLabel from './FormLabel'
 
 describe('FormLabel', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<FormLabel>contents</FormLabel>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormLabel>contents</FormLabel>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<FormLabel className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormLabel className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('inherits id from FormGroup.controlId', () => {
     const { asFragment } = render(
       <FormGroup controlId="input-id">
         <FormLabel />
       </FormGroup>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

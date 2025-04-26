@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import FormGroup from './FormGroup';
+import FormGroup from './FormGroup'
 
 describe('FormGroup', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<FormGroup>contents</FormGroup>);
-    expect(asFragment()).toMatchSnapshot();
-  });
+    const { asFragment } = render(<FormGroup>contents</FormGroup>)
+    expect(asFragment()).toMatchSnapshot()
+  })
 
   it('appends custom className', () => {
-    const { asFragment } = render(<FormGroup className="extra-class" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<FormGroup className="extra-class" />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { createContext } from 'react';
+import { createContext } from 'react'
 
-export type DataTableSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type DataTableSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 type DataTableContext = {
-  size: DataTableSize;
-};
+  size: DataTableSize
+}
 
 export const Context = createContext<DataTableContext>({
   size: 'md',
-});
+})

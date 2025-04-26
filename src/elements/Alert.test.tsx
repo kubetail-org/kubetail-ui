@@ -12,13 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { render } from '@testing-library/react';
+import { render } from '@testing-library/react'
 
-import Alert from './Alert';
+import Alert from './Alert'
 
 describe('Alert', () => {
   it('renders contents properly', () => {
-    const { asFragment } = render(<Alert>contents</Alert>);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+    const { asFragment } = render(<Alert>contents</Alert>)
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

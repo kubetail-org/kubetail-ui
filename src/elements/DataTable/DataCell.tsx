@@ -12,15 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { useContext } from 'react';
-import type { ComponentPropsWithoutRef } from 'react';
+import { useContext } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import { Context as TableContext } from './shared';
-import type { DataTableSize } from './shared';
+import { Context as TableContext } from './shared'
+import type { DataTableSize } from './shared'
 
-const baseCls = 'whitespace-nowrap';
+const baseCls = 'whitespace-nowrap'
 
 const sizeCNMap: Record<DataTableSize, string> = {
   xs: 'px-2 py-1',
@@ -28,23 +28,14 @@ const sizeCNMap: Record<DataTableSize, string> = {
   md: 'px-3 py-3.5',
   lg: 'px-3 py-3.5',
   xl: 'px-3 py-3.5',
-};
+}
 
 const DataCell = ({ className, ...props }: ComponentPropsWithoutRef<'td'>) => {
-  const { size } = useContext(TableContext);
+  const { size } = useContext(TableContext)
 
-  return (
-    <td
-      {...props}
-      className={cn(
-        baseCls,
-        sizeCNMap[size],
-        className,
-      )}
-    />
-  );
-};
+  return <td {...props} className={cn(baseCls, sizeCNMap[size], className)} />
+}
 
-DataCell.displayName = 'DataTableDataCell';
+DataCell.displayName = 'DataTableDataCell'
 
-export default DataCell;
+export default DataCell

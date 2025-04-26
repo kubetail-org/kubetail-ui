@@ -12,18 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
-import { useContext } from 'react';
-import type { ComponentPropsWithoutRef } from 'react';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
+import { useContext } from 'react'
+import type { ComponentPropsWithoutRef } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import { Context as HeaderContext } from './Header';
-import { Context as TableContext } from './shared';
-import type { DataTableSize } from './shared';
+import { Context as HeaderContext } from './Header'
+import { Context as TableContext } from './shared'
+import type { DataTableSize } from './shared'
 
-const baseCN = 'text-left font-semibold text-chrome-900 select-none';
-const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible';
+const baseCN = 'text-left font-semibold text-chrome-900 select-none'
+const sortIconCN = 'ml-2 flex-none text-chrome-400 group-hover:visible group-focus:visible'
 
 const sizeCNMap: Record<DataTableSize, string> = {
   xs: 'px-2 py-1.5',
@@ -31,67 +31,51 @@ const sizeCNMap: Record<DataTableSize, string> = {
   md: 'px-3 py-3.5',
   lg: 'px-3 py-3.5',
   xl: 'px-3 py-3.5',
-};
-
-interface Props extends ComponentPropsWithoutRef<'th'> {
-  sortField?: string;
-  initialSortDirection?: 'ASC' | 'DESC';
 }
 
-const HeaderCell = ({
-  children,
-  className,
-  sortField,
-  initialSortDirection = 'ASC',
-  ...props
-}: Props) => {
-  const { size } = useContext(TableContext);
+interface Props extends ComponentPropsWithoutRef<'th'> {
+  sortField?: string
+  initialSortDirection?: 'ASC' | 'DESC'
+}
 
-  const { sortBy, onSortByChange } = useContext(HeaderContext);
+const HeaderCell = ({ children, className, sortField, initialSortDirection = 'ASC', ...props }: Props) => {
+  const { size } = useContext(TableContext)
 
-  const sortDirection = sortBy && sortBy.field === sortField
-    ? sortBy.direction : initialSortDirection;
+  const { sortBy, onSortByChange } = useContext(HeaderContext)
+
+  const sortDirection = sortBy && sortBy.field === sortField ? sortBy.direction : initialSortDirection
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
-      let newDirection = sortDirection;
-      if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC';
-      if (sortField) onSortByChange({ field: sortField, direction: newDirection });
+      let newDirection = sortDirection
+      if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC'
+      if (sortField) onSortByChange({ field: sortField, direction: newDirection })
     }
-  };
+  }
 
   return (
-    <th
-      {...props}
-      className={cn(
-        baseCN,
-        sizeCNMap[size],
-        className,
-      )}
-    >
+    <th {...props} className={cn(baseCN, sizeCNMap[size], className)}>
       {sortField && (
         <span
           className="group inline-flex cursor-pointer"
           role="button"
           tabIndex={0}
           onClick={() => {
-            let newDirection = sortDirection;
-            if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC';
-            onSortByChange({ field: sortField, direction: newDirection });
+            let newDirection = sortDirection
+            if (sortBy?.field === sortField) newDirection = newDirection === 'ASC' ? 'DESC' : 'ASC'
+            onSortByChange({ field: sortField, direction: newDirection })
           }}
           onKeyDown={handleKeyPress}
         >
           {children}
-          <span className={cn(sortIconCN, sortBy?.field === sortField ? 'visible' : 'invisible')}>
-            {sortDirection === 'ASC' ? <ChevronUpIcon className="h-5 w-5" /> : <ChevronDownIcon className="h-5 w-5" />}
-          </span>
+          <span className={cn(sortIconCN, sortBy?.field === sortField ? 'visible' : 'invisible')}>{sortDirection === 'ASC' ? <ChevronUpIcon className="h-5 w-5" /> : <ChevronDownIcon className="h-5 w-5" />}</span>
         </span>
       )}
       {!sortField && children}
     </th>
-  );
-};
+  )
+}
 
-HeaderCell.displayName = 'DataTableHeaderCell';
+HeaderCell.displayName = 'DataTableHeaderCell'
 
-export default HeaderCell;
+export default HeaderCell
