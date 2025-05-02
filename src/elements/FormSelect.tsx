@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils';
 
 import { Context as FormGroupContext } from './FormGroup';
 
-const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50';
+const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50';
 
 interface Props extends React.ComponentPropsWithoutRef<'select'> {
   id?: string;
