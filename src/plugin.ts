@@ -90,7 +90,7 @@ export default plugin(
         '--popover-foreground': hexToRgb(colors.white),
         '--primary': hexToRgb(colors.blue[500]),
         '--primary-foreground': hexToRgb(colors.white),
-        '--ring': hexToRgb(colors.blue[400]),
+        '--ring': hexToRgb(colors.blue[600]),
         '--secondary': hexToRgb(colors.blue[100]),
         '--secondary-foreground': hexToRgb(colors.gray[800]),
         '--chrome-50': hexToRgb(colors.gray[950]),
