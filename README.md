@@ -20,6 +20,14 @@ Next, run storybook:
 pnpm storybook
 ```
 
+## Getting started in Docker
+
+This should work as simple as running the following command:
+
+```sh
+docker compose up
+```
+
 Open [http://localhost:6006](http://localhost:6006) in your browser to see the components.
 
 ## Scripts
