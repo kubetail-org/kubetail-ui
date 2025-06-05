@@ -8,13 +8,14 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@chromatic-com/storybook",
     "@storybook/addon-themes",
-    'storybook-dark-mode',
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
+    '@vueless/storybook-dark-mode'
   ],
 
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
+  framework: "@storybook/react-vite",
+
+  core: {
+    builder: '@storybook/builder-vite',
   }
 };
 export default config;
