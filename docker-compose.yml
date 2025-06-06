@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      dockerfile_inline: |
+        FROM node:latest
+        WORKDIR /app
+        RUN corepack enable
+        COPY package*.json ./
+        RUN npm install
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    ports:
+      - 6006:6006
+    command: sh -c "npm run storybook -- --no-open"
+
+volumes:
+  node_modules:

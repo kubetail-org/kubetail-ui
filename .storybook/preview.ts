@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 import * as colors from 'tailwindcss/colors';
 
 import '../tailwind.css';
