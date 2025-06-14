@@ -1,0 +1,213 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Typography" />
+
+# Typography
+
+Kubetail UI uses a comprehensive typography system with semantic text colors and consistent sizing scales that work across light and dark themes.
+
+## Roboto Flex
+
+<div className="space-y-4 p-4">
+  <div className="text-2xl">Text 2XL Regular</div>
+  <div className="text-2xl">Text 2XL Medium</div>
+  <div className="text-xl">Text XL Regular</div>
+  <div className="text-xl">Text XL Medium</div>
+  <div className="text-lg">Text L Regular</div>
+  <div className="text-lg">Text L Medium</div>
+  <div className="text-md">Text M Regular</div>
+  <div className="text-md">Text M Medium</div>
+  <div className="text-sm">Text S Regular</div>
+  <div className="text-sm">Text S Medium</div>
+  <div className="text-xs">Text XS Regular</div>
+  <div className="text-xs">Text XS Medium</div>
+</div>
+
+```jsx
+<div className="text-2xl">Text 2XL Regular</div>
+<div className="text-2xl">Text 2XL Medium</div>
+<div className="text-xl">Text XL Regular</div>
+<div className="text-xl">Text XL Medium</div>
+<div className="text-lg">Text L Regular</div>
+<div className="text-lg">Text L Medium</div>
+<div className="text-md">Text M Regular</div>
+<div className="text-md">Text M Medium</div>
+<div className="text-sm">Text S Regular</div>
+<div className="text-sm">Text S Medium</div>
+<div className="text-xs">Text XS Regular</div>
+<div className="text-xs">Text XS Medium</div>
+```
+
+## Text Colors
+
+### Primary Text Colors
+
+<div className="space-y-4 p-4 border rounded-lg">
+  <div className="text-text">
+    <strong>text-text</strong> - Primary text color for main content
+  </div>
+  <div className="text-text-muted">
+    <strong>text-text-muted</strong> - Secondary text for less important content
+  </div>
+  <div className="text-text-disabled">
+    <strong>text-text-disabled</strong> - Disabled text state
+  </div>
+  <div className="bg-bg-primary text-text-on-color p-2 rounded">
+    <strong>text-text-on-color</strong> - Text on colored backgrounds
+  </div>
+</div>
+
+```jsx
+<div className="text-text">Primary text content</div>
+<div className="text-text-muted">Secondary descriptive text</div>
+<div className="text-text-disabled">Disabled text</div>
+<div className="bg-bg-primary text-text-on-color p-2 rounded">
+  Text on colored background
+</div>
+```
+
+## Font Sizes
+
+### Size Scale
+
+<div className="space-y-3 p-4 border rounded-lg">
+  <div className="text-xs">text-xs (12px) - Very small text for labels</div>
+  <div className="text-sm">text-sm (14px) - Small text for captions</div>
+  <div className="text-base">text-base (16px) - Default body text</div>
+  <div className="text-lg">text-lg (18px) - Large body text</div>
+  <div className="text-xl">text-xl (20px) - Small headings</div>
+  <div className="text-2xl">text-2xl (24px) - Medium headings</div>
+</div>
+
+```jsx
+<div className="text-xs">Extra small text</div>
+<div className="text-sm">Small text</div>
+<div className="text-base">Base text</div>
+<div className="text-lg">Large text</div>
+<div className="text-xl">Extra large text</div>
+<div className="text-2xl">2x large text</div>
+```
+
+## Font Weights
+
+<div className="space-y-2 p-4 border rounded-lg">
+  <div className="font-normal">font-normal - Regular weight (400)</div>
+  <div className="font-medium">font-medium - Medium weight (500)</div>
+  <div className="font-semibold">font-semibold - Semi-bold weight (600)</div>
+  <div className="font-bold">font-bold - Bold weight (700)</div>
+</div>
+
+```jsx
+<div className="font-normal">Regular text</div>
+<div className="font-medium">Medium weight text</div>
+<div className="font-semibold">Semi-bold text</div>
+<div className="font-bold">Bold text</div>
+```
+
+## Typography Examples
+
+### Headings
+
+<div className="space-y-4 p-4 border rounded-lg">
+  <h1 className="text-2xl font-bold text-text">Main Page Title</h1>
+  <h2 className="text-xl font-semibold text-text">Section Heading</h2>
+  <h3 className="text-lg font-medium text-text">Subsection Title</h3>
+  <h4 className="text-base font-medium text-text">Component Title</h4>
+</div>
+
+```jsx
+<h1 className="text-2xl font-bold text-text">Main Page Title</h1>
+<h2 className="text-xl font-semibold text-text">Section Heading</h2>
+<h3 className="text-lg font-medium text-text">Subsection Title</h3>
+<h4 className="text-base font-medium text-text">Component Title</h4>
+```
+
+### Body Text
+
+<div className="space-y-3 p-4 border rounded-lg">
+  <p className="text-base text-text">
+    This is the standard body text using text-base size. It provides good readability 
+    for longer content and maintains proper line height for comfortable reading.
+  </p>
+  <p className="text-sm text-text-muted">
+    This is secondary text using text-sm and text-text-muted. Perfect for 
+    descriptions, captions, or less important information.
+  </p>
+  <p className="text-xs text-text-muted">
+    Extra small text for labels, timestamps, or fine print details.
+  </p>
+</div>
+
+```jsx
+<p className="text-base text-text">
+  Standard body text for main content readability.
+</p>
+<p className="text-sm text-text-muted">
+  Secondary descriptive text with muted color.
+</p>
+<p className="text-xs text-text-muted">
+  Fine print or label text.
+</p>
+```
+
+### Lists
+
+<div className="p-4 border rounded-lg">
+  <ul className="space-y-2 text-base text-text list-disc list-inside">
+    <li>Primary list item with standard text</li>
+    <li>
+      Another important item
+      <ul className="ml-4 mt-1 space-y-1 text-sm text-text-muted list-disc list-inside">
+        <li>Nested item with muted text</li>
+        <li>Secondary nested information</li>
+      </ul>
+    </li>
+    <li>Final list item</li>
+  </ul>
+</div>
+
+```jsx
+<ul className="space-y-2 text-base text-text list-disc list-inside">
+  <li>Primary list item</li>
+  <li>Another item
+    <ul className="ml-4 mt-1 space-y-1 text-sm text-text-muted list-disc list-inside">
+      <li>Nested item</li>
+      <li>Secondary nested item</li>
+    </ul>
+  </li>
+</ul>
+```
+
+### Code and Technical Text
+
+<div className="space-y-3 p-4 border rounded-lg">
+  <p className="text-base text-text">
+    Use <code className="px-1 py-0.5 text-sm bg-bg-subtle text-text rounded">inline code</code> for 
+    technical references within text.
+  </p>
+  <pre className="p-3 bg-bg-subtle text-text text-sm rounded-md overflow-x-auto">
+    <code>{`function example() {
+  return "Code block example";
+}`}</code>
+  </pre>
+</div>
+
+```jsx
+<p className="text-base text-text">
+  Use <code className="px-1 py-0.5 text-sm bg-bg-subtle text-text rounded">
+    inline code
+  </code> for technical references.
+</p>
+<pre className="p-3 bg-bg-subtle text-text text-sm rounded-md">
+  <code>Code block content</code>
+</pre>
+```
+
+## Best Practices
+
+- Use `text-text` for primary content and headings
+- Use `text-text-muted` for secondary information, descriptions, and captions  
+- Use `text-text-disabled` only for truly disabled states
+- Use `text-text-on-color` when text appears on colored backgrounds
+- Combine font sizes with appropriate font weights for proper hierarchy
+- Maintain consistent spacing between typography elements using Tailwind's space utilities
