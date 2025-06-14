@@ -1,18 +1,18 @@
-import path from "path";
+import path from 'path';
 
-import { includeIgnoreFile } from "@eslint/compat";
-import js from "@eslint/js";
-import { configs, plugins } from "eslint-config-airbnb-extended";
-import { rules as prettierConfigRules } from "eslint-config-prettier";
-import prettierPlugin from "eslint-plugin-prettier";
+import { includeIgnoreFile } from '@eslint/compat';
+import js from '@eslint/js';
+import { configs, plugins } from 'eslint-config-airbnb-extended';
+import { rules as prettierConfigRules } from 'eslint-config-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
-export const projectRoot = path.resolve(".");
-export const gitignorePath = path.resolve(projectRoot, ".gitignore");
+export const projectRoot = path.resolve('.');
+export const gitignorePath = path.resolve(projectRoot, '.gitignore');
 
 const jsConfig = [
   // ESLint Recommended Rules
   {
-    name: "js/config",
+    name: 'js/config',
     ...js.configs.recommended,
   },
   // Stylistic Plugin
@@ -46,32 +46,32 @@ const typescriptConfig = [
 const prettierConfig = [
   // Prettier Plugin
   {
-    name: "prettier/plugin/config",
+    name: 'prettier/plugin/config',
     plugins: {
       prettier: prettierPlugin,
     },
   },
   // Prettier Config
   {
-    name: "prettier/config",
+    name: 'prettier/config',
     rules: {
       ...prettierConfigRules,
-      "prettier/prettier": "error",
+      'prettier/prettier': 'error',
     },
   },
 ];
 
 const customRulesConfig = [
   {
-    name: "custom/rules",
+    name: 'custom/rules',
     rules: {
-      "import-x/no-extraneous-dependencies": "off",
-      "import-x/extensions": "off",
-      "import-x/no-unresolved": "off",
-      "import-x/prefer-default-export": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/require-default-props": "off",
-      "prettier/prettier": ["error", { singleQuote: false, printWidth: 120 }],
+      'import-x/no-extraneous-dependencies': 'off',
+      'import-x/extensions': 'off',
+      'import-x/no-unresolved': 'off',
+      'import-x/prefer-default-export': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/require-default-props': 'off',
+      'prettier/prettier': ['error', { singleQuote: true, printWidth: 120 }],
     },
   },
 ];
@@ -79,6 +79,9 @@ const customRulesConfig = [
 export default [
   // Ignore .gitignore files/folder in eslint
   includeIgnoreFile(gitignorePath),
+  {
+    ignores: ['.storybook/**/*'],
+  },
   // Javascript Config
   ...jsConfig,
   // React Config

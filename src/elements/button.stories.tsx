@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button, type ButtonVariantProps } from "./button";
+import { Button, type ButtonVariantProps } from './button';
 
 const meta = {
-  title: "Elements/Button",
-  tags: ["autodocs"],
+  title: 'Elements/Button',
+  tags: ['autodocs'],
   component: Button,
 } satisfies Meta<typeof Button>;
 
@@ -28,8 +28,16 @@ const ButtonTemplate: Story = {
           {(['sm', 'md', 'lg', 'xl'] as ButtonVariantProps['size'][]).map((size) => (
             <tr key={size}>
               <td className="pr-3 pb-3">{size}</td>
-              <td className="pr-3 pb-3"><Button {...args} size={size}>{text}</Button></td>
-              <td className="pr-3 pb-3"><Button {...args} size={size} disabled>{text}</Button></td>
+              <td className="pr-3 pb-3">
+                <Button {...args} size={size}>
+                  {text}
+                </Button>
+              </td>
+              <td className="pr-3 pb-3">
+                <Button {...args} size={size} disabled>
+                  {text}
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -41,7 +49,6 @@ const ButtonTemplate: Story = {
 export const Default: Story = {
   ...ButtonTemplate,
 };
-
 
 export const Primary: Story = {
   ...ButtonTemplate,
