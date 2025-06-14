@@ -8,11 +8,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const fontFamilies = ['roboto', 'inter', 'noto-sans-mono'];
+const fontFamilies = ['roboto', 'inter', 'ubuntu-sans-mono'];
 
 export const TextExample: Story = {
   render: () => {
-    // Safelist: font-roboto font-inter font-noto-sans-mono
+    // Safelist: font-roboto font-inter font-ubuntu-sans-mono
 
     const sizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
     const weights = ['normal', 'medium'];

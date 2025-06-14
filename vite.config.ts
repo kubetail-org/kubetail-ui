@@ -8,10 +8,32 @@ import autoExternal from 'rollup-plugin-auto-external';
 import { defineConfig } from 'vite';
 // @ts-ignore
 import dts from 'unplugin-dts/vite';
+import Unfonts from 'unplugin-fonts/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    Unfonts({
+      fontsource: {
+        families: [
+          {
+            name: 'Roboto-Flex',
+            variable: true,
+          },
+          {
+            name: 'Inter',
+            variable: true,
+          },
+          {
+            name: 'Ubuntu-Sans-Mono',
+            variable: true,
+          },
+        ],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
