@@ -1,12 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
+import { Heading } from '@/elements/heading';
+
 const meta = {} satisfies Meta;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
+export const TextExample: Story = {
   render: () => (
     <>
       <div className="text-2xl font-normal">Text 2XL Regular</div>
@@ -24,3 +26,22 @@ export const Basic: Story = {
     </>
   ),
 };
+
+export const HeadingExample: Story = {
+  render: () => (
+    <div className="whitespace-nowrap">
+      <Heading size="9xl">Heading 9XL Semibold</Heading>
+      <Heading size="8xl">Heading 8XL Semibold</Heading>
+      <Heading size="7xl">Heading 7XL Semibold</Heading>
+      <Heading size="6xl">Heading 6XL Semibold</Heading>
+      <Heading size="5xl">Heading 5XL Semibold</Heading>
+      <Heading size="4xl">Heading 4XL Semibold</Heading>
+      <Heading size="3xl">Heading 3XL Semibold</Heading>
+      <Heading size="2xl">Heading 2XL Semibold</Heading>
+      <Heading size="xl">Heading XL Semibold</Heading>
+      <Heading size="lg">Heading L Semibold</Heading>
+      <Heading size="md">Heading M Semibold</Heading>
+      <Heading size="sm">Heading S Semibold</Heading>
+    </div>
+  ),
+}
