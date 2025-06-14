@@ -8,23 +8,46 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const fontFamilies = ['roboto', 'inter', 'noto-sans-mono'];
+
 export const TextExample: Story = {
-  render: () => (
-    <>
-      <div className="text-2xl font-normal">Text 2XL Regular</div>
-      <div className="text-2xl font-medium">Text 2XL Medium</div>
-      <div className="text-xl font-normal">Text XL Regular</div>
-      <div className="text-xl font-medium">Text XL Medium</div>
-      <div className="text-lg font-normal">Text L Regular</div>
-      <div className="text-lg font-medium">Text L Medium</div>
-      <div className="text-md font-normal">Text M Regular</div>
-      <div className="text-md font-medium">Text M Medium</div>
-      <div className="text-sm font-normal">Text S Regular</div>
-      <div className="text-sm font-medium">Text S Medium</div>
-      <div className="text-xs font-normal">Text XS Regular</div>
-      <div className="text-xs font-medium">Text XS Medium</div>
-    </>
-  ),
+  render: () => {
+    // Safelist: font-roboto font-inter font-noto-sans-mono
+
+    const sizes = ['2xl', 'xl', 'lg', 'md', 'sm', 'xs'];
+    const weights = ['normal', 'medium'];
+
+    return (
+      <table className="[&_td]:whitespace-nowrap">
+        {fontFamilies.map((family) => (
+          <>
+            {weights.map((weight) => (
+              <tbody key={`${family}/${weight}`}>
+                <tr>
+                  <td colSpan={2} className="pt-3">
+                    <div className="capitalize text-xl font-medium">
+                      {family} {weight}
+                    </div>
+                  </td>
+                </tr>
+                {sizes.map((size) => {
+                  const cls = `font-${family} font-${weight} text-${size}`;
+                  return (
+                    <tr className="align-middle" key={size}>
+                      <td className="h-[30px] pr-4 text-xs font-mono">&quot;{cls}&quot;</td>
+                      <td>
+                        <span className={cls}>The quick brown fox jumps over the lazy dog.</span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            ))}
+          </>
+        ))}
+      </table>
+    );
+  },
 };
 
 export const HeadingExample: Story = {
@@ -44,4 +67,4 @@ export const HeadingExample: Story = {
       <Heading size="sm">Heading S Semibold</Heading>
     </div>
   ),
-}
+};

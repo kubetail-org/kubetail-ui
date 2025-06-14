@@ -69,6 +69,7 @@ const customRulesConfig = [
       'import-x/extensions': 'off',
       'import-x/no-unresolved': 'off',
       'import-x/prefer-default-export': 'off',
+      'react/function-component-definition': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/require-default-props': 'off',
       'prettier/prettier': ['error', { singleQuote: true, printWidth: 120 }],

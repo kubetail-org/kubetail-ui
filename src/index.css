@@ -92,4 +92,9 @@
     background-color: var(--color-bg);
     color: var(--color-text);
   }
+
+  body {
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
