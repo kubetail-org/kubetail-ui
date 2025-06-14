@@ -50,7 +50,6 @@
     "@microsoft/api-extractor": "^7.52.8",
     "@storybook/addon-docs": "^9.0.9",
     "@storybook/addon-links": "^9.0.9",
-    "@storybook/addon-onboarding": "^9.0.9",
     "@storybook/addon-themes": "^9.0.9",
     "@storybook/builder-vite": "^9.0.9",
     "@storybook/react-vite": "^9.0.9",

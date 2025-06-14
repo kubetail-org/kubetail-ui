@@ -18,9 +18,11 @@ const ButtonTemplate: Story = {
     return (
       <table>
         <thead>
-          <th className="text-left pr-3">size</th>
-          <th className="text-left">{'<button>'}</th>
-          <th className="text-left">disabled</th>
+          <tr>
+            <th className="text-left pr-3">size</th>
+            <th className="text-left">{'<button>'}</th>
+            <th className="text-left">disabled</th>
+          </tr>
         </thead>
         <tbody>
           {(['sm', 'md', 'lg', 'xl'] as ButtonVariantProps['size'][]).map((size) => (
