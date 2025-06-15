@@ -1,5 +1,3 @@
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   /* color-bg */
   --color-bg: var(--color-white);
@@ -119,6 +117,7 @@
     --color-border-input: var(--color-zinc-500);
     --color-border-input-hover: var(--color-zinc-600);
     --color-border-disabled: var(--color-gray-800);
+    --color-border-focusRing: var(--color-blue-500);
 
     /* icon colors */
     --color-icon: var(--color-gray-50);

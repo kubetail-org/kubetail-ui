@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Fragment, useEffect, useRef, useState } from 'react';
 
-const meta = {} satisfies Meta;
+const meta = {
+  title: 'Design System/Typography',
+} satisfies Meta;
 
 export default meta;
 

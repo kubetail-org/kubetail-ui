@@ -27,6 +27,25 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Introduction',
+          'Design System',
+          [
+            'Introduction',
+            'Typography'
+          ],
+          'Elements',
+          [
+            'Introduction',
+            'Button',
+          ],
+        ],
+        locales: 'en-US',
+      },
+    },
   },
 
   decorators: [withThemeByClassName({
