@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./src/index.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-roboto: 'Roboto Flex Variable';
   --font-inter: 'Inter Variable';

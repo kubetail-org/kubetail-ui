@@ -70,3 +70,17 @@ export const Outline: Story = {
     variant: 'outline',
   },
 };
+
+export const Ghost: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'ghost',
+  },
+};
+
+export const Destructive: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'destructive',
+  },
+};
