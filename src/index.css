@@ -22,6 +22,7 @@
   --color-border-input: var(--color-zinc-200);
   --color-border-input-hover: var(--color-zinc-300);
   --color-border-disabled: var(--color-gray-200);
+  --color-border-focusRing: var(--color-blue-500);
 
   /* icon colors */
   --color-icon: var(--color-zinc-900);
