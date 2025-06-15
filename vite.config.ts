@@ -56,7 +56,7 @@ export default defineConfig({
     },
     rollupOptions: {
       plugins: [dts({ tsconfigPath: './tsconfig.app.json' }), autoExternal()],
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      external: ['@radix-ui/react-slot', 'react', 'react-dom', 'react/jsx-runtime'],
       output: {
         // Preserve the directory structure
         preserveModules: true,
