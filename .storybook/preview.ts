@@ -2,6 +2,7 @@ import type { Preview } from "@storybook/react-vite";
 import colors from 'tailwindcss/colors';
 
 import '../tailwind.css';
+import 'unfonts.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
 

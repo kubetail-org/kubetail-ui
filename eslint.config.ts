@@ -72,6 +72,7 @@ const customRulesConfig = [
       'react/function-component-definition': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/require-default-props': 'off',
+      'react/prop-types': 'off',
       'prettier/prettier': ['error', { singleQuote: true, printWidth: 120 }],
     },
   },
