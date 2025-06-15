@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Fragment, useEffect, useRef, useState } from 'react';
 
-import { Heading, type HeadingProps } from '@/elements/heading';
-
 const meta = {} satisfies Meta;
 
 export default meta;
@@ -11,38 +9,39 @@ type Story = StoryObj<typeof meta>;
 
 const fontFamilies = ['roboto', 'inter', 'ubuntu-sans-mono'];
 
-const SampleTextRow: React.FC<{
+const SampleRow: React.FC<{
   className: string;
-  classLabel: string;
-  rowKey: string | number;
-}> = ({ className, classLabel, rowKey }) => {
+  label: string;
+}> = ({ className, label }) => {
   const ref = useRef<HTMLSpanElement>(null);
 
   const [metrics, setMetrics] = useState({
     fontSize: '—',
-    lineHeight: '—',
+    fontWeight: '-',
     letterSpacing: '-',
+    lineHeight: '—',
   });
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // Wait for layout, then read the computed styles
-    const { fontSize, lineHeight, letterSpacing } = window.getComputedStyle(el);
-    setMetrics({ fontSize, lineHeight, letterSpacing });
+
+    const { fontSize, fontWeight, letterSpacing, lineHeight } = window.getComputedStyle(el);
+    setMetrics({ fontSize, fontWeight, letterSpacing, lineHeight });
   }, []);
 
   return (
-    <tr className="align-bottom border-t border-b border-gray-200" key={rowKey}>
+    <tr className="align-middle border-t border-b border-gray-200">
       <td className="pr-4">
         <span ref={ref} className={className}>
-          The quick brown fox jumps over the lazy dog.
+          {label}
         </span>
       </td>
       <td className="pr-3 text-xs font-mono">{metrics.fontSize}</td>
       <td className="pr-3 text-xs font-mono">{metrics.lineHeight}</td>
       <td className="pr-3 text-xs font-mono">{metrics.letterSpacing === 'normal' ? '0px' : metrics.letterSpacing}</td>
-      <td className="h-[30px] text-xs font-mono">{classLabel}</td>
+      <td className="pr-4 text-xs font-mono">{metrics.fontWeight}</td>
+      <td className="text-xs font-mono">{`"${className}"`}</td>
     </tr>
   );
 };
@@ -63,7 +62,7 @@ export const TextExample: Story = {
             {weights.map((weight) => (
               <tbody key={`${family}/${weight}`}>
                 <tr>
-                  <td colSpan={2} className="pt-10">
+                  <td colSpan={6} className="pt-10">
                     <div className="capitalize text-xl font-medium">
                       {family} {weight}
                     </div>
@@ -71,7 +70,13 @@ export const TextExample: Story = {
                 </tr>
                 {sizes.map((size) => {
                   const cls = `font-${family} font-${weight} text-${size}`;
-                  return <SampleTextRow key={size} rowKey={size} className={cls} classLabel={`"${cls}"`} />;
+                  return (
+                    <SampleRow
+                      key={size}
+                      className={cls}
+                      label="The quick brown fox jumped over the lazy dog. [0123456789]"
+                    />
+                  );
                 })}
               </tbody>
             ))}
@@ -82,72 +87,26 @@ export const TextExample: Story = {
   },
 };
 
-const SampleHeadingRow: React.FC<{
-  className: string;
-  classLabel: string;
-  size: HeadingProps['size'];
-}> = ({ className, classLabel, size }) => {
-  const ref = useRef(null);
-
-  const [metrics, setMetrics] = useState({
-    fontSize: '—',
-    lineHeight: '—',
-    letterSpacing: '-',
-  });
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    // Wait for layout, then read the computed styles
-    const { fontSize, lineHeight, letterSpacing } = window.getComputedStyle(el);
-    setMetrics({ fontSize, lineHeight, letterSpacing });
-  }, []);
-
-  return (
-    <tr className="align-bottom border-t border-b border-gray-200">
-      <td className="pr-4">
-        <Heading ref={ref} size={size} className={className}>
-          The quick brown fox jumps over the lazy dog.
-        </Heading>
-      </td>
-      <td className="pr-3 text-xs font-mono">{metrics.fontSize}</td>
-      <td className="pr-3 text-xs font-mono">{metrics.lineHeight}</td>
-      <td className="pr-3 text-xs font-mono">{metrics.letterSpacing === 'normal' ? '0px' : metrics.letterSpacing}</td>
-      <td className="h-[30px] text-xs font-mono">{`<Heading className=${classLabel} size="${size}" />`}</td>
-    </tr>
-  );
-};
-
 export const HeadingExample: Story = {
   render: () => {
     // Safelist: font-roboto font-inter font-ubuntu-sans-mono
-    const sizes = [
-      '9xl',
-      '8xl',
-      '7xl',
-      '6xl',
-      '5xl',
-      '4xl',
-      '3xl',
-      '2xl',
-      'xl',
-      'lg',
-      'md',
-      'sm',
-    ] as HeadingProps['size'][];
+    //           text-heading-sm text-heading-md text-heading-lg text-heading-xl text-heading-2xl
+    //           text-heading-3xl text-heading-4xl text-heading-5xl text-heading-6xl text-heading-7xl
+    //           text-heading-8xl text-heading-9xl
+    const sizes = ['9xl', '8xl', '7xl', '6xl', '5xl', '4xl', '3xl', '2xl', 'xl', 'lg', 'md', 'sm'];
 
     return (
       <table className="[&_td]:whitespace-nowrap border-collapse border-spacing-0">
         {fontFamilies.map((family) => (
           <tbody key={family}>
             <tr>
-              <td colSpan={2} className="pt-10">
+              <td colSpan={6} className="pt-10">
                 <div className="capitalize text-xl font-medium">{family}</div>
               </td>
             </tr>
             {sizes.map((size) => {
-              const cls = `font-${family}`;
-              return <SampleHeadingRow key={size} size={size} className={cls} classLabel={`"${cls}"`} />;
+              const cls = `font-${family} text-heading-${size}`;
+              return <SampleRow key={size} className={cls} label="Hello World" />;
             })}
           </tbody>
         ))}
