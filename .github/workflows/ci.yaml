@@ -5,6 +5,9 @@ on:
     branches:
       - '**'
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     runs-on: ubuntu-24.04
@@ -14,8 +17,6 @@ jobs:
         with:
           node-version: 22
       - uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - run: |
           pnpm install
           pnpm lint
@@ -28,8 +29,6 @@ jobs:
         with:
           node-version: 22
       - uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - run: |
           pnpm install
           pnpm test
@@ -42,8 +41,6 @@ jobs:
         with:
           node-version: 22
       - uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - run: |
           pnpm install
           pnpm build

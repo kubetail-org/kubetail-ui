@@ -21,8 +21,6 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
       - uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - run: pnpm install
       - run: pnpm build
       - run: /bin/bash set-version.sh ${{ steps.tagName.outputs.tag }}
