@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { AtomIcon } from 'lucide-react';
 
 import { Button, type ButtonVariantProps } from './button';
 
@@ -6,6 +7,9 @@ const meta = {
   title: 'Elements/Button',
   tags: ['autodocs'],
   component: Button,
+  argTypes: {
+    children: { control: 'text' },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -14,13 +18,13 @@ type Story = StoryObj<typeof meta>;
 
 const ButtonTemplate: Story = {
   render: ({ ...args }) => {
-    const text = 'Button';
+    const children = args.children ? args.children : 'Button';
     return (
       <table>
         <thead>
           <tr>
             <th className="text-left pr-3">size</th>
-            <th className="text-left">{'<button>'}</th>
+            <th className="text-left">default</th>
             <th className="text-left">disabled</th>
           </tr>
         </thead>
@@ -30,12 +34,12 @@ const ButtonTemplate: Story = {
               <td className="pr-3 pb-3">{size}</td>
               <td className="pr-3 pb-3">
                 <Button {...args} size={size}>
-                  {text}
+                  {children}
                 </Button>
               </td>
               <td className="pr-3 pb-3">
                 <Button {...args} size={size} disabled>
-                  {text}
+                  {children}
                 </Button>
               </td>
             </tr>
@@ -82,5 +86,47 @@ export const Destructive: Story = {
   ...ButtonTemplate,
   args: {
     variant: 'destructive',
+  },
+};
+
+export const Link: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'link',
+  },
+};
+
+export const Icon: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'primary',
+    size: 'icon',
+    children: <AtomIcon />,
+  },
+};
+
+export const LeadingIcon: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'primary',
+    size: 'icon',
+    children: (
+      <>
+        <AtomIcon /> Button
+      </>
+    ),
+  },
+};
+
+export const TrailingIcon: Story = {
+  ...ButtonTemplate,
+  args: {
+    variant: 'primary',
+    size: 'sm',
+    children: (
+      <>
+        Button <AtomIcon />
+      </>
+    ),
   },
 };
