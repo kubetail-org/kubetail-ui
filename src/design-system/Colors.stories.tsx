@@ -33,7 +33,7 @@ export const BackgroundColors: Story = {
         {bgClasses.map((bgCls) => (
           <li>
             <div className={cn('w-[40px] h-[40px] border border-dotted border-gray-200', bgCls)} />
-            <code className="text-xs text-text-muted">className="{bgCls}"</code>
+            <code className="text-xs text-text-muted">&quot;{bgCls}&quot;</code>
           </li>
         ))}
       </ul>
@@ -56,7 +56,7 @@ export const BorderColors: Story = {
         {classes.map((cls) => (
           <li>
             <div className={cn('w-[40px] h-[40px] border', cls)} />
-            <code className="text-xs text-text-muted">className="border {cls}"</code>
+            <code className="text-xs text-text-muted">&quot;border {cls}&quot;</code>
           </li>
         ))}
       </ul>
@@ -66,16 +66,13 @@ export const BorderColors: Story = {
 
 export const IconColors: Story = {
   render: () => {
-    const classes = [
-      'text-icon',
-      'text-icon-disabled',
-    ];
+    const classes = ['text-icon', 'text-icon-disabled'];
     return (
       <ul className="space-y-4">
         {classes.map((cls) => (
           <li>
             <AtomIcon className={cn('w-[40px] h-[40px]', cls)} />
-            <code className="text-xs text-text-muted">className="{cls}"</code>
+            <code className="text-xs text-text-muted">&quot;{cls}&quot;</code>
           </li>
         ))}
       </ul>
@@ -85,18 +82,13 @@ export const IconColors: Story = {
 
 export const TextColors: Story = {
   render: () => {
-    const classes = [
-      'text-text',
-      'text-text-muted',
-      'text-text-disabled',
-      'text-text-on-color',
-    ];
+    const classes = ['text-text', 'text-text-muted', 'text-text-disabled', 'text-text-on-color'];
     return (
       <ul className="space-y-4">
         {classes.map((cls) => (
           <li>
             <div className={cls}>Hello world</div>
-            <code className="text-xs text-text-muted">className="{cls}"</code>
+            <code className="text-xs text-text-muted">&quot;{cls}&quot;</code>
           </li>
         ))}
       </ul>

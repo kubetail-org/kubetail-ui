@@ -4,7 +4,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Kubetail-UI
 
-Kubetail-UI is the fun, new way to add Kubetail shared styles and React components to your apps.
+Kubetail-UI is the fun, new, easy way to add Kubetail shared styles and React components to your Kubetail-related apps and projects.
 
 ## Quickstart
 
@@ -21,9 +21,26 @@ Assuming you've already configured your project to use Tailwind v4, the next ste
 @import "@kubetail/ui";
 ```
 
-Once the stylesheet is installed you can use all of Kubetail-UI's custom styles with Tailwind's class utilities. For example to add text with the custom "heading-4xl" and "text-2xl" styles and to draw a box with the color "bg-error-strong" you can do the following:
+And add the `@kubetail/ui` javascript files to the content directories list in your `tailwind.config.ts` file:
+
+```typescript
+import type { Config } from 'tailwindcss';
+
+const config = {
+  content: [
+    './src/**/*.{ts,tsx}',
+    './node_modules/@kubetail/ui/**/*.js',
+  ],
+} satisfies Config;
+
+export default config;
+```
+
+Now you can use all of Kubetail-UI's custom styles with Tailwind's utility classes and import components from `@kubetail/ui`:
 
 ```tsx
+import { Button } from '@kubetail/ui/elements/button';
+
 export default function Page() {
   return (
     <html>
@@ -31,6 +48,7 @@ export default function Page() {
         <h1 className="text-heading-4xl">My Cool Project</h1>
         <div className="text-2xl">This is a box with color &quot;bg-error-strong&quot;:</div>
         <div className="h-[100px] w-[100px] bg-bg-error-strong" />
+        <Button variant="xl">Click me</Button>
       </body>
     </html>
   );

@@ -9,8 +9,6 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const fontFamilies = ['roboto', 'inter', 'ubuntu-sans-mono'];
-
 const SampleRow: React.FC<{
   className: string;
   label: string;
@@ -42,7 +40,7 @@ const SampleRow: React.FC<{
         </td>
       </tr>
       <tr className="align-top h-[50px]">
-        <td className="text-xs font-mono space-x-2">
+        <td className="text-xs font-mono space-x-2 text-gray-500">
           <span>{`"${className}"`}</span>
           <span>{metrics.fontSize}</span>
           <span>{metrics.lineHeight}</span>
