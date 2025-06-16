@@ -21,14 +21,14 @@ Assuming you've already configured your project to use Tailwind v4, the next ste
 @import "@kubetail/ui";
 ```
 
-And add the `@kubetail/ui` javascript files to the content directories list in your `tailwind.config.ts` file:
+Then add the `@kubetail/ui` javascript files to the `content` list in your `tailwind.config.ts` file:
 
 ```typescript
 import type { Config } from 'tailwindcss';
 
 const config = {
   content: [
-    './src/**/*.{ts,tsx}',
+    ...
     './node_modules/@kubetail/ui/**/*.js',
   ],
 } satisfies Config;
@@ -54,33 +54,6 @@ export default function Page() {
   );
 }
 ```
-
-## Components
-
-To use a specific component in your project you'll need to ensure that its dependencies are installed in your project. For example, to add a Kubetail-UI button to your project you'll need to install the `@radix-ui/react-slot` library:
-
-```console
-pnpm install @radix-ui/react-slot
-```
-
-Then you can can import the component from the `@kubetail/ui` library and use it in your project:
-
-```tsx
-import { Button } from '@kubetail/ui/elements/button';
-
-export default function Page() {
-  return (
-    <html>
-      <body>
-        <h1 className="text-heading-2xl">Example Button</h1>
-        <Button variant="xl">This is a cool button</Button>
-      </body>
-    </html>
-  );
-}
-```
-
-The components provided by this library are available under the Elements list.
 
 ## Fonts
 
