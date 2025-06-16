@@ -22,14 +22,6 @@ export default defineConfig({
             name: 'Roboto-Flex',
             variable: true,
           },
-          {
-            name: 'Inter',
-            variable: true,
-          },
-          {
-            name: 'Ubuntu-Sans-Mono',
-            variable: true,
-          },
         ],
       },
     }),
