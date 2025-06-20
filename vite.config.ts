@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
+import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
 // @ts-ignore
 import dts from 'unplugin-dts/vite';
@@ -38,7 +39,7 @@ export default defineConfig({
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
-        resolve(__dirname, 'src/index.css'),
+        resolve(__dirname, 'src/plugin.ts'),
         ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), {
           ignore: ['**/*.test.tsx', '**/*.stories.tsx'],
         }),
@@ -47,7 +48,21 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      plugins: [dts({ tsconfigPath: './tsconfig.app.json' }), autoExternal()],
+      plugins: [
+        dts({ tsconfigPath: './tsconfig.app.json' }),
+        autoExternal(),
+        copy({
+          targets: [
+            {
+              src: 'src/index.css',
+              dest: 'dist',
+              rename: 'index.css',
+            },
+          ],
+          // ensure it runs after everything is written
+          hook: 'writeBundle',
+        }),
+      ],
       external: [
         '@heroicons/react/20/solid',
         '@heroicons/react/24/solid',

@@ -1,5 +1,4 @@
 @plugin "@tailwindcss/forms";
-@import "react-day-picker/style.css";
 
 @theme {
   --color-accent: var(--color-amber-200);

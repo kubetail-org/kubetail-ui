@@ -11,6 +11,10 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./plugin": {
+      "import": "./dist/plugin.js",
+      "require": "./dist/plugin.cjs"
+    },
     "./elements": {
       "import": "./dist/elements/index.js",
       "require": "./dist/elements/index.cjs"
@@ -88,6 +92,7 @@
     "prettier": "^3.5.3",
     "react-day-picker": "^9.7.0",
     "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-copy": "^3.5.0",
     "storybook": "^9.0.9",
     "tslib": "^2.8.1",
     "typescript": "5.8.3",
