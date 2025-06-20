@@ -32,16 +32,22 @@ const preview: Preview = {
         method: 'alphabetical',
         order: [
           'Introduction',
-          'Design System',
-          [
-            'Overview',
-            'Colors',
-            'Typography',
-          ],
           'Elements',
           [
-            'Overview',
-            'Button',
+            'Introduction'
+          ],
+          'V2',
+          [
+            'Design System',
+            [
+              'Overview',
+              'Colors',
+              'Typography',
+            ],
+            'Elements',
+            [
+              'Introduction',
+            ],
           ],
         ],
         locales: 'en-US',

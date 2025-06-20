@@ -34,6 +34,12 @@
   --color-chrome-foreground-muted: var(--color-gray-500);
   --color-chrome-foreground-subtle: var(--color-gray-300);
   --color-chrome-divider: var(--color-gray-300);
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakooint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
 }
 
 @layer base {
@@ -71,16 +77,31 @@
   }
 }
 
+@layer utilities {
+  .max-w-screen-sm  { max-width: 540px; }
+  .max-w-screen-md  { max-width: 720px; }
+  .max-w-screen-lg  { max-width: 960px; }
+  .max-w-screen-xl  { max-width: 1140px; }
+  .max-w-screen-2xl { max-width: 1320px; }
+}
+
 /* Default styles */
 @layer base {
   html {
     @apply bg-background;
     @apply text-foreground;
-    @apply border-border;
   }
 
   body {
     @apply antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .border {
+    @apply border-border;
+  }
+
+  .ring {
+    @apply ring-ring;
   }
 }
