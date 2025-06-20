@@ -39,15 +39,9 @@ importers:
       '@eslint/js':
         specifier: ^9.28.0
         version: 9.29.0
-      '@fontsource-variable/inter':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@fontsource-variable/roboto-flex':
         specifier: ^5.2.6
         version: 5.2.6
-      '@fontsource-variable/ubuntu-sans-mono':
-        specifier: ^5.2.8
-        version: 5.2.8
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.1.0)
@@ -114,6 +108,9 @@ importers:
       '@vueless/storybook-dark-mode':
         specifier: ^9.0.5
         version: 9.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
       eslint:
         specifier: ^9.28.0
         version: 9.29.0(jiti@2.4.2)
@@ -531,14 +528,8 @@ packages:
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
 
-  '@fontsource-variable/inter@5.2.6':
-    resolution: {integrity: sha512-jks/bficUPQ9nn7GvXvHtlQIPudW7Wx8CrlZoY8bhxgeobNxlQan8DclUJuYF2loYRrGpfrhCIZZspXYysiVGg==}
-
   '@fontsource-variable/roboto-flex@5.2.6':
     resolution: {integrity: sha512-8jUDGkb6gRUexJkdUz1GThB9fshF7ENe/vVmtf+nz2MxQZZsrrYT92tST3xM+xf/BnoqL6yRkGdv9zNITiyYCw==}
-
-  '@fontsource-variable/ubuntu-sans-mono@5.2.8':
-    resolution: {integrity: sha512-t39VVjLOAIjunr1m3PFMN8V+5FfsW4OUj3iLqJHHHGcHvopl+j3s+WIFkgpvk0FU302Or0Bv+/9ghX9EaRwPvQ==}
 
   '@heroicons/react@2.2.0':
     resolution: {integrity: sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==}
@@ -4125,11 +4116,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.9': {}
 
-  '@fontsource-variable/inter@5.2.6': {}
-
   '@fontsource-variable/roboto-flex@5.2.6': {}
-
-  '@fontsource-variable/ubuntu-sans-mono@5.2.8': {}
 
   '@heroicons/react@2.2.0(react@19.1.0)':
     dependencies:
