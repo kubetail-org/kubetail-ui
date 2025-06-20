@@ -1,15 +1,31 @@
 /// <reference types="vitest" />
 import { resolve } from 'path';
 
-import typescript from '@rollup/plugin-typescript';
-import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react-swc';
 import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
 import { defineConfig } from 'vite';
+// @ts-ignore
+import dts from 'unplugin-dts/vite';
+import Unfonts from 'unplugin-fonts/vite';
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    Unfonts({
+      fontsource: {
+        families: [
+          {
+            name: 'Roboto-Flex',
+            variable: true,
+          },
+        ],
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -17,35 +33,32 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    cssCodeSplit: true,
+    cssMinify: false,
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
-        resolve(__dirname, 'src/plugin.ts'),
-        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), { ignore: ['**/*\.test\.tsx', '**/*\.stories\.tsx'] }),
+        resolve(__dirname, 'src/index.css'),
+        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), {
+          ignore: ['**/*.test.tsx', '**/*.stories.tsx'],
+        }),
       ],
       name: 'kubetail-ui',
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      plugins: [
-        typescript({
-          sourceMap: false,
-          declaration: true,
-          outDir: "dist",
-          include: 'src/**/*',
-          exclude: [
-            'src/**/*.stories.ts',
-            'src/**/*.stories.tsx'
-          ],
-          allowImportingTsExtensions: false // https://github.com/rollup/plugins/discussions/1536
-        }),
-        autoExternal(),
-      ],
+      plugins: [dts({ tsconfigPath: './tsconfig.app.json' }), autoExternal()],
       external: [
         '@heroicons/react/20/solid',
         '@heroicons/react/24/solid',
+        '@radix-ui/react-dropdown-menu',
+        '@radix-ui/react-popover',
+        '@radix-ui/react-slot',
+        '@radix-ui/react-tabs',
         '@restart/ui/Button',
+        'lucide-react',
         'react',
+        'react-day-picker',
         'react-dom',
         'react/jsx-runtime',
         'tailwindcss/colors',
@@ -54,7 +67,7 @@ export default defineConfig({
       output: {
         // Preserve the directory structure
         preserveModules: true,
-        preserveModulesRoot: 'src'
+        preserveModulesRoot: 'src',
       },
     },
   },

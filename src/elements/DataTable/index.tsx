@@ -66,7 +66,7 @@ DataTable.displayName = 'DataTable';
 
 type DataTableType = typeof DataTable;
 
-interface DataTableExportType extends DataTableType {
+export interface DataTableExportType extends DataTableType {
   Body: typeof Body;
   DataCell: typeof DataCell;
   Header: typeof Header;

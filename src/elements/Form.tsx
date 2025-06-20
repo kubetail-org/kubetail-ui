@@ -45,7 +45,7 @@ Form.displayName = 'Form';
 
 type FormType = typeof Form;
 
-interface FormExportType extends FormType {
+export interface FormExportType extends FormType {
   Check: typeof FormCheck;
   Control: typeof FormControl;
   Group: typeof FormGroup;
