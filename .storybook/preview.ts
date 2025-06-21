@@ -1,7 +1,8 @@
 import type { Preview } from "@storybook/react-vite";
-import * as colors from 'tailwindcss/colors';
+import colors from 'tailwindcss/colors';
 
 import '../tailwind.css';
+import 'unfonts.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
 
@@ -24,6 +25,32 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+    },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Introduction',
+          'Elements',
+          [
+            'Introduction'
+          ],
+          'V2',
+          [
+            'Design System',
+            [
+              'Overview',
+              'Colors',
+              'Typography',
+            ],
+            'Elements',
+            [
+              'Introduction',
+            ],
+          ],
+        ],
+        locales: 'en-US',
       },
     },
   },

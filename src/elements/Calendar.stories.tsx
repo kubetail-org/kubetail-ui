@@ -22,7 +22,7 @@ export const Default: Story = {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="rounded-md border"
+        className="rounded-md border border-border"
       />
     );
   },

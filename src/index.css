@@ -1,0 +1,106 @@
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-accent: var(--color-amber-200);
+  --color-accent-foreground: var(--color-gray-800);
+  --color-background: var(--color-white);
+  --color-border: var(--color-gray-200);
+  --color-danger: var(--color-red-500);
+  --color-danger-foreground: var(--color-white);
+  --color-foreground: var(--color-gray-900);
+  --color-input: var(--color-gray-300);
+  --color-muted: var(--color-gray-100);
+  --color-muted-foreground: var(--color-gray-400);
+  --color-popover: var(--color-white);
+  --color-popover-foreground: var(--color-gray-900);
+  --color-primary: rgb(69 110 222);
+  --color-primary-foreground: var(--color-white);
+  --color-ring: var(--color-blue-400);
+  --color-secondary: var(--color-blue-100);
+  --color-secondary-foreground: var(--color-gray-800);
+  --color-chrome-50: var(--color-gray-50);
+  --color-chrome-100: var(--color-gray-100);
+  --color-chrome-200: var(--color-gray-200);
+  --color-chrome-300: var(--color-gray-300);
+  --color-chrome-400: var(--color-gray-400);
+  --color-chrome-500: var(--color-gray-500);
+  --color-chrome-600: var(--color-gray-600);
+  --color-chrome-700: var(--color-gray-700);
+  --color-chrome-800: var(--color-gray-800);
+  --color-chrome-900: var(--color-gray-900);
+  --color-chrome-950: var(--color-gray-950);
+  --color-chrome-foreground: var(--color-gray-800);
+  --color-chrome-foreground-muted: var(--color-gray-500);
+  --color-chrome-foreground-subtle: var(--color-gray-300);
+  --color-chrome-divider: var(--color-gray-300);
+
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakooint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+}
+
+@layer base {
+  :root[class~="dark"] {
+    --color-accent: var(--color-amber-200);
+    --color-accent-foreground: var(--color-gray-800);
+    --color-background: var(--color-neutral-800);
+    --color-border: var(--color-gray-200);
+    --color-danger: var(--color-red-500);
+    --color-danger-foreground: var(--color-white);
+    --color-foreground: var(--color-white);
+    --color-input: var(--color-gray-300);
+    --color-muted: var(--color-gray-100);
+    --color-muted-foreground: var(--color-gray-600);
+    --color-popover: var(--color-neutral-800);
+    --color-popover-foreground: var(--color-white);
+    --color-primary: var(--color-blue-500);
+    --color-primary-foreground: var(--color-white);
+    --color-ring: var(--color-blue-600);
+    --color-secondary: var(--color-blue-100);
+    --color-secondary-foreground: var(--color-gray-800);
+    --color-chrome-50: var(--color-gray-950);
+    --color-chrome-100: var(--color-gray-900);
+    --color-chrome-200: var(--color-gray-800);
+    --color-chrome-300: var(--color-gray-700);
+    --color-chrome-400: var(--color-gray-600);
+    --color-chrome-500: var(--color-gray-500);
+    --color-chrome-600: var(--color-gray-400);
+    --color-chrome-700: var(--color-gray-300);
+    --color-chrome-800: var(--color-gray-200);
+    --color-chrome-900: var(--color-gray-100);
+    --color-chrome-950: var(--color-gray-50);
+    --color-chrome-foreground: var(--color.white);
+    --color-chrome-divider: var(--color-gray-700);
+  }
+}
+
+@layer utilities {
+  .max-w-screen-sm  { max-width: 540px; }
+  .max-w-screen-md  { max-width: 720px; }
+  .max-w-screen-lg  { max-width: 960px; }
+  .max-w-screen-xl  { max-width: 1140px; }
+  .max-w-screen-2xl { max-width: 1320px; }
+}
+
+/* Default styles */
+@layer base {
+  html {
+    @apply bg-background;
+    @apply text-foreground;
+  }
+
+  body {
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .border {
+    @apply border-border;
+  }
+
+  .ring {
+    @apply ring-ring;
+  }
+}
