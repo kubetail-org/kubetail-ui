@@ -39,7 +39,6 @@ export default defineConfig({
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
-        resolve(__dirname, 'src/plugin.ts'),
         ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), {
           ignore: ['**/*.test.tsx', '**/*.stories.tsx'],
         }),

@@ -11,10 +11,6 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./plugin": {
-      "import": "./dist/plugin.js",
-      "require": "./dist/plugin.cjs"
-    },
     "./elements": {
       "import": "./dist/elements/index.js",
       "require": "./dist/elements/index.cjs"
