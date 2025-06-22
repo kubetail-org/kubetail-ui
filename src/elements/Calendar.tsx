@@ -1,3 +1,4 @@
+/*
 'use client';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,8 +9,8 @@ import { cn } from '@/lib/utils';
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
-const IconLeft = () => <ChevronLeft className="h-4 w-4" />;
-const IconRight = () => <ChevronRight className="h-4 w-4" />;
+const ChevronLeftIcon = () => <ChevronLeft className="h-4 w-4" />;
+const ChevronRightIcon = () => <ChevronRight className="h-4 w-4" />;
 
 function Calendar({
   className,
@@ -51,7 +52,9 @@ function Calendar({
         day_hidden: 'invisible',
         ...classNames,
       }}
-      components={{ IconLeft, IconRight }}
+      components={{ 
+        Chevron: ({ orientation }) => orientation === 'left' ? <ChevronLeftIcon /> : <ChevronRightIcon /> 
+      }}
       {...props}
     />
   );
@@ -60,3 +63,31 @@ function Calendar({
 Calendar.displayName = 'Calendar';
 
 export { Calendar };
+*/
+
+import { DayPicker, getDefaultClassNames } from 'react-day-picker';
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+
+export function Calendar({ showOutsideDays = true, ...props }) {
+  const defaultClassNames = getDefaultClassNames();
+  return (
+    <DayPicker
+      mode="single"
+      showOutsideDays={showOutsideDays}
+      classNames={{
+        today: 'bg-accent text-accent-foreground',
+        selected:
+          'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground',
+        root: `${defaultClassNames.root} shadow-lg p-5`,
+        chevron: `${defaultClassNames.chevron} fill-amber-500`,
+        weekday: 'text-muted-foreground font-normal text-sm',
+        day_selected:
+          'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground',
+        day_today: 'bg-accent text-accent-foreground',
+        outside: 'text-muted-foreground',
+      }}
+      {...props}
+    />
+  );
+}

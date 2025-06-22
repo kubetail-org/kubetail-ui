@@ -42,12 +42,7 @@ export const Context = createContext<SortByContext>({
   onSortByChange: noop,
 });
 
-const Header = ({
-  className,
-  sortBy,
-  onSortByChange,
-  ...props
-}: Props) => {
+const Header = ({ className, sortBy, onSortByChange, ...props }: Props) => {
   const context = useMemo(
     () => ({
       sortBy: sortBy || null,

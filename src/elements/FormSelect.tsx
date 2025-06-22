@@ -18,30 +18,17 @@ import { cn } from '@/lib/utils';
 
 import { Context as FormGroupContext } from './FormGroup';
 
-const baseCls = 'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50';
+const baseCls =
+  'mt-1 block w-full h-10 rounded bg-background border border-input py-2 pl-3 pr-10 text-sm ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50';
 
 interface Props extends React.ComponentPropsWithoutRef<'select'> {
   id?: string;
 }
 
-const FormSelect = forwardRef((
-  {
-    className,
-    id,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLSelectElement>,
-) => {
+const FormSelect = forwardRef(({ className, id, ...props }: Props, ref: React.ForwardedRef<HTMLSelectElement>) => {
   const { controlId } = useContext(FormGroupContext);
 
-  return (
-    <select
-      {...props}
-      ref={ref}
-      id={id || controlId}
-      className={cn(baseCls, className)}
-    />
-  );
+  return <select {...props} ref={ref} id={id || controlId} className={cn(baseCls, className)} />;
 });
 
 FormSelect.displayName = 'FormSelect';

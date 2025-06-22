@@ -14,9 +14,7 @@
 
 import type { ComponentPropsWithoutRef } from 'react';
 
-const Row = (props: ComponentPropsWithoutRef<'tr'>) => (
-  <tr {...props} />
-);
+const Row = (props: ComponentPropsWithoutRef<'tr'>) => <tr {...props} />;
 
 Row.displayName = 'DataTableRow';
 

@@ -19,18 +19,32 @@ const ButtonTemplate: Story = {
     return (
       <table>
         <thead>
-          <th className="text-left pr-3">size</th>
-          <th className="text-left">{'<button>'}</th>
-          <th className="text-left">as=&quot;a&quot;</th>
-          <th className="text-left">disabled</th>
+          <tr>
+            <th className="text-left pr-3">size</th>
+            <th className="text-left">{'<button>'}</th>
+            <th className="text-left">as=&quot;a&quot;</th>
+            <th className="text-left">disabled</th>
+          </tr>
         </thead>
         <tbody>
           {(['xs', 'sm', 'md', 'lg', 'xl'] as ButtonVariantProps['size'][]).map((size) => (
             <tr key={size}>
               <td className="pr-3">{size}</td>
-              <td className="pr-2"><Button {...args} size={size}>{text}</Button></td>
-              <td className="pr-2"><Button {...args} size={size} as="a">{text}</Button></td>
-              <td className="pr-2"><Button {...args} size={size} disabled>{text}</Button></td>
+              <td className="pr-2">
+                <Button {...args} size={size}>
+                  {text}
+                </Button>
+              </td>
+              <td className="pr-2">
+                <Button {...args} size={size} as="a">
+                  {text}
+                </Button>
+              </td>
+              <td className="pr-2">
+                <Button {...args} size={size} disabled>
+                  {text}
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>

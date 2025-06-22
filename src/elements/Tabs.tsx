@@ -53,9 +53,4 @@ const TabsContent = forwardRef<TC1, TC2>(({ className, ...props }, ref) => (
 ));
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 
-export {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-};
+export { Tabs, TabsList, TabsTrigger, TabsContent };
