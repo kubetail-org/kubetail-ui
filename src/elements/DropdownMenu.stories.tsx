@@ -36,29 +36,15 @@ export const Default: Story = {
         <DropdownMenuLabel>Label 1</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Option 1
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Option 2
-          </DropdownMenuItem>
+          <DropdownMenuItem>Option 1</DropdownMenuItem>
+          <DropdownMenuItem>Option 2</DropdownMenuItem>
           <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
-              Language
-            </DropdownMenuSubTrigger>
+            <DropdownMenuSubTrigger>Language</DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
-                <DropdownMenuCheckboxItem
-                  checked
-                >
-                  English
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                  Spanish
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem>
-                  Go
-                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem checked>English</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>Spanish</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>Go</DropdownMenuCheckboxItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>

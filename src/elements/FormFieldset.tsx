@@ -18,19 +18,12 @@ import { cn } from '@/lib/utils';
 
 const baseCls = 'space-y-8';
 
-const FormFieldset = forwardRef((
-  {
-    className,
-    ...props
-  }: React.ComponentPropsWithoutRef<'fieldset'>,
-  ref: React.ForwardedRef<HTMLFieldSetElement>,
-) => (
-  <fieldset
-    {...props}
-    ref={ref}
-    className={cn(baseCls, className)}
-  />
-));
+const FormFieldset = forwardRef(
+  (
+    { className, ...props }: React.ComponentPropsWithoutRef<'fieldset'>,
+    ref: React.ForwardedRef<HTMLFieldSetElement>,
+  ) => <fieldset {...props} ref={ref} className={cn(baseCls, className)} />,
+);
 
 FormFieldset.displayName = 'FormFieldset';
 

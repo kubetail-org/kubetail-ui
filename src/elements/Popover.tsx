@@ -15,12 +15,7 @@ const PopoverTrigger = PopoverPrimitive.Trigger;
 type T1 = ElementRef<typeof PopoverPrimitive.Content>;
 type T2 = ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>;
 
-const PopoverContent = forwardRef<T1, T2>(({
-  className,
-  align = 'center',
-  sideOffset = 4,
-  ...props
-}, ref) => (
+const PopoverContent = forwardRef<T1, T2>(({ className, align = 'center', sideOffset = 4, ...props }, ref) => (
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
@@ -36,10 +31,4 @@ const PopoverContent = forwardRef<T1, T2>(({
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
-export {
-  Popover,
-  PopoverAnchor,
-  PopoverClose,
-  PopoverContent,
-  PopoverTrigger,
-};
+export { Popover, PopoverAnchor, PopoverClose, PopoverContent, PopoverTrigger };

@@ -48,16 +48,7 @@ export const buttonVariants = cva(
   },
 );
 
-const Button = forwardRef((
-  {
-    as,
-    children,
-    className,
-    disabled,
-    ...props
-  }: ButtonProps & ButtonVariantProps,
-  ref,
-) => {
+const Button = forwardRef(({ as, children, className, disabled, ...props }: ButtonProps & ButtonVariantProps, ref) => {
   const [ariaButtonProps, { tagName: Tag }] = useButtonProps({
     tagName: as,
     disabled,
@@ -65,12 +56,7 @@ const Button = forwardRef((
   });
 
   return (
-    <Tag
-      {...props}
-      {...ariaButtonProps}
-      ref={ref}
-      className={cn(buttonVariants(props), className)}
-    >
+    <Tag {...props} {...ariaButtonProps} ref={ref} className={cn(buttonVariants(props), className)}>
       {children}
     </Tag>
   );

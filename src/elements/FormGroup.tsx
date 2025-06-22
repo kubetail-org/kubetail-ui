@@ -17,7 +17,7 @@ import { createContext, forwardRef, useMemo } from 'react';
 import { cn } from '@/lib/utils';
 
 type ContextState = {
-  controlId: string | undefined,
+  controlId: string | undefined;
 };
 
 const Context = createContext({} as ContextState); // for passing `controlId`
@@ -27,23 +27,12 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
   controlId?: string;
 }
 
-const FormGroup = forwardRef((
-  {
-    className,
-    controlId,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLDivElement>,
-) => {
+const FormGroup = forwardRef(({ className, controlId, ...props }: Props, ref: React.ForwardedRef<HTMLDivElement>) => {
   const context = useMemo(() => ({ controlId }), [controlId]);
 
   return (
     <Context.Provider value={context}>
-      <div
-        {...props}
-        ref={ref}
-        className={cn(baseCls, className)}
-      />
+      <div {...props} ref={ref} className={cn(baseCls, className)} />
     </Context.Provider>
   );
 });

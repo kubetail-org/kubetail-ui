@@ -38,19 +38,12 @@ interface Props extends ComponentPropsWithoutRef<'th'> {
   initialSortDirection?: 'ASC' | 'DESC';
 }
 
-const HeaderCell = ({
-  children,
-  className,
-  sortField,
-  initialSortDirection = 'ASC',
-  ...props
-}: Props) => {
+const HeaderCell = ({ children, className, sortField, initialSortDirection = 'ASC', ...props }: Props) => {
   const { size } = useContext(TableContext);
 
   const { sortBy, onSortByChange } = useContext(HeaderContext);
 
-  const sortDirection = sortBy && sortBy.field === sortField
-    ? sortBy.direction : initialSortDirection;
+  const sortDirection = sortBy && sortBy.field === sortField ? sortBy.direction : initialSortDirection;
 
   const handleKeyPress = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -61,14 +54,7 @@ const HeaderCell = ({
   };
 
   return (
-    <th
-      {...props}
-      className={cn(
-        baseCN,
-        sizeCNMap[size],
-        className,
-      )}
-    >
+    <th {...props} className={cn(baseCN, sizeCNMap[size], className)}>
       {sortField && (
         <span
           className="group inline-flex cursor-pointer"

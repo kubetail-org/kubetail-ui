@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState, useEffect } from 'react';
 
@@ -50,14 +52,17 @@ export const Sortable: Story = {
 
     return (
       <DataTable>
-        <DataTable.Header
-          sortBy={sortBy}
-          onSortByChange={handleSortByChange}
-        >
+        <DataTable.Header sortBy={sortBy} onSortByChange={handleSortByChange}>
           <DataTable.Row>
-            <DataTable.HeaderCell sortField="COL1" initialSortDirection="ASC">col1</DataTable.HeaderCell>
-            <DataTable.HeaderCell sortField="COL2" initialSortDirection="DESC">col2</DataTable.HeaderCell>
-            <DataTable.HeaderCell sortField="COL3" initialSortDirection="ASC">col3</DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL1" initialSortDirection="ASC">
+              col1
+            </DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL2" initialSortDirection="DESC">
+              col2
+            </DataTable.HeaderCell>
+            <DataTable.HeaderCell sortField="COL3" initialSortDirection="ASC">
+              col3
+            </DataTable.HeaderCell>
             <DataTable.HeaderCell>col4</DataTable.HeaderCell>
           </DataTable.Row>
         </DataTable.Header>
@@ -84,10 +89,10 @@ export const Dynamic: Story = {
   render: () => {
     const rand = () => Math.random().toString();
 
-    const randData = () => ([
+    const randData = () => [
       [rand(), rand()],
       [rand(), rand()],
-    ]);
+    ];
 
     const [data, setData] = useState(randData());
 

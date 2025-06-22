@@ -40,23 +40,13 @@ interface Props extends PropsWithChildren {
   size?: DataTableSize;
 }
 
-const DataTable = ({
-  className,
-  children,
-  size = 'md',
-}: Props) => {
+const DataTable = ({ className, children, size = 'md' }: Props) => {
   const context = useMemo(() => ({ size }), [size]);
 
   return (
     <Context.Provider value={context}>
       <div className={cn(baseCls, className)}>
-        <table className={cn(
-          'min-w-full divide-y divide-chrome-300',
-          size && sizeCNMap[size],
-        )}
-        >
-          {children}
-        </table>
+        <table className={cn('min-w-full divide-y divide-chrome-300', size && sizeCNMap[size])}>{children}</table>
       </div>
     </Context.Provider>
   );
@@ -66,7 +56,7 @@ DataTable.displayName = 'DataTable';
 
 type DataTableType = typeof DataTable;
 
-interface DataTableExportType extends DataTableType {
+export interface DataTableExportType extends DataTableType {
   Body: typeof Body;
   DataCell: typeof DataCell;
   Header: typeof Header;
@@ -74,15 +64,12 @@ interface DataTableExportType extends DataTableType {
   Row: typeof Row;
 }
 
-const DataTableExport: DataTableExportType = Object.assign(
-  DataTable,
-  {
-    Body,
-    DataCell,
-    Header,
-    HeaderCell,
-    Row,
-  },
-);
+const DataTableExport: DataTableExportType = Object.assign(DataTable, {
+  Body,
+  DataCell,
+  Header,
+  HeaderCell,
+  Row,
+});
 
 export default DataTableExport;

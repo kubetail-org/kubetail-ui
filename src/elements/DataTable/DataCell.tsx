@@ -33,16 +33,7 @@ const sizeCNMap: Record<DataTableSize, string> = {
 const DataCell = ({ className, ...props }: ComponentPropsWithoutRef<'td'>) => {
   const { size } = useContext(TableContext);
 
-  return (
-    <td
-      {...props}
-      className={cn(
-        baseCls,
-        sizeCNMap[size],
-        className,
-      )}
-    />
-  );
+  return <td {...props} className={cn(baseCls, sizeCNMap[size], className)} />;
 };
 
 DataCell.displayName = 'DataTableDataCell';

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
@@ -17,13 +19,6 @@ export const Default: Story = {
   render: () => {
     const [date, setDate] = useState<Date | undefined>(new Date());
 
-    return (
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="rounded-md border"
-      />
-    );
+    return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border border-border" />;
   },
 };
