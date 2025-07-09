@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "react-day-picker/style.css";
-@plugin "@tailwindcss/forms";
 @import "./src/index.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
