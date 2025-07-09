@@ -14,7 +14,7 @@ export function Calendar({ className, showOutsideDays = true, ...props }: Calend
         today: 'bg-accent text-accent-foreground',
         selected:
           'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground',
-        root: cn(`${defaultClassNames.root} shadow-lg p-5`, className),
+        root: cn(defaultClassNames.root, className),
         chevron: `${defaultClassNames.chevron} fill-amber-500`,
         weekday: 'text-muted-foreground font-normal text-sm',
         day_selected:
