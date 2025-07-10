@@ -25,7 +25,7 @@ import Row from './Row';
 import { Context } from './shared';
 import type { DataTableSize } from './shared';
 
-const baseCls = 'overflow-hidden shadow ring-1 ring-black ring-opacity-5 rounded-lg';
+const baseCls = 'overflow-hidden shadow ring ring-black/5 rounded-lg';
 
 const sizeCNMap: Record<DataTableSize, string> = {
   xs: 'text-xs',

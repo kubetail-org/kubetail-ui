@@ -3,7 +3,7 @@
 exports[`FormControl > appends custom className 1`] = `
 <DocumentFragment>
   <input
-    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium extra-class"
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium extra-class"
   />
 </DocumentFragment>
 `;
@@ -14,7 +14,7 @@ exports[`FormControl > inherits id from FormGroup.controlId 1`] = `
     class="space-y-1"
   >
     <input
-      class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+      class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
       id="input-id"
     />
   </div>
@@ -24,7 +24,7 @@ exports[`FormControl > inherits id from FormGroup.controlId 1`] = `
 exports[`FormControl > renders \`disabled=false\` properly 1`] = `
 <DocumentFragment>
   <input
-    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
   />
 </DocumentFragment>
 `;
@@ -32,7 +32,7 @@ exports[`FormControl > renders \`disabled=false\` properly 1`] = `
 exports[`FormControl > renders \`disabled\` properly 1`] = `
 <DocumentFragment>
   <input
-    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
     disabled=""
   />
 </DocumentFragment>
@@ -41,7 +41,7 @@ exports[`FormControl > renders \`disabled\` properly 1`] = `
 exports[`FormControl > renders as textarea properly 1`] = `
 <DocumentFragment>
   <textarea
-    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
   >
     contents
   </textarea>
@@ -51,7 +51,7 @@ exports[`FormControl > renders as textarea properly 1`] = `
 exports[`FormControl > renders properly 1`] = `
 <DocumentFragment>
   <input
-    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
+    class="flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium"
     type="text"
     value="content"
   />

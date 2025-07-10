@@ -20,7 +20,7 @@ import { Context as FormGroupContext } from './FormGroup';
 import FormControlFeedback from './FormControlFeedback';
 
 const baseCls =
-  'flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium';
+  'flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium';
 
 interface Props extends React.ComponentPropsWithoutRef<'input'> {
   as?: React.ElementType;

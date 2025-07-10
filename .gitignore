@@ -34,7 +34,6 @@ dist-ssr
 *.sln
 *.sw?
 
-
 # typescript
 *.tsbuildinfo
 
@@ -45,4 +44,4 @@ dist-ssr
 \#*
 storybook-static
 .claude
-
+.docker_node_modules
