@@ -23,25 +23,13 @@ const Template = ({ formData = {}, formErrors = {} }: TemplateProps): Story => (
     <Form {...args}>
       <Form.Group>
         <Form.Label htmlFor="input1">Input 1</Form.Label>
-        <Form.Control
-          id="input1"
-          placeholder="input-1 placeholder"
-          defaultValue={formData.input1}
-        />
-        {formErrors.input1 && (
-          <Form.Control.Feedback>{formErrors.input1}</Form.Control.Feedback>
-        )}
+        <Form.Control id="input1" placeholder="input-1 placeholder" defaultValue={formData.input1} />
+        {formErrors.input1 && <Form.Control.Feedback>{formErrors.input1}</Form.Control.Feedback>}
       </Form.Group>
       <Form.Group>
         <Form.Label htmlFor="input2">Input 2</Form.Label>
-        <Form.Control
-          id="input2"
-          placeholder="input-2 placeholder"
-          defaultValue={formData.input2}
-        />
-        {formErrors.input2 && (
-          <Form.Control.Feedback>{formErrors.input2}</Form.Control.Feedback>
-        )}
+        <Form.Control id="input2" placeholder="input-2 placeholder" defaultValue={formData.input2} />
+        {formErrors.input2 && <Form.Control.Feedback>{formErrors.input2}</Form.Control.Feedback>}
       </Form.Group>
       <Form.Group>
         <Form.Label htmlFor="select1">Select 1</Form.Label>

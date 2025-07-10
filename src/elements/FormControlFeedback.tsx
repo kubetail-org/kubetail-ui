@@ -20,19 +20,10 @@ interface Props extends React.ComponentPropsWithoutRef<'div'> {
   as?: React.ElementType;
 }
 
-const FormControlFeedback = ({
-  as = 'div',
-  className,
-  ...props
-}: Props) => {
+const FormControlFeedback = ({ as = 'div', className, ...props }: Props) => {
   const Tag = as;
 
-  return (
-    <Tag
-      {...props}
-      className={cn(baseCls, className)}
-    />
-  );
+  return <Tag {...props} className={cn(baseCls, className)} />;
 };
 
 FormControlFeedback.displayName = 'FormControlFeedback';

@@ -43,3 +43,6 @@ dist-ssr
 *.pem
 *~
 \#*
+storybook-static
+.claude
+

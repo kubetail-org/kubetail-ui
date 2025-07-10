@@ -2,6 +2,71 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta title="Introduction" />
 
-# Welcome to Kubetail-UI
+# Kubetail-UI
 
-Kubetail-UI is the fun, new way to add Kubetail shared styles and React components to your apps. You can browse the components using the sidebar.
+Kubetail-UI is the fun, new, easy way to add Kubetail shared styles and React components to your Kubetail-related apps and projects.
+
+## Quickstart
+
+To use Kubetail-UI, first install the Kubetail-UI JavaScript library and its required dependencies:
+
+```console
+pnpm install @kubetail/ui react react-dom tailwindcss
+```
+
+Assuming you've already configured your project to use Tailwind v4, the next step is to import the Kubetail-UI stylesheet into your main CSS file:
+
+```css
+@import "tailwindcss";
+@import "@kubetail/ui";
+```
+
+Then add the `@kubetail/ui` javascript files to the `content` list in your `tailwind.config.ts` file:
+
+```typescript
+import type { Config } from 'tailwindcss';
+
+const config = {
+  content: [
+    ...
+    './node_modules/@kubetail/ui/**/*.js',
+  ],
+} satisfies Config;
+
+export default config;
+```
+
+Now you can use all of Kubetail-UI's custom styles with Tailwind's utility classes and import components from `@kubetail/ui`:
+
+```tsx
+import { Button } from '@kubetail/ui/elements/button';
+
+export default function Page() {
+  return (
+    <html>
+      <body>
+        <Button>Click me</Button>
+      </body>
+    </html>
+  );
+}
+```
+
+## Fonts
+
+When you import the `@kubetail/ui` css file it automatically applies the following font styles:
+
+```css
+@layer base {
+  body {
+    @apply antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+```
+
+However, this library doesn't load font files for you or set a custom default font family. Picking fonts and ensuring the files are available in the browser is left up to you (though for custom fonts we recommend using variable fonts from FontSource).
+
+## Light/Dark Mode
+
+This library is dark-mode ready but you must choose how you want Tailwind to detect the mode and configure it for your project ([https://tailwindcss.com/docs/dark-mode](https://tailwindcss.com/docs/dark-mode)).

@@ -14,19 +14,11 @@
 
 import { forwardRef } from 'react';
 
-const FormOption = forwardRef((
-  {
-    className,
-    ...props
-  }: React.ComponentPropsWithoutRef<'option'>,
-  ref: React.ForwardedRef<HTMLOptionElement>,
-) => (
-  <option
-    {...props}
-    ref={ref}
-    className={className}
-  />
-));
+const FormOption = forwardRef(
+  ({ className, ...props }: React.ComponentPropsWithoutRef<'option'>, ref: React.ForwardedRef<HTMLOptionElement>) => (
+    <option {...props} ref={ref} className={className} />
+  ),
+);
 
 FormOption.displayName = 'FormOption';
 

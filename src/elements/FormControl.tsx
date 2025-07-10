@@ -19,34 +19,22 @@ import { cn } from '@/lib/utils';
 import { Context as FormGroupContext } from './FormGroup';
 import FormControlFeedback from './FormControlFeedback';
 
-const baseCls = 'flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium';
+const baseCls =
+  'flex h-10 w-full rounded border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 file:border-0 file:bg-transparent file:text-sm file:font-medium';
 
 interface Props extends React.ComponentPropsWithoutRef<'input'> {
   as?: React.ElementType;
   id?: string;
 }
 
-const FormControl = forwardRef((
-  {
-    as = 'input',
-    className,
-    id,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLInputElement>,
-) => {
-  const Tag = as;
-  const { controlId } = useContext(FormGroupContext);
+const FormControl = forwardRef(
+  ({ as = 'input', className, id, ...props }: Props, ref: React.ForwardedRef<HTMLInputElement>) => {
+    const Tag = as;
+    const { controlId } = useContext(FormGroupContext);
 
-  return (
-    <Tag
-      {...props}
-      ref={ref}
-      id={id || controlId}
-      className={cn(baseCls, className)}
-    />
-  );
-});
+    return <Tag {...props} ref={ref} id={id || controlId} className={cn(baseCls, className)} />;
+  },
+);
 
 FormControl.displayName = 'FormControl';
 
@@ -56,11 +44,8 @@ interface FormControlExportType extends FormControlType {
   Feedback: typeof FormControlFeedback;
 }
 
-const FormControlExport: FormControlExportType = Object.assign(
-  FormControl,
-  {
-    Feedback: FormControlFeedback,
-  },
-);
+const FormControlExport: FormControlExportType = Object.assign(FormControl, {
+  Feedback: FormControlFeedback,
+});
 
 export default FormControlExport;

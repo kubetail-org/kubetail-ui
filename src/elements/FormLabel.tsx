@@ -25,27 +25,14 @@ interface Props extends React.ComponentPropsWithoutRef<'label'> {
   htmlFor?: string;
 }
 
-const FormLabel = forwardRef((
-  {
-    as = 'label',
-    className,
-    htmlFor,
-    ...props
-  }: Props,
-  ref: React.ForwardedRef<HTMLLabelElement>,
-) => {
-  const Tag = as;
-  const { controlId } = useContext(FormGroupContext);
+const FormLabel = forwardRef(
+  ({ as = 'label', className, htmlFor, ...props }: Props, ref: React.ForwardedRef<HTMLLabelElement>) => {
+    const Tag = as;
+    const { controlId } = useContext(FormGroupContext);
 
-  return (
-    <Tag
-      {...props}
-      ref={ref}
-      htmlFor={htmlFor || controlId}
-      className={cn(baseCls, className)}
-    />
-  );
-});
+    return <Tag {...props} ref={ref} htmlFor={htmlFor || controlId} className={cn(baseCls, className)} />;
+  },
+);
 
 FormLabel.displayName = 'FormLabel';
 

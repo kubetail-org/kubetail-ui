@@ -24,19 +24,17 @@ describe('Button', () => {
   });
 
   it('renders variants properly', () => {
-    ['primary', 'secondary', 'white', 'danger', 'success']
-      .forEach((variant) => {
-        const { asFragment } = render(<Button intent={variant as ButtonVariantProps['intent']} />);
-        expect(asFragment()).toMatchSnapshot();
-      });
+    ['primary', 'secondary', 'white', 'danger', 'success'].forEach((variant) => {
+      const { asFragment } = render(<Button intent={variant as ButtonVariantProps['intent']} />);
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
 
   it('renders sizes properly', () => {
-    ['xs', 'sm', 'md', 'lg', 'xl']
-      .forEach((size) => {
-        const { asFragment } = render(<Button size={size as ButtonVariantProps['size']}>My Button</Button>);
-        expect(asFragment()).toMatchSnapshot();
-      });
+    ['xs', 'sm', 'md', 'lg', 'xl'].forEach((size) => {
+      const { asFragment } = render(<Button size={size as ButtonVariantProps['size']}>My Button</Button>);
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
 
   it('renders disabled=true properly', () => {
