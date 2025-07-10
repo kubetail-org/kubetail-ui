@@ -6,7 +6,7 @@ exports[`FormCheck > appends custom className to wrapper element 1`] = `
     class="flex items-center extra-class"
   >
     <input
-      class="h-4 w-4 text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
+      class="h-4 w-4 bg-background text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
       type="checkbox"
     />
   </div>
@@ -19,7 +19,7 @@ exports[`FormCheck > renders \`disabled=false\` properly 1`] = `
     class="flex items-center"
   >
     <input
-      class="h-4 w-4 text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
+      class="h-4 w-4 bg-background text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
       type="checkbox"
     />
   </div>
@@ -32,7 +32,7 @@ exports[`FormCheck > renders \`disabled\` properly 1`] = `
     class="flex items-center"
   >
     <input
-      class="h-4 w-4 text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
+      class="h-4 w-4 bg-background text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
       disabled=""
       type="checkbox"
     />
@@ -46,7 +46,7 @@ exports[`FormCheck > renders properly 1`] = `
     class="flex items-center"
   >
     <input
-      class="h-4 w-4 text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
+      class="h-4 w-4 bg-background text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:opacity-50"
       type="checkbox"
     />
     <label

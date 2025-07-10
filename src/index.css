@@ -71,7 +71,7 @@
     --color-chrome-800: var(--color-gray-200);
     --color-chrome-900: var(--color-gray-100);
     --color-chrome-950: var(--color-gray-50);
-    --color-chrome-foreground: var(--color.white);
+    --color-chrome-foreground: var(--color-white);
     --color-chrome-divider: var(--color-gray-700);
   }
 }

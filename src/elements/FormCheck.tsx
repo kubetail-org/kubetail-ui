@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils';
 
 const wrapperBaseCls = 'flex items-center';
 const inputBaseCls =
-  'h-4 w-4 text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring-1 focus:ring-ring focus:ring-offset-0 disabled:opacity-50';
+  'h-4 w-4 bg-background text-primary-600 rounded border-input ring-offset-background focus:outline-none focus:border-input focus:ring focus:ring-ring focus:ring-offset-0 disabled:opacity-50';
 const labelBaseCls = 'ml-2 block text-sm text-chrome-900';
 
 export interface Props extends React.ComponentPropsWithoutRef<'input'> {

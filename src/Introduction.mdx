@@ -17,23 +17,12 @@ pnpm install @kubetail/ui react react-dom tailwindcss
 Assuming you've already configured your project to use Tailwind v4, the next step is to import the Kubetail-UI stylesheet into your main CSS file:
 
 ```css
-@import "tailwindcss";
-@import "@kubetail/ui";
-```
+@import 'tailwindcss';
 
-Then add the `@kubetail/ui` javascript files to the `content` list in your `tailwind.config.ts` file:
+@import '@kubetail/ui';
+@source '../node_modules/@kubetail/ui/**/*.js';
 
-```typescript
-import type { Config } from 'tailwindcss';
-
-const config = {
-  content: [
-    ...
-    './node_modules/@kubetail/ui/**/*.js',
-  ],
-} satisfies Config;
-
-export default config;
+@custom-variant dark (&:where(.dark, .dark *));
 ```
 
 Now you can use all of Kubetail-UI's custom styles with Tailwind's utility classes and import components from `@kubetail/ui`:
