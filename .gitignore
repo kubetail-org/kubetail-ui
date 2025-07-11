@@ -45,4 +45,4 @@ dist-ssr
 \#*
 storybook-static
 .claude
-
+.docker_node_modules

@@ -10,25 +10,27 @@ Kubetail-UI is a project for developing and sharing React components and other U
 
 First, install the dependencies:
 
-```sh
+```console
 pnpm install
 ```
 
 Next, run storybook:
 
-```sh
+```console
 pnpm storybook
 ```
 
+Open [http://localhost:6006](http://localhost:6006) in your browser to see Storybook.
+
 ## Getting started in Docker
 
-This should work as simple as running the following command:
+Instead of running the project on your local machine you can also run it in a container using `docker compose`:
 
-```sh
+```console
 docker compose up
 ```
 
-Open [http://localhost:6006](http://localhost:6006) in your browser to see the components.
+Open [http://localhost:6006](http://localhost:6006) in your browser to see Storybook.
 
 ## Scripts
 
@@ -40,25 +42,20 @@ Open [http://localhost:6006](http://localhost:6006) in your browser to see the c
 
 ## Integrate kubetail-ui into your Tailwind CSS project
 
-1. Install `@kubetail/ui` package
+1. Install the `@kubetail/ui` package
 
-```bash
-pnpm add -D @kubetail/ui
+```console
+pnpm add @kubetail/ui
 ```
 
-2. Modify your Tailwind config file
+2. Modify your Tailwind css file
 
-```javascript
-import kubetailUIPlugin from '@kubetail/ui/plugin';
+```css
+@import 'tailwindcss';
 
-export default {
-  content: [
-    ...
-    './node_modules/@kubetail/ui/**/*.js',
-  ],
-  plugins: [
-    ...
-    kubetailUIPlugin,
-  ],
-};
+
+@import '@kubetail/ui';
+@source '../node_modules/@kubetail/ui/**/*.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
 ```
