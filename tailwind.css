@@ -1,12 +1,12 @@
 @import "tailwindcss";
 @import "./src/index.css";
 
+@source "../node_modules/@kubetail/ui/**/*.js";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-roboto: 'Roboto Flex Variable';
-  --font-inter: 'Inter Variable';
-  --font-ubuntu-sans-mono: 'Ubuntu Sans Mono Variable';
 }
 
 @layer base {

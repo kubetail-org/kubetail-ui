@@ -22,14 +22,6 @@ export default defineConfig({
             name: 'Roboto-Flex',
             variable: true,
           },
-          {
-            name: 'Inter',
-            variable: true,
-          },
-          {
-            name: 'Ubuntu-Sans-Mono',
-            variable: true,
-          },
         ],
       },
     }),
@@ -68,5 +60,6 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: ['vitest.setup.ts'],
+    include: ['src/**/*.test.{ts,tsx}'],
   },
 });

@@ -4,7 +4,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Kubetail-UI
 
-Kubetail-UI is the fun, new way to add Kubetail shared styles and React components to your apps.
+Kubetail-UI is the fun, new, easy way to add Kubetail shared styles and React components to your Kubetail-related apps and projects.
 
 ## Quickstart
 
@@ -17,35 +17,15 @@ pnpm install @kubetail/ui react react-dom tailwindcss
 Assuming you've already configured your project to use Tailwind v4, the next step is to import the Kubetail-UI stylesheet into your main CSS file:
 
 ```css
-@import "tailwindcss";
-@import "@kubetail/ui";
+@import 'tailwindcss';
+
+@import '@kubetail/ui';
+@source '../node_modules/@kubetail/ui/**/*.js';
+
+@custom-variant dark (&:where(.dark, .dark *));
 ```
 
-Once the stylesheet is installed you can use all of Kubetail-UI's custom styles with Tailwind's class utilities. For example to add text with the custom "heading-4xl" and "text-2xl" styles and to draw a box with the color "bg-error-strong" you can do the following:
-
-```tsx
-export default function Page() {
-  return (
-    <html>
-      <body>
-        <h1 className="text-heading-4xl">My Cool Project</h1>
-        <div className="text-2xl">This is a box with color &quot;bg-error-strong&quot;:</div>
-        <div className="h-[100px] w-[100px] bg-bg-error-strong" />
-      </body>
-    </html>
-  );
-}
-```
-
-## Components
-
-To use a specific component in your project you'll need to ensure that its dependencies are installed in your project. For example, to add a Kubetail-UI button to your project you'll need to install the `@radix-ui/react-slot` library:
-
-```console
-pnpm install @radix-ui/react-slot
-```
-
-Then you can can import the component from the `@kubetail/ui` library and use it in your project:
+Now you can use all of Kubetail-UI's custom styles with Tailwind's utility classes and import components from `@kubetail/ui`:
 
 ```tsx
 import { Button } from '@kubetail/ui/elements/button';
@@ -54,15 +34,15 @@ export default function Page() {
   return (
     <html>
       <body>
-        <h1 className="text-heading-2xl">Example Button</h1>
-        <Button variant="xl">This is a cool button</Button>
+        <h1 className="text-heading-4xl">My Cool Project</h1>
+        <div className="text-2xl">This is a box with color &quot;bg-error-strong&quot;:</div>
+        <div className="h-[100px] w-[100px] bg-bg-error-strong" />
+        <Button variant="xl">Click me</Button>
       </body>
     </html>
   );
 }
 ```
-
-The components provided by this library are available under the Elements list.
 
 ## Fonts
 
