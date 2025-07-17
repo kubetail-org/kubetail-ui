@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
+import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
 // @ts-ignore
 import dts from 'unplugin-dts/vite';
@@ -47,7 +48,21 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      plugins: [dts({ tsconfigPath: './tsconfig.app.json' }), autoExternal()],
+      plugins: [
+        dts({ tsconfigPath: './tsconfig.app.json' }),
+        autoExternal(),
+        copy({
+          targets: [
+            {
+              src: 'src/index.css',
+              dest: 'dist',
+              rename: 'index.css',
+            },
+          ],
+          // ensure it runs after everything is written
+          hook: 'writeBundle',
+        }),
+      ],
       external: ['@radix-ui/react-slot', 'react', 'react-dom', 'react/jsx-runtime'],
       output: {
         // Preserve the directory structure
