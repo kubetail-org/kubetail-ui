@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "./src/index.css";
 
-@source "../node_modules/@kubetail/ui/**/*.js";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
