@@ -6,7 +6,7 @@
   --color-bg-primary: var(--color-blue-700);
   --color-bg-primary-hover: var(--color-blue-400);
   --color-bg-primary-active: var(--color-blue-950);
-  --color-bg-secondary: var(--color-zinc-100);
+  --color-bg-secondary: var(--color-zinc-50);
   --color-bg-secondary-hover: var(--color-zinc-200);
   --color-bg-secondary-active: var(--color-zinc-100);
   --color-bg-error-strong: var(--color-red-500);
@@ -25,6 +25,7 @@
   /* color-icon */
   --color-icon: var(--color-zinc-900);
   --color-icon-disabled: var(--color-zinc-400);
+  --color-icon-interactive: var(--color-blue-900);
 
   /* color-text */
   --color-text: var(--color-zinc-950);
@@ -103,7 +104,7 @@
     --color-bg-primary: var(--color-blue-500);
     --color-bg-primary-hover: var(--color-blue-300);
     --color-bg-primary-active: var(--color-blue-700);
-    --color-bg-secondary: var(--color-zinc-800);
+    --color-bg-secondary: var(--color-zinc-600);
     --color-bg-secondary-hover: var(--color-zinc-600);
     --color-bg-secondary-active: var(--color-zinc-800);
     --color-bg-error-strong: var(--color-red-400);
@@ -114,7 +115,7 @@
     /* border colors */
     --color-border: var(--color-zinc-700);
     --color-border-hover: var(--color-zinc-600);
-    --color-border-input: var(--color-zinc-500);
+    --color-border-input: var(--color-zinc-400);
     --color-border-input-hover: var(--color-zinc-600);
     --color-border-disabled: var(--color-gray-800);
     --color-border-focusRing: var(--color-blue-500);
@@ -122,6 +123,7 @@
     /* icon colors */
     --color-icon: var(--color-gray-50);
     --color-icon-disabled: var(--color-zinc-600);
+    --color-icon-interactive: var(--color-blue-100);
 
     /* text colors */
     --color-text: var(--color-zinc-50);
