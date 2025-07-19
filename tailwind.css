@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "./src/index.css";
 
-@source "./src/**/*.{js,ts,jsx,tsx}";
+@source "./src/**/*.{js,ts,jsx,tsx,mdx}";
 @source "./src/**/*.stories.{js,ts,jsx,tsx}";
 @source "./storybook/**/*.{js,ts,jsx,tsx}";
 

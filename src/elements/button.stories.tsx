@@ -29,7 +29,7 @@ const ButtonTemplate: Story = {
           </tr>
         </thead>
         <tbody>
-          {(['sm', 'md', 'lg', 'xl'] as ButtonVariantProps['size'][]).map((size) => (
+          {(['default', 'sm', 'lg'] as ButtonVariantProps['size'][]).map((size) => (
             <tr key={size}>
               <td className="pr-3 pb-3">{size}</td>
               <td className="pr-3 pb-3">
@@ -44,6 +44,19 @@ const ButtonTemplate: Story = {
               </td>
             </tr>
           ))}
+          <tr>
+            <td className="pr-3 pb-3">icon</td>
+            <td className="pr-3 pb-3">
+              <Button {...args} size="icon">
+                <AtomIcon />
+              </Button>
+            </td>
+            <td className="pr-3 pb-3">
+              <Button {...args} size="icon" disabled>
+                <AtomIcon />
+              </Button>
+            </td>
+          </tr>
         </tbody>
       </table>
     );
@@ -52,13 +65,6 @@ const ButtonTemplate: Story = {
 
 export const Default: Story = {
   ...ButtonTemplate,
-};
-
-export const Primary: Story = {
-  ...ButtonTemplate,
-  args: {
-    variant: 'primary',
-  },
 };
 
 export const Secondary: Story = {
@@ -99,7 +105,7 @@ export const Link: Story = {
 export const Icon: Story = {
   ...ButtonTemplate,
   args: {
-    variant: 'primary',
+    variant: 'default',
     size: 'icon',
     children: <AtomIcon />,
   },
@@ -108,7 +114,7 @@ export const Icon: Story = {
 export const LeadingIcon: Story = {
   ...ButtonTemplate,
   args: {
-    variant: 'primary',
+    variant: 'default',
     size: 'icon',
     children: (
       <>
@@ -121,7 +127,7 @@ export const LeadingIcon: Story = {
 export const TrailingIcon: Story = {
   ...ButtonTemplate,
   args: {
-    variant: 'primary',
+    variant: 'default',
     size: 'sm',
     children: (
       <>

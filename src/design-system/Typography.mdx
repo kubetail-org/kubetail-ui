@@ -1,15 +1,114 @@
-import { Meta, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
+import { useEffect, useRef, useState } from 'react';
 
-import * as TypographyStories from './Typography.stories';
+<Meta title="Design System/Typography" />
 
-<Meta of={TypographyStories} />
+export const SampleRow = ({ className, label }) => {
+  const ref = useRef(null);
+
+  const [metrics, setMetrics] = useState({
+    fontSize: '—',
+    fontWeight: '-',
+    letterSpacing: '-',
+    lineHeight: '—',
+  });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const { fontSize, fontWeight, letterSpacing, lineHeight } = window.getComputedStyle(el);
+    setMetrics({ fontSize, fontWeight, letterSpacing, lineHeight });
+  }, []);
+
+  return (
+    <>
+      <tr className="border-t border-b border-gray-300">
+        <td>
+          <span ref={ref} className={className}>
+            {label}
+          </span>
+        </td>
+      </tr>
+      <tr className="align-top h-[50px]">
+        <td className="text-xs font-mono space-x-2 text-gray-500">
+          <span>{`"${className}"`}</span>
+          <span>{metrics.fontSize}</span>
+          <span>{metrics.lineHeight}</span>
+          <span>{metrics.letterSpacing === 'normal' ? '0px' : metrics.letterSpacing}</span>
+          <span>{metrics.fontWeight}</span>
+        </td>
+      </tr>
+    </>
+  );
+};
 
 # Typography
 
 ## Text
 
-<Canvas of={TypographyStories.TextExample} />
+export const TextTable = () => {
+  const sizes = [
+    '2xl', // text-2xl
+    'xl',  // text-xl
+    'lg',  // text-lg
+    'md',  // text-md
+    'sm',  // text-sm
+    'xs',  // text-xs
+  ];
 
-## Headings
+  return (
+    <Unstyled>
+      <table className="[&_td]:whitespace-nowrap border-collapse border-spacing-0">
+        <tbody>
+          {sizes.map((size) => {
+            const cls = `text-${size}`;
+            return (
+              <SampleRow
+                key={size}
+                className={cls}
+                label="The quick brown fox jumped over the lazy dog. [0123456789]"
+              />
+            );
+          })}
+        </tbody>
+      </table>
+    </Unstyled>
+  );
+};
 
-<Canvas of={TypographyStories.HeadingExample} />
+<TextTable />
+
+## Heading
+
+export const HeadingTable = () => {
+  const sizes = [
+    '9xl', // text-heading-9xl
+    '8xl', // text-heading-8xl
+    '7xl', // text-heading-7xl
+    '6xl', // text-heading-6xl
+    '5xl', // text-heading-5xl
+    '4xl', // text-heading-4xl
+    '3xl', // text-heading-3xl
+    '2xl', // text-heading-2xl
+    'xl',  // text-heading-xl
+    'lg',  // text-heading-lg
+    'md',  // text-heading-md
+    'sm',  // text-heading-sm
+  ];
+
+  return (
+    <Unstyled>
+      <table className="[&_td]:whitespace-nowrap border-collapse border-spacing-0">
+        <tbody>
+          {sizes.map((size) => {
+            const cls = `text-heading-${size}`;
+            return <SampleRow key={size} className={cls} label="Hello World" />;
+          })}
+        </tbody>
+      </table>
+    </Unstyled>
+  );
+};
+
+<HeadingTable />

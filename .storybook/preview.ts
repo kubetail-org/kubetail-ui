@@ -34,14 +34,15 @@ const preview: Preview = {
           'Introduction',
           'Design System',
           [
-            'Overview',
             'Colors',
             'Typography',
+            'Styles',
           ],
           'Elements',
           [
             'Overview',
             'Button',
+            'Input',
           ],
         ],
         locales: 'en-US',
