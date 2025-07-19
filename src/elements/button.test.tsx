@@ -10,7 +10,7 @@ describe('Button', () => {
   });
 
   it('renders variants properly', () => {
-    ['primary', 'secondary', 'outline', 'ghost', 'destructive', 'link'].forEach((variant) => {
+    ['default', 'secondary', 'outline', 'ghost', 'destructive', 'link'].forEach((variant) => {
       const { asFragment } = render(<Button variant={variant as ButtonVariantProps['variant']} />);
       expect(asFragment()).toMatchSnapshot();
     });

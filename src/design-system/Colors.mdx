@@ -1,23 +1,104 @@
-import { Meta, Canvas, Story, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Unstyled } from '@storybook/addon-docs/blocks';
 
-import * as Stories from './Colors.stories';
+import { cn } from '@/lib/utils';
 
-<Meta of={Stories} />
+<Meta title="Design System/Colors" />
+
+export const colWidth = 200;
 
 # Colors
 
-## Background colors
+## Background Colors
 
-<Canvas of={Stories.BackgroundColors} sourceState="none" />
+export const BackgroundColorTable = () => {
+  const varNames = [
+    'background',  // bg-background
+    //'card',      // bg-card
+    //'popover',   // bg-popover
+    'primary',     // bg-primary
+    'secondary',   // bg-secondary
+    'muted',       // bg-muted
+    //'accent',    // bg-accent
+    'destructive', // bg-destructive
+    'border',      // bg-border
+    'input',       // bg-input
+    'ring',        // bg-ring
+  ];
 
-## Border colors
+  return (
+    <Unstyled>
+      <table>
+        <thead>
+          <tr>
+            <th className="text-left">Name</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          {varNames.map((varName) => (
+            <tr key={varName}>
+              <td className="text-sm" width={colWidth}>{varName}</td>
+              <td className="light bg-background py-[10px]" width={colWidth} align="center">
+                <div className={cn('w-[40px] h-[40px] border border-dotted border-gray-300', `bg-${varName}`)} />
+              </td>
+              <td className="dark dark:bg-background py-[10px]" width={colWidth} align="center">
+                <div className={cn('dark w-[40px] h-[40px] border border-dotted border-gray-700', `bg-${varName}`)} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Unstyled>
+  );
+};
 
-<Canvas of={Stories.BorderColors} sourceState="none" />
+<BackgroundColorTable />
 
-## Icon colors
+## Text Colors
 
-<Canvas of={Stories.IconColors} sourceState="none" />
+export const TextColorTable = () => {
+  const tuples = [
+    ['background', 'foreground'],              // bg-background text-foreground
+    //['card', 'card-foreground'],             // bg-card text-foreground
+    //['popover', 'popover-foreground',        // bg-popover text-popover-foreground
+    ['primary', 'primary-foreground'],         // bg-primary text-primary-foreground
+    ['secondary', 'secondary-foreground'],     // bg-secondary text-secondary-foreground
+    ['muted', 'muted-foreground'],             // bg-muted text-muted-foreground
+    //['accent', 'accent-foreground'],         // bg-accent text-accent-foreground
+    ['destructive', 'destructive-foreground'], // bg-destructive text-destructive-foreground
+  ];
 
-## Text colors
+  return (
+    <Unstyled>
+      <table>
+        <thead>
+          <tr>
+            <th className="text-left">Name</th>
+            <th>Light</th>
+            <th>Dark</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tuples.map((tuple) => (
+            <tr key={tuple[0]}>
+              <td className="text-sm" width={colWidth}>{tuple[1]}</td>
+              <td className="light bg-background py-[20px]" width={colWidth} align="center">
+                <span className={cn('p-[10px] border border-dotted border-gray-300', `bg-${tuple[0]}`, `text-${tuple[1]}`)}>
+                  Example text
+                </span>
+              </td>
+              <td className="dark dark:bg-background py-[20px]" width={colWidth} align="center">
+                <span className={cn('dark p-[10px] border border-dotted border-gray-700 inline-block', `bg-${tuple[0]}`, `text-${tuple[1]}`)}>
+                  Example text
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Unstyled>
+  );
+};
 
-<Canvas of={Stories.TextColors} sourceState="none" />
+<TextColorTable />
