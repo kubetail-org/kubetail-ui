@@ -16,7 +16,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: var(--color-red-500);                        /* color-bg-error-strong */
-  --destructive-foreground: var(--color-zinc-950);            /* color-text */ 
+  --destructive-foreground: var(--color-white);               /* color-text-on-color */ 
   --border: var(--color-zinc-200);                            /* color-border */
   --input: var(--color-zinc-200);                             /* color-border-input */
   --ring: var(--color-blue-500);                              /* color-border-focusRing */
