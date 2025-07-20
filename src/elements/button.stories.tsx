@@ -7,6 +7,19 @@ const meta = {
   title: 'Elements/Button',
   tags: ['autodocs'],
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component: `
+A reusable Button component.
+
+**Peer Dependencies**
+
+- @radix-ui/react-slot ^1
+        `,
+      },
+    },
+  },
   argTypes: {
     children: { control: 'text' },
   },

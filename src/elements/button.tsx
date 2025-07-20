@@ -33,6 +33,14 @@ const buttonVariants = cva(
 
 export type ButtonVariantProps = VariantProps<typeof buttonVariants>;
 
+/**
+ * `Button` renders a button component
+ *
+ * @param props.className - the custom className
+ * @param props.variant - the button variant
+ * @param props.size - the button size
+ * @parmm props.asChild - as child
+ */
 function Button({
   className,
   variant,

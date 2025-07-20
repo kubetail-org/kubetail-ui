@@ -6,6 +6,15 @@ const meta = {
   title: 'Elements/Input',
   tags: ['autodocs'],
   component: Input,
+  parameters: {
+    docs: {
+      description: {
+        component: `
+A reusable Input component.
+        `,
+      },
+    },
+  },
   args: {
     defaultValue: '',
     disabled: false,
