@@ -44,6 +44,7 @@ const preview: Preview = {
             'Button',
             'Dropdown Menu',
             'Input',
+            'Spinner',
           ],
         ],
         locales: 'en-US',

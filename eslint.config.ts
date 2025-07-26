@@ -45,6 +45,7 @@ const customRulesConfig = [
   {
     name: 'custom/rules',
     rules: {
+      '@typescript-eslint/consistent-type-definitions': 'off',
       'import-x/no-extraneous-dependencies': 'off',
       'import-x/extensions': 'off',
       'import-x/no-unresolved': 'off',

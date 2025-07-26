@@ -1,4 +1,6 @@
-/* shadcn */
+/**
+ * Shadcn theme
+ */
 
 :root, .light {
   --background: var(--color-white);                           /* color-bg */
@@ -119,9 +121,52 @@
   }
 }
 
-/* custom */
+/**
+ * Custom theme
+ */
+
+:root, .light {
+  --chrome-50: var(--color-gray-50);
+  --chrome-100: var(--color-gray-100);
+  --chrome-200: var(--color-gray-200);
+  --chrome-300: var(--color-gray-300);
+  --chrome-400: var(--color-gray-400);
+  --chrome-500: var(--color-gray-500);
+  --chrome-600: var(--color-gray-600);
+  --chrome-700: var(--color-gray-700);
+  --chrome-800: var(--color-gray-800);
+  --chrome-900: var(--color-gray-900);
+  --chrome-950: var(--color-gray-950);
+}
+
+.dark {
+  --chrome-50: var(--color-gray-950);
+  --chrome-100: var(--color-gray-900);
+  --chrome-200: var(--color-gray-800);
+  --chrome-300: var(--color-gray-700);
+  --chrome-400: var(--color-gray-600);
+  --chrome-500: var(--color-gray-500);
+  --chrome-600: var(--color-gray-400);
+  --chrome-700: var(--color-gray-300);
+  --chrome-800: var(--color-gray-200);
+  --chrome-900: var(--color-gray-100);
+  --chrome-950: var(--color-gray-50);
+}
 
 @theme inline {
+  --color-chrome-50: var(--chrome-50);
+  --color-chrome-100: var(--chrome-100);
+  --color-chrome-200: var(--chrome-200);
+  --color-chrome-300: var(--chrome-300);
+  --color-chrome-400: var(--chrome-400);
+  --color-chrome-500: var(--chrome-500);
+  --color-chrome-600: var(--chrome-600);
+  --color-chrome-700: var(--chrome-700);
+  --color-chrome-800: var(--chrome-800);
+  --color-chrome-900: var(--chrome-900);
+  --color-chrome-950: var(--chrome-950);
+
+  /* text */
   --text-base: 1rem;
   --text-base--line-height: calc(1.5 / 1);
   --text-xs: 0.75rem;
@@ -185,4 +230,3 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
-
