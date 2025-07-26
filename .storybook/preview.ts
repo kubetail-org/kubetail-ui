@@ -42,8 +42,11 @@ const preview: Preview = {
           [
             'Overview',
             'Button',
+            'Checkbox',
             'Dropdown Menu',
+            'Form',
             'Input',
+            'Label',
             'Spinner',
           ],
         ],
