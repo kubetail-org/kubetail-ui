@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { AtomIcon } from 'lucide-react';
 
-import { Button, type ButtonVariantProps } from './button';
+import { Button, type ButtonVariantProps } from '@/elements/button';
 
 const meta = {
   title: 'Elements/Button',
