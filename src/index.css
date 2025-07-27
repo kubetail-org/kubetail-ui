@@ -15,7 +15,7 @@
   --secondary-foreground: var(--color-zinc-950);              /* color-text */
   --muted: var(--color-zinc-50);                              /* color-bg-subtle */
   --muted-foreground: var(--color-zinc-500);                  /* color-text-muted */
-  --accent: var(--color-amber-200);
+  --accent: var(--color-blue-100);
   --accent-foreground: var(--color-zinc-950);
   --destructive: var(--color-red-500);                        /* color-bg-error-strong */
   --destructive-foreground: var(--color-white);               /* color-text-on-color */ 
@@ -51,7 +51,7 @@
   --secondary-foreground: var(--color-zinc-50);              /* color-text */
   --muted: var(--color-zinc-900);                            /* color-bg-subtle */
   --muted-foreground: var(--color-zinc-400);                 /* color-text-muted */
-  --accent: var(--color-amber-800);
+  --accent: var(--color-blue-900);
   --accent-foreground: var(--color-white);
   --destructive: var(--color-red-400);                       /* color-bg-error-strong */
   --destructive-foreground: var(--color-zinc-50);            /* color-text */

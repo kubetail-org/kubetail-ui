@@ -50,6 +50,7 @@ const preview: Preview = {
             'Input',
             'Label',
             'Popover',
+            'Select',
             'Spinner',
             'Tabs',
           ],

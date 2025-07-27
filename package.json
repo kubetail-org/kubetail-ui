@@ -43,6 +43,7 @@
     "@radix-ui/react-dropdown-menu": "^2",
     "@radix-ui/react-label": "^2",
     "@radix-ui/react-popover": "^1",
+    "@radix-ui/react-select": "^2",
     "@radix-ui/react-slot": "^1",
     "@radix-ui/react-tabs": "^1",
     "lucide-react": "*",
@@ -68,6 +69,9 @@
     "@radix-ui/react-slot": {
       "optional": true
     },
+    "@radix-ui/react-select": {
+      "optional": true
+    },
     "@radix-ui/react-tabs": {
       "optional": true
     },
@@ -91,6 +95,7 @@
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-popover": "^1.1.14",
+    "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.12",
     "@storybook/addon-docs": "^9.0.9",
