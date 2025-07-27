@@ -52,6 +52,7 @@ const preview: Preview = {
             'Popover',
             'Select',
             'Spinner',
+            'Table',
             'Tabs',
           ],
         ],
