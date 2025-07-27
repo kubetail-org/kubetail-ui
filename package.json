@@ -45,6 +45,7 @@
     "@radix-ui/react-slot": "^1",
     "lucide-react": "*",
     "react": "^19",
+    "react-day-picker": "^9",
     "react-dom": "^19",
     "react-hook-form": "^7",
     "tailwindcss": "^4"
@@ -63,6 +64,9 @@
       "optional": true
     },
     "lucide-react": {
+      "optional": true
+    },
+    "react-day-picker": {
       "optional": true
     },
     "react-hook-form": {
@@ -109,6 +113,7 @@
     "jsdom": "^26.1.0",
     "lucide-react": "^0.515.0",
     "prettier": "^3.5.3",
+    "react-day-picker": "^9.8.1",
     "react-docgen-typescript": "^2.4.0",
     "react-hook-form": "^7.61.1",
     "rollup-plugin-auto-external": "^2.0.0",
