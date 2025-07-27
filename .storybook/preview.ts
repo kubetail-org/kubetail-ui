@@ -42,6 +42,7 @@ const preview: Preview = {
           [
             'Overview',
             'Button',
+            'Calendar',
             'Checkbox',
             'Dropdown Menu',
             'Form',
