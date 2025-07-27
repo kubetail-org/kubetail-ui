@@ -49,6 +49,7 @@ const preview: Preview = {
             'Form',
             'Input',
             'Label',
+            'Popover',
             'Spinner',
             'Tabs',
           ],
