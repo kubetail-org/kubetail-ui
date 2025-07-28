@@ -1,8 +1,8 @@
-import type { DropdownMenuCheckboxItemProps } from '@radix-ui/react-dropdown-menu';
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useState } from 'react';
+import type { Meta } from "@storybook/react-vite";
+import type { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
+import { useState } from "react";
 
-import { Button } from '@/elements/button';
+import { Button } from "@/elements/button";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -12,11 +12,13 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/elements/dropdown-menu';
+} from "@/elements/dropdown-menu";
+
+type Checked = DropdownMenuCheckboxItemProps["checked"];
 
 const meta = {
-  title: 'Elements/Dropdown Menu',
-  tags: ['autodocs'],
+  title: "Elements/Dropdown Menu",
+  tags: ["autodocs"],
   component: DropdownMenu,
   parameters: {
     docs: {
@@ -35,11 +37,7 @@ A reusable Dropdown Menu component.
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-type Checked = DropdownMenuCheckboxItemProps['checked'];
-
-const CheckboxesExample = () => {
+export function Checkboxes() {
   const [showStatusBar, setShowStatusBar] = useState<Checked>(true);
   const [showActivityBar, setShowActivityBar] = useState<Checked>(false);
   const [showPanel, setShowPanel] = useState<Checked>(false);
@@ -52,26 +50,32 @@ const CheckboxesExample = () => {
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Appearance</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem checked={showStatusBar} onCheckedChange={setShowStatusBar}>
+        <DropdownMenuCheckboxItem
+          checked={showStatusBar}
+          onCheckedChange={setShowStatusBar}
+        >
           Status Bar
         </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem checked={showActivityBar} onCheckedChange={setShowActivityBar} disabled>
+        <DropdownMenuCheckboxItem
+          checked={showActivityBar}
+          onCheckedChange={setShowActivityBar}
+          disabled
+        >
           Activity Bar
         </DropdownMenuCheckboxItem>
-        <DropdownMenuCheckboxItem checked={showPanel} onCheckedChange={setShowPanel}>
+        <DropdownMenuCheckboxItem
+          checked={showPanel}
+          onCheckedChange={setShowPanel}
+        >
           Panel
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
+}
 
-export const Checkboxes = {
-  render: () => <CheckboxesExample />,
-} satisfies Story;
-
-const RadioGroupExample = () => {
-  const [position, setPosition] = useState('bottom');
+export function RadioGroup() {
+  const [position, setPosition] = useState("bottom");
 
   return (
     <DropdownMenu>
@@ -89,8 +93,4 @@ const RadioGroupExample = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
-
-export const RadioGroup = {
-  render: () => <RadioGroupExample />,
-} satisfies Story;
+}
