@@ -1,14 +1,13 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+// Calendar.stories.tsx
+import type { Meta } from "@storybook/react-vite";
+import { useState } from "react";
 
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { useState } from 'react';
+import { Calendar } from "@/elements/calendar";
 
-import { Calendar } from '@/elements/calendar';
-
-const meta = {
-  title: 'Elements/Calendar',
-  tags: ['autodocs'],
+const meta: Meta<typeof Calendar> = {
+  title: "Elements/Calendar",
   component: Calendar,
+  tags: ["autodocs"],
   parameters: {
     docs: {
       description: {
@@ -20,18 +19,27 @@ A reusable Calendar component.
 - react-day-picker (also requires import of 'react-day-picker/style.css')
         `,
       },
+      source: {
+        type: "dynamic", // extract whole function
+      },
     },
   },
-} satisfies Meta<typeof Calendar>;
-
+};
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+// instead of `export const Default: Story = {...}`, do:
+export function Default() {
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
-export const Default: Story = {
-  render: () => {
-    const [date, setDate] = useState<Date | undefined>(new Date());
+  return (
+    <Calendar
+      mode="single"
+      selected={date}
+      onSelect={setDate}
+      className="rounded-md border border-border"
+    />
+  );
+}
 
-    return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border border-border" />;
-  },
-};
+// optional: give it a nicer name in the UI
+Default.storyName = "Default";

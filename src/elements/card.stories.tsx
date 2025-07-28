@@ -1,13 +1,21 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from "@storybook/react-vite";
 
-import { Button } from '@/elements/button';
-import { Input } from '@/elements/input';
-import { Label } from '@/elements/label';
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
+import { Button } from "@/elements/button";
+import { Input } from "@/elements/input";
+import { Label } from "@/elements/label";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/elements/card";
 
 const meta = {
-  title: 'Elements/Card',
-  tags: ['autodocs'],
+  title: "Elements/Card",
+  tags: ["autodocs"],
   component: Card,
   parameters: {
     docs: {
@@ -22,14 +30,15 @@ A reusable Card component.
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Demo = {
-  render: () => (
+// Export as a named function so Docs “dynamic” source shows the full body
+export function Demo() {
+  return (
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Login to your account</CardTitle>
-        <CardDescription>Enter your email below to login to your account</CardDescription>
+        <CardDescription>
+          Enter your email below to login to your account
+        </CardDescription>
         <CardAction>
           <Button variant="link">Sign Up</Button>
         </CardAction>
@@ -39,7 +48,12 @@ export const Demo = {
           <div className="flex flex-col gap-6">
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" placeholder="m@example.com" required />
+              <Input
+                id="email"
+                type="email"
+                placeholder="m@example.com"
+                required
+              />
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
@@ -65,5 +79,5 @@ export const Demo = {
         </Button>
       </CardFooter>
     </Card>
-  ),
-} satisfies Story;
+  );
+}
