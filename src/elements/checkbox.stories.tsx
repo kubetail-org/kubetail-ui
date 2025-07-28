@@ -1,11 +1,11 @@
-import type { Meta } from "@storybook/react-vite";
+import type { Meta } from '@storybook/react-vite';
 
-import { Checkbox } from "@/elements/checkbox";
-import { Label } from "@/elements/label";
+import { Checkbox } from '@/elements/checkbox';
+import { Label } from '@/elements/label';
 
 const meta = {
-  title: "Elements/Checkbox",
-  tags: ["autodocs"],
+  title: 'Elements/Checkbox',
+  tags: ['autodocs'],
   component: Checkbox,
   parameters: {
     docs: {
@@ -52,12 +52,8 @@ export function Demo() {
           className="data-[state=checked]:border-blue-600 data-[state=checked]:bg-blue-600 data-[state=checked]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700"
         />
         <div className="grid gap-1.5 font-normal">
-          <p className="text-sm leading-none font-medium">
-            Enable notifications
-          </p>
-          <p className="text-muted-foreground text-sm">
-            You can enable or disable notifications at any time.
-          </p>
+          <p className="text-sm leading-none font-medium">Enable notifications</p>
+          <p className="text-muted-foreground text-sm">You can enable or disable notifications at any time.</p>
         </div>
       </Label>
     </div>

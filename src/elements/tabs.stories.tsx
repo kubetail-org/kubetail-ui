@@ -1,21 +1,14 @@
-import type { Meta } from "@storybook/react-vite";
+import type { Meta } from '@storybook/react-vite';
 
-import { Button } from "@/elements/button";
-import { Input } from "@/elements/input";
-import { Label } from "@/elements/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/elements/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/elements/card";
+import { Button } from '@/elements/button';
+import { Input } from '@/elements/input';
+import { Label } from '@/elements/label';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/elements/tabs';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
 
 const meta = {
-  title: "Elements/Tabs",
-  tags: ["autodocs"],
+  title: 'Elements/Tabs',
+  tags: ['autodocs'],
   component: Tabs,
   parameters: {
     docs: {
@@ -29,7 +22,7 @@ A reusable Tabs component.
         `,
       },
       source: {
-        type: "dynamic", // global, but explicit here for clarity
+        type: 'dynamic', // global, but explicit here for clarity
       },
     },
   },
@@ -50,10 +43,7 @@ export function Demo() {
           <Card>
             <CardHeader>
               <CardTitle>Account</CardTitle>
-              <CardDescription>
-                Make changes to your account here. Click save when you&apos;re
-                done.
-              </CardDescription>
+              <CardDescription>Make changes to your account here. Click save when you&apos;re done.</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
@@ -74,10 +64,7 @@ export function Demo() {
           <Card>
             <CardHeader>
               <CardTitle>Password</CardTitle>
-              <CardDescription>
-                Change your password here. After saving, you&apos;ll be logged
-                out.
-              </CardDescription>
+              <CardDescription>Change your password here. After saving, you&apos;ll be logged out.</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="grid gap-3">

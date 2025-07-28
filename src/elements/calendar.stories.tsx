@@ -1,13 +1,13 @@
 // Calendar.stories.tsx
-import type { Meta } from "@storybook/react-vite";
-import { useState } from "react";
+import type { Meta } from '@storybook/react-vite';
+import { useState } from 'react';
 
-import { Calendar } from "@/elements/calendar";
+import { Calendar } from '@/elements/calendar';
 
 const meta: Meta<typeof Calendar> = {
-  title: "Elements/Calendar",
+  title: 'Elements/Calendar',
   component: Calendar,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -20,7 +20,7 @@ A reusable Calendar component.
         `,
       },
       source: {
-        type: "dynamic", // extract whole function
+        type: 'dynamic', // extract whole function
       },
     },
   },
@@ -31,15 +31,8 @@ export default meta;
 export function Default() {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
-  return (
-    <Calendar
-      mode="single"
-      selected={date}
-      onSelect={setDate}
-      className="rounded-md border border-border"
-    />
-  );
+  return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border border-border" />;
 }
 
 // optional: give it a nicer name in the UI
-Default.storyName = "Default";
+Default.storyName = 'Default';
