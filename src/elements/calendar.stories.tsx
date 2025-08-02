@@ -18,9 +18,6 @@ A reusable Calendar component.
 - react-day-picker (also requires import of 'react-day-picker/style.css')
         `,
       },
-      source: {
-        type: 'dynamic', // extract whole function
-      },
     },
   },
 };
