@@ -26,7 +26,6 @@ A reusable Calendar component.
 };
 export default meta;
 
-// instead of `export const Default: Story = {...}`, do:
 export function Default() {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
