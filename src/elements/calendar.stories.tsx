@@ -1,4 +1,3 @@
-// Calendar.stories.tsx
 import type { Meta } from '@storybook/react-vite';
 import { useState } from 'react';
 
