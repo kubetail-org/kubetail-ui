@@ -1,5 +1,5 @@
+import type { Meta } from '@storybook/react-vite';
 import type { DropdownMenuCheckboxItemProps } from '@radix-ui/react-dropdown-menu';
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
 import { Button } from '@/elements/button';
@@ -13,6 +13,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/elements/dropdown-menu';
+
+type Checked = DropdownMenuCheckboxItemProps['checked'];
 
 const meta = {
   title: 'Elements/Dropdown Menu',
@@ -35,11 +37,7 @@ A reusable Dropdown Menu component.
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-type Checked = DropdownMenuCheckboxItemProps['checked'];
-
-const CheckboxesExample = () => {
+export function Checkboxes() {
   const [showStatusBar, setShowStatusBar] = useState<Checked>(true);
   const [showActivityBar, setShowActivityBar] = useState<Checked>(false);
   const [showPanel, setShowPanel] = useState<Checked>(false);
@@ -64,13 +62,9 @@ const CheckboxesExample = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
+}
 
-export const Checkboxes = {
-  render: () => <CheckboxesExample />,
-} satisfies Story;
-
-const RadioGroupExample = () => {
+export function RadioGroup() {
   const [position, setPosition] = useState('bottom');
 
   return (
@@ -89,8 +83,4 @@ const RadioGroupExample = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
-
-export const RadioGroup = {
-  render: () => <RadioGroupExample />,
-} satisfies Story;
+}

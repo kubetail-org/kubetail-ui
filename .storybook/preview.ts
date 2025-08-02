@@ -6,8 +6,16 @@ import 'unfonts.css';
 
 import { withThemeByClassName } from "@storybook/addon-themes";
 
+
 const preview: Preview = {
   parameters: {
+    // 📘 Enable dynamic source extraction for all stories:
+    docs: {
+      source: {
+        type: 'dynamic',
+      },
+    },
+
     backgrounds: {
       default: 'white',
       values: [

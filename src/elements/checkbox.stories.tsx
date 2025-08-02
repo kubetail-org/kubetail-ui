@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 
 import { Checkbox } from '@/elements/checkbox';
 import { Label } from '@/elements/label';
@@ -24,10 +24,9 @@ A reusable Checkbox component.
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Demo = {
-  render: () => (
+// Named function export so Docs “dynamic” source shows the full body
+export function Demo() {
+  return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center gap-3">
         <Checkbox id="terms" />
@@ -58,5 +57,5 @@ export const Demo = {
         </div>
       </Label>
     </div>
-  ),
-} satisfies Story;
+  );
+}

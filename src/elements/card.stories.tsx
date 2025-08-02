@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta } from '@storybook/react-vite';
 
 import { Button } from '@/elements/button';
 import { Input } from '@/elements/input';
@@ -22,10 +22,8 @@ A reusable Card component.
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
-
-export const Demo = {
-  render: () => (
+export function Demo() {
+  return (
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle>Login to your account</CardTitle>
@@ -65,5 +63,5 @@ export const Demo = {
         </Button>
       </CardFooter>
     </Card>
-  ),
-} satisfies Story;
+  );
+}
