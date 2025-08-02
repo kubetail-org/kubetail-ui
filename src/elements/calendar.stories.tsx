@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { Calendar } from '@/elements/calendar';
 
-const meta: Meta<typeof Calendar> = {
+const meta = {
   title: 'Elements/Calendar',
   component: Calendar,
   tags: ['autodocs'],
@@ -20,7 +20,8 @@ A reusable Calendar component.
       },
     },
   },
-};
+} satisfies Meta<typeof Calendar>;
+
 export default meta;
 
 export function Default() {
