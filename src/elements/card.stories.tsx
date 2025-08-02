@@ -22,7 +22,6 @@ A reusable Card component.
 
 export default meta;
 
-// Export as a named function so Docs “dynamic” source shows the full body
 export function Demo() {
   return (
     <Card className="w-full max-w-sm">
