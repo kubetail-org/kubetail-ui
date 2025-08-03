@@ -2,6 +2,10 @@
 @import "react-day-picker/style.css";
 @import "./src/index.css";
 
+@source "./src/**/*.{js,ts,jsx,tsx,mdx}";
+@source "./src/**/*.stories.{js,ts,jsx,tsx}";
+@source "./storybook/**/*.{js,ts,jsx,tsx}";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
