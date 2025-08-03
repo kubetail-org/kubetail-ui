@@ -32,4 +32,46 @@ describe('Button', () => {
     const { asFragment } = render(<Button className="my-extra-class" />);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('renders asChild properly', () => {
+    const { asFragment, getByText } = render(
+      <Button asChild>
+        <a href="/test">Child Link</a>
+      </Button>,
+    );
+    expect(getByText('Child Link').tagName).toBe('A');
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('handles onClick', () => {
+    const handleClick = vi.fn();
+    const { getByText } = render(<Button onClick={handleClick}>Click Me</Button>);
+    getByText('Click Me').click();
+    expect(handleClick).toHaveBeenCalled();
+  });
+
+  it('renders with aria-invalid', () => {
+    const { getByRole } = render(<Button aria-invalid>Invalid</Button>);
+    expect(getByRole('button')).toHaveAttribute('aria-invalid');
+  });
+
+  it('renders with an icon', () => {
+    const Icon = () => <svg data-testid="icon" />;
+    const { getByTestId } = render(
+      <Button>
+        <Icon />
+        Icon Btn
+      </Button>,
+    );
+    expect(getByTestId('icon')).toBeInTheDocument();
+  });
+
+  it('renders as link variant with href', () => {
+    const { getByText } = render(
+      <Button asChild variant="link">
+        <a href="/test">Link Btn</a>
+      </Button>,
+    );
+    expect(getByText('Link Btn')).toHaveAttribute('href', '/test');
+  });
 });
