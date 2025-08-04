@@ -1,0 +1,400 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`DropdownMenu > Basic rendering > renders content when open 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r3»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r2»"
+    type="button"
+  >
+    Open Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > Basic rendering > renders the trigger properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-expanded="false"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="closed"
+    id="radix-«r0»"
+    type="button"
+  >
+    Open Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > Complex dropdown menu > renders all components together properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r2m»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r2l»"
+    type="button"
+  >
+    Complex Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > Content positioning > applies custom className to content 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r35»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r34»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r32»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r31»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuCheckboxItem > applies custom className 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r17»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r16»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuCheckboxItem > renders checked state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r11»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r10»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«ru»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«rt»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuItem > applies custom className 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«rr»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«rq»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuItem > renders default variant properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«rd»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«rc»"
+    type="button"
+  >
+    Open Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuItem > renders destructive variant properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«ri»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«rh»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«rl»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«rk»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1p»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1o»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1l»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1k»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1n»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1m»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > applies custom className to radio items 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1i»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1h»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > renders radio group properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1a»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r19»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1v»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1u»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r1r»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r1q»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r24»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r23»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r21»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r20»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuSub components > applies custom className to sub components 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r2h»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r2g»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r27»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r26»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with inset properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r2c»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r2b»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > Error handling > handles disabled state 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="radix-«r3h»"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-slot="dropdown-menu-trigger"
+    data-state="open"
+    id="radix-«r3g»"
+    type="button"
+  >
+    Menu
+  </button>
+</DocumentFragment>
+`;
