@@ -37,79 +37,73 @@ describe('Checkbox', () => {
 
   it('handles controlled state properly', () => {
     const handleChange = vi.fn();
-    const { container, rerender } = render(
-      <Checkbox checked={false} onCheckedChange={handleChange} />
-    );
-    
+    const { container, rerender } = render(<Checkbox checked={false} onCheckedChange={handleChange} />);
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
     expect(checkbox).toHaveAttribute('data-state', 'unchecked');
 
-    rerender(<Checkbox checked={true} onCheckedChange={handleChange} />);
+    rerender(<Checkbox checked onCheckedChange={handleChange} />);
     expect(checkbox).toHaveAttribute('data-state', 'checked');
   });
 
   it('calls onCheckedChange when clicked', () => {
     const handleChange = vi.fn();
     const { container } = render(<Checkbox onCheckedChange={handleChange} />);
-    
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
     fireEvent.click(checkbox);
-    
+
     expect(handleChange).toHaveBeenCalledTimes(1);
     expect(handleChange).toHaveBeenCalledWith(true);
   });
 
   it('toggles state when clicked in uncontrolled mode', () => {
     const { container } = render(<Checkbox />);
-    
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
-    
+
     expect(checkbox).toHaveAttribute('data-state', 'unchecked');
 
     fireEvent.click(checkbox);
     expect(checkbox).toHaveAttribute('data-state', 'checked');
-    
+
     fireEvent.click(checkbox);
     expect(checkbox).toHaveAttribute('data-state', 'unchecked');
   });
 
   it('does not respond to clicks when disabled', () => {
     const handleChange = vi.fn();
-    const { container } = render(
-      <Checkbox disabled onCheckedChange={handleChange} />
-    );
-    
+    const { container } = render(<Checkbox disabled onCheckedChange={handleChange} />);
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
     fireEvent.click(checkbox);
-    
+
     expect(handleChange).not.toHaveBeenCalled();
     expect(checkbox).toHaveAttribute('data-state', 'unchecked');
   });
 
   it('is accessible and focusable', () => {
     const { container } = render(<Checkbox />);
-    
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
-    
+
     expect(checkbox).not.toHaveAttribute('tabindex', '-1');
-    
+
     expect(checkbox).toHaveAttribute('role', 'checkbox');
-    
+
     expect(checkbox).toHaveAttribute('aria-checked', 'false');
   });
 
   it('supports focus and blur events', () => {
     const handleFocus = vi.fn();
     const handleBlur = vi.fn();
-    const { container } = render(
-      <Checkbox onFocus={handleFocus} onBlur={handleBlur} />
-    );
-    
+    const { container } = render(<Checkbox onFocus={handleFocus} onBlur={handleBlur} />);
+
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
-    
+
     fireEvent.focus(checkbox);
     expect(handleFocus).toHaveBeenCalled();
-    
+
     fireEvent.blur(checkbox);
     expect(handleBlur).toHaveBeenCalled();
   });
@@ -148,13 +142,9 @@ describe('Checkbox', () => {
 
   it('supports additional HTML attributes', () => {
     const { container } = render(
-      <Checkbox 
-        id="test-checkbox" 
-        data-testid="custom-checkbox"
-        aria-label="Test checkbox"
-      />
+      <Checkbox id="test-checkbox" data-testid="custom-checkbox" aria-label="Test checkbox" />,
     );
-    
+
     const checkbox = container.querySelector('[data-slot="checkbox"]');
     expect(checkbox).toHaveAttribute('id', 'test-checkbox');
     expect(checkbox).toHaveAttribute('data-testid', 'custom-checkbox');
@@ -164,7 +154,7 @@ describe('Checkbox', () => {
   it('applies correct CSS classes', () => {
     const { container } = render(<Checkbox />);
     const checkbox = container.querySelector('[data-slot="checkbox"]');
-    
+
     expect(checkbox).toHaveClass(
       'peer',
       'border-input',
@@ -174,21 +164,15 @@ describe('Checkbox', () => {
       'border',
       'shadow-xs',
       'transition-shadow',
-      'outline-none'
+      'outline-none',
     );
   });
 
   it('has correct indicator styling when checked', () => {
     const { container } = render(<Checkbox checked />);
     const indicator = container.querySelector('[data-slot="checkbox-indicator"]');
-    
+
     expect(indicator).toBeInTheDocument();
-    expect(indicator).toHaveClass(
-      'flex',
-      'items-center',
-      'justify-center',
-      'text-current',
-      'transition-none'
-    );
+    expect(indicator).toHaveClass('flex', 'items-center', 'justify-center', 'text-current', 'transition-none');
   });
 });

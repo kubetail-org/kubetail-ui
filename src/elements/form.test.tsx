@@ -4,16 +4,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Input } from './input';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-  useFormField,
-} from './form';
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, useFormField } from './form';
 
 const TestFormComponent = ({
   defaultValues = {},
@@ -55,7 +46,7 @@ const TestFormComponent = ({
 // Component to test individual form components with custom props
 const CustomFormItemComponent = ({ className }: { className?: string }) => {
   const form = useForm();
-  
+
   return (
     <Form {...form}>
       <FormField
@@ -73,7 +64,7 @@ const CustomFormItemComponent = ({ className }: { className?: string }) => {
 
 const CustomFormLabelComponent = ({ className }: { className?: string }) => {
   const form = useForm();
-  
+
   return (
     <Form {...form}>
       <FormField
@@ -91,7 +82,7 @@ const CustomFormLabelComponent = ({ className }: { className?: string }) => {
 
 const CustomFormDescriptionComponent = ({ className }: { className?: string }) => {
   const form = useForm();
-  
+
   return (
     <Form {...form}>
       <FormField
@@ -109,7 +100,7 @@ const CustomFormDescriptionComponent = ({ className }: { className?: string }) =
 
 const CustomFormMessageComponent = ({ children }: { children?: React.ReactNode }) => {
   const form = useForm();
-  
+
   return (
     <Form {...form}>
       <FormField
@@ -130,11 +121,7 @@ const FormFieldContextTestComponent = () => {
 
   return (
     <Form {...form}>
-      <FormField 
-        control={form.control} 
-        name="contextTest" 
-        render={() => <div>Mock render</div>} 
-      />
+      <FormField control={form.control} name="contextTest" render={() => <div>Mock render</div>} />
     </Form>
   );
 };
@@ -164,14 +151,12 @@ const IntegrationTestComponent = ({ defaultValues }: { defaultValues?: Record<st
   );
 };
 
-// Component to test useFormField hook
-const UseFormFieldTestComponent = ({ throwError = false }: { throwError?: boolean }) => {
-  if (throwError) {
-    // Test hook outside of FormField context
-    const formField = useFormField();
-    return <div>{formField.name}</div>;
-  }
+const UseFormFieldErrorTestComponent = () => {
+  const formField = useFormField();
+  return <div>{formField.name}</div>;
+};
 
+const UseFormFieldTestComponent = () => {
   const form = useForm();
 
   return (
@@ -372,7 +357,7 @@ describe('Form Components', () => {
     it('handles field changes', () => {
       render(<TestFormComponent />);
       const input = screen.getByPlaceholderText('Enter text');
-      
+
       fireEvent.change(input, { target: { value: 'new value' } });
       expect(input).toHaveValue('new value');
     });
@@ -386,7 +371,7 @@ describe('Form Components', () => {
   describe('useFormField hook', () => {
     it('returns correct field properties', () => {
       render(<UseFormFieldTestComponent />);
-      
+
       expect(screen.getByTestId('field-name')).toHaveTextContent('hookTest');
       expect(screen.getByTestId('form-item-id')).toHaveTextContent(/^.+-form-item$/);
       expect(screen.getByTestId('form-description-id')).toHaveTextContent(/^.+-form-item-description$/);
@@ -395,11 +380,10 @@ describe('Form Components', () => {
     });
 
     it('throws error when used outside FormField context', () => {
-      // Suppress console.error for this test
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-      
+
       expect(() => {
-        render(<UseFormFieldTestComponent throwError />);
+        render(<UseFormFieldErrorTestComponent />);
       }).toThrow();
 
       consoleSpy.mockRestore();
@@ -410,7 +394,6 @@ describe('Form Components', () => {
     it('form components work together correctly', () => {
       render(<IntegrationTestComponent defaultValues={{ integration: 'test value' }} />);
 
-      // Check all components are rendered and connected
       const label = screen.getByText('Integration Test');
       const input = screen.getByDisplayValue('test value');
       const description = screen.getByText('Integration test description');
@@ -419,7 +402,6 @@ describe('Form Components', () => {
       expect(input).toBeInTheDocument();
       expect(description).toBeInTheDocument();
 
-      // Check accessibility connections
       const labelId = label.getAttribute('for');
       const inputId = input.getAttribute('id');
       expect(labelId).toBe(inputId);
@@ -449,7 +431,7 @@ describe('Form Components', () => {
                 </FormItem>
               )}
             />
-          </Form>
+          </Form>,
         );
 
         React.useEffect(() => {
@@ -472,7 +454,7 @@ describe('Form Components', () => {
                     </FormItem>
                   )}
                 />
-              </Form>
+              </Form>,
             );
           }, 100);
 
@@ -484,7 +466,6 @@ describe('Form Components', () => {
 
       render(<ValidationTestComponentWrapper />);
 
-      // Check basic render
       expect(screen.getByText('Validation Test')).toBeInTheDocument();
       expect(screen.getByPlaceholderText('Validation test')).toBeInTheDocument();
     });
