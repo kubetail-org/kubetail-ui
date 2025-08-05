@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Label > appends custom className 1`] = `
+<DocumentFragment>
+  <label
+    class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 my-extra-class"
+    data-slot="label"
+  >
+    Test Label
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Label > handles empty content 1`] = `
+<DocumentFragment>
+  <label
+    class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+    data-slot="label"
+  />
+</DocumentFragment>
+`;
+
+exports[`Label > renders contents properly 1`] = `
+<DocumentFragment>
+  <label
+    class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+    data-slot="label"
+  >
+    My Label
+  </label>
+</DocumentFragment>
+`;
+
+exports[`Label > renders with complex children 1`] = `
+<DocumentFragment>
+  <label
+    class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50"
+    data-slot="label"
+  >
+    <span>
+      Required
+    </span>
+    <strong>
+      *
+    </strong>
+  </label>
+</DocumentFragment>
+`;
