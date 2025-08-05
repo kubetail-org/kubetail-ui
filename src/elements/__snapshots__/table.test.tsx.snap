@@ -1,0 +1,286 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Table Components > Complete Table Structure > renders complete table structure properly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative w-full overflow-x-auto"
+    data-slot="table-container"
+  >
+    <table
+      class="w-full caption-bottom text-sm"
+      data-slot="table"
+    >
+      <caption
+        class="text-muted-foreground mt-4 text-sm"
+        data-slot="table-caption"
+      >
+        A list of recent invoices
+      </caption>
+      <thead
+        class="[&_tr]:border-b"
+        data-slot="table-header"
+      >
+        <tr
+          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          data-slot="table-row"
+        >
+          <th
+            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-head"
+          >
+            Invoice
+          </th>
+          <th
+            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-head"
+          >
+            Status
+          </th>
+          <th
+            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-head"
+          >
+            Method
+          </th>
+          <th
+            class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            data-slot="table-head"
+          >
+            Amount
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="[&_tr:last-child]:border-0"
+        data-slot="table-body"
+      >
+        <tr
+          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          data-slot="table-row"
+        >
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-medium"
+            data-slot="table-cell"
+          >
+            INV001
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-cell"
+          >
+            Paid
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-cell"
+          >
+            Credit Card
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            data-slot="table-cell"
+          >
+            $250.00
+          </td>
+        </tr>
+        <tr
+          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          data-slot="table-row"
+        >
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-medium"
+            data-slot="table-cell"
+          >
+            INV002
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-cell"
+          >
+            Pending
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            data-slot="table-cell"
+          >
+            PayPal
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            data-slot="table-cell"
+          >
+            $150.00
+          </td>
+        </tr>
+      </tbody>
+      <tfoot
+        class="bg-muted/50 border-t font-medium [&>tr]:last:border-b-0"
+        data-slot="table-footer"
+      >
+        <tr
+          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          data-slot="table-row"
+        >
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            colspan="3"
+            data-slot="table-cell"
+          >
+            Total
+          </td>
+          <td
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            data-slot="table-cell"
+          >
+            $400.00
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Table Components > Table > renders table with container properly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative w-full overflow-x-auto"
+    data-slot="table-container"
+  >
+    <table
+      class="w-full caption-bottom text-sm"
+      data-slot="table"
+    >
+      <tbody>
+        <tr>
+          <td>
+            Cell content
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableBody > renders tbody properly 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody
+      class="[&_tr:last-child]:border-0"
+      data-slot="table-body"
+    >
+      <tr>
+        <td>
+          Body content
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableCaption > renders caption properly 1`] = `
+<DocumentFragment>
+  <table>
+    <caption
+      class="text-muted-foreground mt-4 text-sm"
+      data-slot="table-caption"
+    >
+      Table caption
+    </caption>
+    <tbody>
+      <tr>
+        <td>
+          Cell content
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableCell > renders td properly 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr>
+        <td
+          class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+          data-slot="table-cell"
+        >
+          Cell content
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableFooter > renders tfoot properly 1`] = `
+<DocumentFragment>
+  <table>
+    <tfoot
+      class="bg-muted/50 border-t font-medium [&>tr]:last:border-b-0"
+      data-slot="table-footer"
+    >
+      <tr>
+        <td>
+          Footer content
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableHead > renders th properly 1`] = `
+<DocumentFragment>
+  <table>
+    <thead>
+      <tr>
+        <th
+          class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+          data-slot="table-head"
+        >
+          Header content
+        </th>
+      </tr>
+    </thead>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableHeader > renders thead properly 1`] = `
+<DocumentFragment>
+  <table>
+    <thead
+      class="[&_tr]:border-b"
+      data-slot="table-header"
+    >
+      <tr>
+        <th>
+          Header
+        </th>
+      </tr>
+    </thead>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Components > TableRow > renders tr properly 1`] = `
+<DocumentFragment>
+  <table>
+    <tbody>
+      <tr
+        class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+        data-slot="table-row"
+      >
+        <td>
+          Row content
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
