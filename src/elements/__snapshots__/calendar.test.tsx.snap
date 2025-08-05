@@ -256,13 +256,12 @@ exports[`Calendar > applies correct CSS classes for different day states 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
                   tabindex="-1"
                   type="button"
@@ -271,30 +270,31 @@ exports[`Calendar > applies correct CSS classes for different day states 1`] = `
                 </button>
               </td>
               <td
-                aria-selected="true"
-                class="rdp-day bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
-                data-selected="true"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025, selected"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   5
                 </button>
               </td>
               <td
-                class="rdp-day"
+                aria-selected="true"
+                class="rdp-day bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
                 data-day="2025-08-06"
+                data-selected="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Wednesday, August 6th, 2025"
+                  aria-label="Wednesday, August 6th, 2025, selected"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   6
@@ -987,29 +987,29 @@ exports[`Calendar > can hide outside days when showOutsideDays is false 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
@@ -1724,31 +1724,33 @@ exports[`Calendar > forwards DayPicker props correctly with mode single 1`] = `
                 </button>
               </td>
               <td
-                aria-selected="true"
-                class="rdp-day bg-accent text-accent-foreground bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+                class="rdp-day rdp-disabled"
                 data-day="2025-08-04"
-                data-selected="true"
-                data-today="true"
+                data-disabled="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025, selected"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  disabled=""
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                aria-selected="true"
+                class="rdp-day bg-accent text-accent-foreground bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
                 data-day="2025-08-05"
+                data-selected="true"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025, selected"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
@@ -3117,29 +3119,29 @@ exports[`Calendar > forwards all other DayPicker props 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
@@ -5226,29 +5228,29 @@ exports[`Calendar > handles disabled dates 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
@@ -6636,29 +6638,29 @@ exports[`Calendar > renders properly 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
@@ -8175,29 +8177,29 @@ exports[`Calendar > renders with custom selected date in single mode 1`] = `
                 </button>
               </td>
               <td
-                class="rdp-day bg-accent text-accent-foreground"
+                class="rdp-day"
                 data-day="2025-08-04"
-                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Today, Monday, August 4th, 2025"
+                  aria-label="Monday, August 4th, 2025"
                   class="rdp-day_button"
-                  tabindex="0"
+                  tabindex="-1"
                   type="button"
                 >
                   4
                 </button>
               </td>
               <td
-                class="rdp-day"
+                class="rdp-day bg-accent text-accent-foreground"
                 data-day="2025-08-05"
+                data-today="true"
                 role="gridcell"
               >
                 <button
-                  aria-label="Tuesday, August 5th, 2025"
+                  aria-label="Today, Tuesday, August 5th, 2025"
                   class="rdp-day_button"
-                  tabindex="-1"
+                  tabindex="0"
                   type="button"
                 >
                   5
