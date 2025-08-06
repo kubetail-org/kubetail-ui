@@ -7,7 +7,7 @@ import { Input } from './input';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, useFormField } from './form';
 
 const TestFormComponent = ({
-  defaultValues = {},
+  defaultValues = { testField: '' },
   hasError = false,
   errorMessage = 'This field is required',
 }: {
@@ -19,9 +19,13 @@ const TestFormComponent = ({
     defaultValues,
   });
 
-  if (hasError) {
-    form.setError('testField', { message: errorMessage });
-  }
+  React.useEffect(() => {
+    if (hasError) {
+      form.setError('testField', { message: errorMessage });
+    } else {
+      form.clearErrors('testField');
+    }
+  }, [form, hasError, errorMessage]);
 
   return (
     <Form {...form}>

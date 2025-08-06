@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './tabs';
 
@@ -217,7 +217,9 @@ describe('Tabs', () => {
       expect(tab1Trigger).toHaveAttribute('aria-selected', 'true');
       expect(tab2Trigger).toHaveAttribute('aria-selected', 'false');
 
-      fireEvent.click(tab2Trigger);
+      act(() => {
+        fireEvent.click(tab2Trigger);
+      });
 
       expect(tab2Trigger).toBeInTheDocument();
     });
@@ -227,7 +229,9 @@ describe('Tabs', () => {
 
       expect(screen.getByText('Content for Tab 1')).toBeVisible();
 
-      fireEvent.click(screen.getByRole('tab', { name: 'Tab 3 (Disabled)' }));
+      act(() => {
+        fireEvent.click(screen.getByRole('tab', { name: 'Tab 3 (Disabled)' }));
+      });
 
       expect(screen.getByText('Content for Tab 1')).toBeVisible();
       expect(screen.queryByText('Content for Tab 3')).not.toBeInTheDocument();
@@ -239,10 +243,14 @@ describe('Tabs', () => {
       const tab1 = screen.getByRole('tab', { name: 'Tab 1' });
       const tab2 = screen.getByRole('tab', { name: 'Tab 2' });
 
-      tab1.focus();
+      act(() => {
+        tab1.focus();
+      });
       expect(tab1).toHaveFocus();
 
-      fireEvent.click(tab2);
+      act(() => {
+        fireEvent.click(tab2);
+      });
 
       expect(tab2).toBeInTheDocument();
       expect(tab2).not.toBeDisabled();
