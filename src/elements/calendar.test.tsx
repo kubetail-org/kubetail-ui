@@ -1,11 +1,14 @@
-import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 import { Calendar } from './calendar';
 
+const today = new Date('2024-02-14'); // Always day one
+
 describe('Calendar', () => {
   it('renders properly', () => {
-    const { asFragment } = render(<Calendar />);
+    const selectedDate = new Date('2024-01-15');
+    const { asFragment } = render(<Calendar mode="single" selected={selectedDate} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -17,13 +20,15 @@ describe('Calendar', () => {
   });
 
   it('can hide outside days when showOutsideDays is false', () => {
-    const { asFragment } = render(<Calendar showOutsideDays={false} />);
+    const { asFragment } = render(<Calendar showOutsideDays={false} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('forwards DayPicker props correctly with mode single', () => {
-    const today = new Date();
-    const { asFragment } = render(<Calendar mode="single" selected={today} disabled={{ before: new Date() }} />);
+    const fixedDate = new Date('2024-01-15');
+    const { asFragment } = render(
+      <Calendar mode="single" selected={fixedDate} disabled={{ before: new Date('2024-01-10') }} today={today} />,
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -36,19 +41,19 @@ describe('Calendar', () => {
 
   it('renders with custom selected date in single mode', () => {
     const selectedDate = new Date('2024-01-15');
-    const { asFragment } = render(<Calendar mode="single" selected={selectedDate} />);
+    const { asFragment } = render(<Calendar mode="single" selected={selectedDate} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('handles disabled dates', () => {
     const disabledDate = new Date('2024-01-01');
-    const { asFragment } = render(<Calendar disabled={disabledDate} />);
+    const { asFragment } = render(<Calendar disabled={disabledDate} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with custom month', () => {
     const customMonth = new Date('2024-06-01');
-    const { asFragment } = render(<Calendar month={customMonth} />);
+    const { asFragment } = render(<Calendar month={customMonth} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -73,10 +78,7 @@ describe('Calendar', () => {
   });
 
   it('applies correct CSS classes for different day states', () => {
-    const today = new Date();
-    const selected = new Date();
-    selected.setDate(today.getDate() + 1);
-
+    const selected = new Date('2024-01-16');
     const { asFragment } = render(<Calendar mode="single" selected={selected} today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
@@ -90,6 +92,7 @@ describe('Calendar', () => {
         selected={new Date('2024-07-15')}
         month={new Date('2024-07-01')}
         disabled={{ before: new Date('2024-07-10') }}
+        today={today}
       />,
     );
     expect(asFragment()).toMatchSnapshot();
@@ -109,7 +112,7 @@ describe('Calendar', () => {
   });
 
   it('forwards all other DayPicker props', () => {
-    const { asFragment } = render(<Calendar captionLayout="dropdown" numberOfMonths={2} fixedWeeks />);
+    const { asFragment } = render(<Calendar captionLayout="dropdown" numberOfMonths={2} fixedWeeks today={today} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

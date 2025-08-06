@@ -22,6 +22,7 @@ exports[`Form Components > Form > renders form properly 1`] = `
       id="«r0»-form-item"
       name="testField"
       placeholder="Enter text"
+      value=""
     />
     <p
       class="text-muted-foreground text-sm"
@@ -56,6 +57,7 @@ exports[`Form Components > FormField > renders form field with controller 1`] = 
       id="«rn»-form-item"
       name="testField"
       placeholder="Enter text"
+      value=""
     />
     <p
       class="text-muted-foreground text-sm"
