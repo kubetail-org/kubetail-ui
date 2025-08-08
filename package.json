@@ -15,61 +15,9 @@
       "import": "./dist/elements/index.js",
       "require": "./dist/elements/index.cjs"
     },
-    "./elements/DataTable": {
-      "import": "./dist/elements/DataTable/index.js",
-      "require": "./dist/elements/DataTable/index.cjs"
-    },
-    "./elements/button": {
-      "import": "./dist/elements/button.js",
-      "require": "./dist/elements/button.cjs"
-    },
-    "./elements/calendar": {
-      "import": "./dist/elements/calendar.js",
-      "require": "./dist/elements/calendar.cjs"
-    },
-    "./elements/card": {
-      "import": "./dist/elements/card.js",
-      "require": "./dist/elements/card.cjs"
-    },
-    "./elements/checkbox": {
-      "import": "./dist/elements/checkbox.js",
-      "require": "./dist/elements/checkbox.cjs"
-    },
-    "./elements/dropdown-menu": {
-      "import": "./dist/elements/dropdown-menu.js",
-      "require": "./dist/elements/dropdown-menu.cjs"
-    },
-    "./elements/form": {
-      "import": "./dist/elements/form.js",
-      "require": "./dist/elements/form.cjs"
-    },
-    "./elements/input": {
-      "import": "./dist/elements/input.js",
-      "require": "./dist/elements/input.cjs"
-    },
-    "./elements/label": {
-      "import": "./dist/elements/label.js",
-      "require": "./dist/elements/label.cjs"
-    },
-    "./elements/popover": {
-      "import": "./dist/elements/popover.js",
-      "require": "./dist/elements/popover.cjs"
-    },
-    "./elements/select": {
-      "import": "./dist/elements/select.js",
-      "require": "./dist/elements/select.cjs"
-    },
-    "./elements/spinner": {
-      "import": "./dist/elements/spinner.js",
-      "require": "./dist/elements/spinner.cjs"
-    },
-    "./elements/table": {
-      "import": "./dist/elements/table.js",
-      "require": "./dist/elements/table.cjs"
-    },
-    "./elements/tabs": {
-      "import": "./dist/elements/tabs.js",
-      "require": "./dist/elements/tabs.cjs"
+    "./elements/*": {
+      "import": "./dist/elements/*.js",
+      "require": "./dist/elements/*.cjs"
     },
     "./package.json": "./package.json"
   },

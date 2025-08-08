@@ -58,6 +58,7 @@ const preview: Preview = {
             'Input',
             'Label',
             'Popover',
+            'SearchBox',
             'Select',
             'Spinner',
             'Table',
