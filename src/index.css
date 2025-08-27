@@ -9,7 +9,7 @@
   --card-foreground: var(--color-zinc-950);
   --popover: var(--color-white);
   --popover-foreground: var(--color-zinc-950);
-  --primary: var(--color-blue-700);                           /* color-bg-primary */
+  --primary: oklch(0.563 0.194 262.62);                           /* color-bg-primary */
   --primary-foreground: var(--color-white);                   /* color-text-on-color */
   --secondary: var(--color-zinc-50);                          /* color-bg-secondary */
   --secondary-foreground: var(--color-zinc-950);              /* color-text */
