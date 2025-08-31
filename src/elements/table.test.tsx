@@ -39,6 +39,21 @@ describe('Table Components', () => {
       expect(table).toHaveClass('custom-table-class');
     });
 
+    it('applies custom containerClassName properly', () => {
+      const { container } = render(
+        <Table containerClassName="custom-table-class">
+          <tbody>
+            <tr>
+              <td>Cell content</td>
+            </tr>
+          </tbody>
+        </Table>,
+      );
+
+      const table = container.querySelector('[data-slot="table-container"]');
+      expect(table).toHaveClass('custom-table-class');
+    });
+
     it('passes through additional props', () => {
       const { container } = render(
         <Table data-testid="test-table" id="my-table">
