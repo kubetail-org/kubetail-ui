@@ -53,6 +53,7 @@ const preview: Preview = {
             'Calendar',
             'Card',
             'Checkbox',
+            'Dialog',
             'Dropdown Menu',
             'Form',
             'Input',
