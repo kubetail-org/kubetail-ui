@@ -1,3 +1,4 @@
+import * as React from 'react';
 import type { Meta } from '@storybook/react-vite';
 
 import { Button } from '@/elements/button';
@@ -11,6 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/elements/dialog';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/elements/dropdown-menu';
 import { Input } from '@/elements/input';
 import { Label } from '@/elements/label';
 
@@ -80,5 +82,27 @@ export function CustomCloseButton() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
+  );
+}
+
+export function InsideDropdownMenu() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <>
+      <DropdownMenu>
+        <DropdownMenuTrigger>Open Menu</DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem onSelect={() => setIsOpen(true)}>Open Dialog</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent>
+          <DialogTitle>Title</DialogTitle>
+          <DialogDescription>Description</DialogDescription>
+          Content
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
