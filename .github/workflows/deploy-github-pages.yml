@@ -3,8 +3,8 @@ name: Build and Publish Storybook to GitHub Pages
 on:
   push:
     branches:
-      - 'v2'
- 
+      - 'gh-pages'
+
 permissions:
   contents: read
   pages: write

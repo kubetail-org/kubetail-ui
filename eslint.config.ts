@@ -48,7 +48,6 @@ const customRulesConfig = [
       '@typescript-eslint/consistent-type-definitions': 'off',
       'import-x/no-extraneous-dependencies': 'off',
       'import-x/extensions': 'off',
-      'import-x/no-rename-default': 'off',
       'import-x/no-unresolved': 'off',
       'import-x/prefer-default-export': 'off',
       'react/function-component-definition': 'off',

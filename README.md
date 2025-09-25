@@ -30,7 +30,7 @@ Instead of running the project on your local machine you can also run it in a co
 docker compose up
 ```
 
-Open [http://localhost:6006](http://localhost:6006) in your browser to see storybook.
+Open [http://localhost:6006](http://localhost:6006) in your browser to see Storybook.
 
 ## Scripts
 
@@ -52,6 +52,7 @@ pnpm add @kubetail/ui
 
 ```css
 @import 'tailwindcss';
+
 
 @import '@kubetail/ui';
 @source '../node_modules/@kubetail/ui/**/*.js';

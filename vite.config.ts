@@ -39,6 +39,7 @@ export default defineConfig({
     lib: {
       entry: [
         resolve(__dirname, 'src/index.ts'),
+        resolve(__dirname, 'src/index.css'),
         ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), {
           ignore: ['**/*.test.tsx', '**/*.stories.tsx'],
         }),
@@ -62,22 +63,7 @@ export default defineConfig({
           hook: 'writeBundle',
         }),
       ],
-      external: [
-        '@heroicons/react/20/solid',
-        '@heroicons/react/24/solid',
-        '@radix-ui/react-dropdown-menu',
-        '@radix-ui/react-popover',
-        '@radix-ui/react-slot',
-        '@radix-ui/react-tabs',
-        '@restart/ui/Button',
-        'lucide-react',
-        'react',
-        'react-day-picker',
-        'react-dom',
-        'react/jsx-runtime',
-        'tailwindcss/colors',
-        'tailwindcss/plugin',
-      ],
+      external: ['@radix-ui/react-slot', 'react', 'react-dom', 'react/jsx-runtime'],
       output: {
         // Preserve the directory structure
         preserveModules: true,
