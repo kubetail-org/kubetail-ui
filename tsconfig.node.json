@@ -24,7 +24,6 @@
   "include": [
     "eslint.config.ts",
     "vite.config.ts",
-    "vitest.setup.ts",
-    "tailwind.config.ts"
+    "vitest.setup.ts"
   ]
 }
