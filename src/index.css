@@ -9,7 +9,7 @@
   --card-foreground: var(--color-zinc-950);
   --popover: var(--color-white);
   --popover-foreground: var(--color-zinc-950);
-  --primary: oklch(0.563 0.194 262.62);                           /* color-bg-primary */
+  --primary: oklch(0.563 0.194 262.62);                     /* color-bg-primary */
   --primary-foreground: var(--color-white);                   /* color-text-on-color */
   --secondary: var(--color-zinc-50);                          /* color-bg-secondary */
   --secondary-foreground: var(--color-zinc-950);              /* color-text */
@@ -20,7 +20,7 @@
   --destructive: var(--color-red-500);                        /* color-bg-error-strong */
   --destructive-foreground: var(--color-white);               /* color-text-on-color */ 
   --border: var(--color-zinc-200);                            /* color-border */
-  --input: var(--color-zinc-300);                             /* color-border-input */
+  --input: var(--color-zinc-200);                             /* color-border-input */
   --ring: var(--color-blue-500);                              /* color-border-focusRing */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
