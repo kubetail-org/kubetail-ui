@@ -58,6 +58,7 @@ const preview: Preview = {
             'Form',
             'Input',
             'Label',
+            'Pagination',
             'Popover',
             'SearchBox',
             'Select',
