@@ -1,0 +1,110 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Sidebar > Basic rendering > renders properly 1`] = `
+<DocumentFragment>
+  <div
+    class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex min-h-svh w-full"
+    data-slot="sidebar-wrapper"
+    style="--sidebar-width: 16rem; --sidebar-width-icon: 3rem;"
+  >
+    <div
+      class="group peer text-sidebar-foreground hidden md:block"
+      data-collapsible=""
+      data-side="left"
+      data-slot="sidebar"
+      data-state="expanded"
+      data-variant="sidebar"
+    >
+      <div
+        class="relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-(--sidebar-width-icon)"
+        data-slot="sidebar-gap"
+      />
+      <div
+        class="fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l"
+        data-slot="sidebar-container"
+      >
+        <div
+          class="bg-sidebar group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
+          data-sidebar="sidebar"
+          data-slot="sidebar-inner"
+        >
+          <div
+            class="flex flex-col gap-2 p-2"
+            data-sidebar="header"
+            data-slot="sidebar-header"
+          >
+            Header
+          </div>
+          <div
+            class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden"
+            data-sidebar="content"
+            data-slot="sidebar-content"
+          >
+            <div
+              class="relative flex w-full min-w-0 flex-col p-2"
+              data-sidebar="group"
+              data-slot="sidebar-group"
+            >
+              Group 1
+            </div>
+            <div
+              class="relative flex w-full min-w-0 flex-col p-2"
+              data-sidebar="group"
+              data-slot="sidebar-group"
+            >
+              Group 2
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-2 p-2"
+            data-sidebar="footer"
+            data-slot="sidebar-footer"
+          >
+            Footer
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <button
+        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-7"
+        data-sidebar="trigger"
+        data-slot="sidebar-trigger"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-panel-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            height="18"
+            rx="2"
+            width="18"
+            x="3"
+            y="3"
+          />
+          <path
+            d="M9 3v18"
+          />
+        </svg>
+        <span
+          class="sr-only"
+        >
+          Toggle Sidebar
+        </span>
+      </button>
+      <h1>
+        Main content
+      </h1>
+    </main>
+  </div>
+</DocumentFragment>
+`;

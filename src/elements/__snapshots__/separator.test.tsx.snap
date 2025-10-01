@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Separator > Basic rendering > renders properly 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="space-y-1"
+    >
+      <h4
+        class="text-sm leading-none font-medium"
+      >
+        Radix Primitives
+      </h4>
+      <p
+        class="text-muted-foreground text-sm"
+      >
+        An open-source UI component library.
+      </p>
+    </div>
+    <div
+      class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-4"
+      data-orientation="horizontal"
+      data-slot="separator"
+      role="none"
+    />
+    <div
+      class="flex h-5 items-center space-x-4 text-sm"
+    >
+      <div>
+        Blog
+      </div>
+      <div
+        class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+        data-orientation="vertical"
+        data-slot="separator"
+        role="none"
+      />
+      <div>
+        Docs
+      </div>
+      <div
+        class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+        data-orientation="vertical"
+        data-slot="separator"
+        role="none"
+      />
+      <div>
+        Source
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

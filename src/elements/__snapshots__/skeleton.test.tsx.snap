@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Skelton > Basic rendering > renders properly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center space-x-4"
+  >
+    <div
+      class="bg-accent animate-pulse h-12 w-12 rounded-full"
+      data-slot="skeleton"
+    />
+    <div
+      class="space-y-2"
+    >
+      <div
+        class="bg-accent animate-pulse rounded-md h-4 w-[250px]"
+        data-slot="skeleton"
+      />
+      <div
+        class="bg-accent animate-pulse rounded-md h-4 w-[200px]"
+        data-slot="skeleton"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
