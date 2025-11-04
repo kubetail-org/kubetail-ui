@@ -3,10 +3,11 @@ name: publish
 on:
   push:
     tags:
-      - '**'
+      - "**"
 
 jobs:
   publish:
+    environment: production
     runs-on: ubuntu-24.04
     permissions:
       packages: write
