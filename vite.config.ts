@@ -1,8 +1,8 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 import { resolve } from 'path';
 
 import tailwindcss from '@tailwindcss/vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
 import copy from 'rollup-plugin-copy';

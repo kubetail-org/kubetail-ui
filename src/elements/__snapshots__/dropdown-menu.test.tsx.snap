@@ -3,12 +3,12 @@
 exports[`DropdownMenu > Basic rendering > renders content when open 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r3»"
+    aria-controls="radix-_r_3_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r2»"
+    id="radix-_r_2_"
     type="button"
   >
     Open Menu
@@ -23,7 +23,7 @@ exports[`DropdownMenu > Basic rendering > renders the trigger properly 1`] = `
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="closed"
-    id="radix-«r0»"
+    id="radix-_r_0_"
     type="button"
   >
     Open Menu
@@ -34,12 +34,12 @@ exports[`DropdownMenu > Basic rendering > renders the trigger properly 1`] = `
 exports[`DropdownMenu > Complex dropdown menu > renders all components together properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r2m»"
+    aria-controls="radix-_r_2m_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r2l»"
+    id="radix-_r_2l_"
     type="button"
   >
     Complex Menu
@@ -50,12 +50,12 @@ exports[`DropdownMenu > Complex dropdown menu > renders all components together 
 exports[`DropdownMenu > Content positioning > applies custom className to content 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r35»"
+    aria-controls="radix-_r_35_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r34»"
+    id="radix-_r_34_"
     type="button"
   >
     Menu
@@ -66,12 +66,12 @@ exports[`DropdownMenu > Content positioning > applies custom className to conten
 exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r32»"
+    aria-controls="radix-_r_32_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r31»"
+    id="radix-_r_31_"
     type="button"
   >
     Menu
@@ -82,12 +82,12 @@ exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`]
 exports[`DropdownMenu > DropdownMenuCheckboxItem > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r17»"
+    aria-controls="radix-_r_17_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r16»"
+    id="radix-_r_16_"
     type="button"
   >
     Menu
@@ -98,12 +98,12 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > applies custom className 1`] 
 exports[`DropdownMenu > DropdownMenuCheckboxItem > renders checked state properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r11»"
+    aria-controls="radix-_r_11_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r10»"
+    id="radix-_r_10_"
     type="button"
   >
     Menu
@@ -114,12 +114,12 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > renders checked state properl
 exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«ru»"
+    aria-controls="radix-_r_u_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«rt»"
+    id="radix-_r_t_"
     type="button"
   >
     Menu
@@ -130,12 +130,12 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state prope
 exports[`DropdownMenu > DropdownMenuItem > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«rr»"
+    aria-controls="radix-_r_r_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«rq»"
+    id="radix-_r_q_"
     type="button"
   >
     Menu
@@ -146,12 +146,12 @@ exports[`DropdownMenu > DropdownMenuItem > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuItem > renders default variant properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«rd»"
+    aria-controls="radix-_r_d_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«rc»"
+    id="radix-_r_c_"
     type="button"
   >
     Open Menu
@@ -162,12 +162,12 @@ exports[`DropdownMenu > DropdownMenuItem > renders default variant properly 1`] 
 exports[`DropdownMenu > DropdownMenuItem > renders destructive variant properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«ri»"
+    aria-controls="radix-_r_i_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«rh»"
+    id="radix-_r_h_"
     type="button"
   >
     Menu
@@ -178,12 +178,12 @@ exports[`DropdownMenu > DropdownMenuItem > renders destructive variant properly 
 exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«rl»"
+    aria-controls="radix-_r_l_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«rk»"
+    id="radix-_r_k_"
     type="button"
   >
     Menu
@@ -194,12 +194,12 @@ exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1p»"
+    aria-controls="radix-_r_1p_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1o»"
+    id="radix-_r_1o_"
     type="button"
   >
     Menu
@@ -210,12 +210,12 @@ exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1l»"
+    aria-controls="radix-_r_1l_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1k»"
+    id="radix-_r_1k_"
     type="button"
   >
     Menu
@@ -226,12 +226,12 @@ exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1n»"
+    aria-controls="radix-_r_1n_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1m»"
+    id="radix-_r_1m_"
     type="button"
   >
     Menu
@@ -242,12 +242,12 @@ exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
 exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > applies custom className to radio items 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1i»"
+    aria-controls="radix-_r_1i_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1h»"
+    id="radix-_r_1h_"
     type="button"
   >
     Menu
@@ -258,12 +258,12 @@ exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > appli
 exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > renders radio group properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1a»"
+    aria-controls="radix-_r_1a_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r19»"
+    id="radix-_r_19_"
     type="button"
   >
     Menu
@@ -274,12 +274,12 @@ exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > rende
 exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1v»"
+    aria-controls="radix-_r_1v_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1u»"
+    id="radix-_r_1u_"
     type="button"
   >
     Menu
@@ -290,12 +290,12 @@ exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r1r»"
+    aria-controls="radix-_r_1r_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r1q»"
+    id="radix-_r_1q_"
     type="button"
   >
     Menu
@@ -306,12 +306,12 @@ exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r24»"
+    aria-controls="radix-_r_24_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r23»"
+    id="radix-_r_23_"
     type="button"
   >
     Menu
@@ -322,12 +322,12 @@ exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r21»"
+    aria-controls="radix-_r_21_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r20»"
+    id="radix-_r_20_"
     type="button"
   >
     Menu
@@ -338,12 +338,12 @@ exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuSub components > applies custom className to sub components 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r2h»"
+    aria-controls="radix-_r_2h_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r2g»"
+    id="radix-_r_2g_"
     type="button"
   >
     Menu
@@ -354,12 +354,12 @@ exports[`DropdownMenu > DropdownMenuSub components > applies custom className to
 exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r27»"
+    aria-controls="radix-_r_27_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r26»"
+    id="radix-_r_26_"
     type="button"
   >
     Menu
@@ -370,12 +370,12 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1
 exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with inset properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r2c»"
+    aria-controls="radix-_r_2c_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r2b»"
+    id="radix-_r_2b_"
     type="button"
   >
     Menu
@@ -386,12 +386,12 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with in
 exports[`DropdownMenu > Error handling > handles disabled state 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="radix-«r3h»"
+    aria-controls="radix-_r_3h_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
     data-state="open"
-    id="radix-«r3g»"
+    id="radix-_r_3g_"
     type="button"
   >
     Menu
