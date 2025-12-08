@@ -4,6 +4,7 @@
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
+    "types": ["node"],
     "skipLibCheck": true,
 
     /* Bundler mode */
@@ -19,7 +20,7 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
   },
   "include": [
     "eslint.config.ts",
