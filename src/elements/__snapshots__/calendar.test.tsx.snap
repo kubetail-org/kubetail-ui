@@ -10,7 +10,7 @@ exports[`Calendar > applies correct CSS classes for different day states 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -667,7 +667,7 @@ exports[`Calendar > can hide outside days when showOutsideDays is false 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -1276,7 +1276,7 @@ exports[`Calendar > forwards DayPicker props correctly with mode single 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -1934,7 +1934,7 @@ exports[`Calendar > forwards all other DayPicker props 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -2599,7 +2599,7 @@ exports[`Calendar > forwards all other DayPicker props 1`] = `
             <span
               aria-live="polite"
               role="status"
-              style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; word-wrap: normal;"
+              style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; word-wrap: normal;"
             >
               February 2024
             </span>
@@ -3942,7 +3942,7 @@ exports[`Calendar > forwards all other DayPicker props 1`] = `
             <span
               aria-live="polite"
               role="status"
-              style="border: 0px; height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; word-wrap: normal;"
+              style="border: 0px; clip: rect(0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; word-wrap: normal;"
             >
               March 2024
             </span>
@@ -4666,7 +4666,7 @@ exports[`Calendar > handles disabled dates 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -5323,7 +5323,7 @@ exports[`Calendar > handles multiple prop combinations 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -5964,7 +5964,7 @@ exports[`Calendar > renders properly 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -6621,7 +6621,7 @@ exports[`Calendar > renders with custom month 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
@@ -7391,7 +7391,7 @@ exports[`Calendar > renders with custom selected date in single mode 1`] = `
       class="rdp-months"
     >
       <nav
-        aria-label=""
+        aria-label="Navigation bar"
         class="rdp-nav"
       >
         <button
