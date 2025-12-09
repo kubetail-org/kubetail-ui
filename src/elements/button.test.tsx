@@ -17,7 +17,7 @@ describe('Button', () => {
   });
 
   it('renders sizes properly', () => {
-    ['xs', 'sm', 'md', 'lg', 'xl'].forEach((size) => {
+    ['sm', 'lg', 'icon', 'icon-sm', 'icon-lg'].forEach((size) => {
       const { asFragment } = render(<Button size={size as ButtonVariantProps['size']}>My Button</Button>);
       expect(asFragment()).toMatchSnapshot();
     });
