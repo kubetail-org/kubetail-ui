@@ -29,13 +29,13 @@
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
   --sidebar: var(--color-zinc-200);
-  --sidebar-foreground: var(--foreground);
+  --sidebar-foreground: var(--color-zinc-950);
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: var(--color-zinc-300);
-  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-accent: var(--color-blue-200);
+  --sidebar-accent-foreground: var(--color-blue-900);
   --sidebar-border: var(--color-zinc-300);
-  --sidebar-ring: var(--ring);
+  --sidebar-ring: var(--color-blue-500);
 }
 
 .dark {
@@ -47,11 +47,11 @@
   --popover-foreground: var(--color-white);
   --primary: var(--color-blue-500);                          /* color-bg-primary */
   --primary-foreground: var(--color-white);                  /* color-text-on-color */
-  --secondary: var(--color-zinc-600);                        /* color-bg-secondary */
+  --secondary: var(--color-zinc-800);                        /* color-bg-secondary */
   --secondary-foreground: var(--color-zinc-50);              /* color-text */
   --muted: var(--color-zinc-900);                            /* color-bg-subtle */
   --muted-foreground: var(--color-zinc-400);                 /* color-text-muted */
-  --accent: var(--color-blue-900);
+  --accent: var(--color-blue-950);
   --accent-foreground: var(--color-white);
   --destructive: var(--color-red-400);                       /* color-bg-error-strong */
   --destructive-foreground: var(--color-zinc-50);            /* color-text */
@@ -64,13 +64,13 @@
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: var(--color-zinc-950);
-  --sidebar-foreground: var(--foreground);
+  --sidebar-foreground: var(--color-zinc-50);
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: var(--color-zinc-700);
-  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-accent: var(--color-blue-800);
+  --sidebar-accent-foreground: var(--color-zinc-50);
   --sidebar-border: var(--color-zinc-700);
-  --sidebar-ring: var(--ring);
+  --sidebar-ring: var(--color-blue-500);
 }
 
 @theme inline {

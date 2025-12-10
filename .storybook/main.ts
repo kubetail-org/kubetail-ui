@@ -11,7 +11,6 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-themes",
     "@storybook/addon-docs",
-    '@vueless/storybook-dark-mode'
   ],
   typescript: {
     reactDocgen: 'react-docgen-typescript',
