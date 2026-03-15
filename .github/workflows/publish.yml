@@ -44,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: refs/tags/cli/v${{ needs.config.outputs.version }}
+          ref: refs/tags/v${{ needs.config.outputs.version }}
 
       - uses: actions/setup-node@v4
         with:
@@ -59,4 +59,5 @@ jobs:
 
       - run: /bin/bash set-version.sh v${{ needs.config.outputs.version }}
 
-      - run: pnpm publish
+      - run: pnpm publish --no-git-checks --access public
+        if: ${{ needs.config.outputs.dry_run == 'false' }}
