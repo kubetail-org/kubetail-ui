@@ -1,6 +1,7 @@
 {
   "name": "@kubetail/ui",
-  "version": "0.0.2",
+  "version": "0.0.1",
+  "url": "https://github.com/kubetail-org/kubetail",
   "type": "module",
   "sideEffects": false,
   "module": "./dist/index.js",
