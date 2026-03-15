@@ -59,4 +59,5 @@ jobs:
 
       - run: /bin/bash set-version.sh v${{ needs.config.outputs.version }}
 
-      - run: pnpm publish
+      - run: pnpm publish --no-git-checks --access public
+        if: ${{ needs.config.outputs.dry_run == 'false' }}
