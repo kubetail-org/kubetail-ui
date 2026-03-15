@@ -1,0 +1,101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Link > appends custom className 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer my-extra-class"
+    data-slot="link"
+    href="/test"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link > renders asChild properly 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    Child Content
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Link > renders contents properly 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    My Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link > renders variants properly 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link > renders variants properly 2`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`RouterLink > renders as anchor by default 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    Router Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`RouterLink > renders variants properly 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`RouterLink > renders variants properly 2`] = `
+<DocumentFragment>
+  <a
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;

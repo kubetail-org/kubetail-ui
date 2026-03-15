@@ -19,6 +19,10 @@
       "import": "./dist/elements/*.js",
       "require": "./dist/elements/*.cjs"
     },
+    "./lib*": {
+      "import": "./dist/lib/*.js",
+      "require": "./dist/elements/*.cjs"
+    },
     "./package.json": "./package.json"
   },
   "style": "./dist/index.css",
