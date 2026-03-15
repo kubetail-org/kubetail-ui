@@ -1,6 +1,6 @@
 {
   "name": "@kubetail/ui",
-  "version": "dev",
+  "version": "0.0.1",
   "url": "https://github.com/kubetail-org/kubetail",
   "type": "module",
   "sideEffects": false,
