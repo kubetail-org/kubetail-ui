@@ -5,6 +5,7 @@ exports[`Calendar > applies correct CSS classes for different day states 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -662,6 +663,7 @@ exports[`Calendar > can hide outside days when showOutsideDays is false 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -1271,6 +1273,7 @@ exports[`Calendar > forwards DayPicker props correctly with mode single 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -1929,6 +1932,7 @@ exports[`Calendar > forwards all other DayPicker props 1`] = `
     class="rdp-root"
     data-mode="single"
     data-multiple-months="true"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -4661,6 +4665,7 @@ exports[`Calendar > handles disabled dates 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -5318,6 +5323,7 @@ exports[`Calendar > handles multiple prop combinations 1`] = `
   <div
     class="rdp-root multi-prop-test"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -5959,6 +5965,7 @@ exports[`Calendar > renders properly 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -6616,6 +6623,7 @@ exports[`Calendar > renders with custom month 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"
@@ -7386,6 +7394,7 @@ exports[`Calendar > renders with custom selected date in single mode 1`] = `
   <div
     class="rdp-root"
     data-mode="single"
+    lang="en-US"
   >
     <div
       class="rdp-months"

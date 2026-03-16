@@ -125,9 +125,7 @@ describe('Switch', () => {
   });
 
   it('supports additional HTML attributes', () => {
-    const { container } = render(
-      <Switch id="test-switch" data-testid="custom-switch" aria-label="Test switch" />,
-    );
+    const { container } = render(<Switch id="test-switch" data-testid="custom-switch" aria-label="Test switch" />);
 
     const switchEl = container.querySelector('[data-slot="switch"]');
     expect(switchEl).toHaveAttribute('id', 'test-switch');
