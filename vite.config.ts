@@ -29,6 +29,9 @@ export default defineConfig({
   ],
   resolve: {
     tsconfigPaths: true,
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
   },
   build: {
     sourcemap: true,
