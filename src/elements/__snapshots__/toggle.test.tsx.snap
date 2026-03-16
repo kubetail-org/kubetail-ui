@@ -1,0 +1,125 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Toggle > renders contents properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-2 min-w-9"
+    data-slot="toggle"
+    data-state="off"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders disabled and pressed state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="true"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-2 min-w-9"
+    data-disabled=""
+    data-slot="toggle"
+    data-state="on"
+    disabled=""
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders disabled state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-2 min-w-9"
+    data-disabled=""
+    data-slot="toggle"
+    data-state="off"
+    disabled=""
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders large size 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-10 px-2.5 min-w-10"
+    data-slot="toggle"
+    data-state="off"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders outline variant 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive data-[state=on]:bg-accent data-[state=on]:text-accent-foreground border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground h-9 px-2 min-w-9"
+    data-slot="toggle"
+    data-state="off"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders pressed state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="true"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-2 min-w-9"
+    data-slot="toggle"
+    data-state="on"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders small size 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-8 px-1.5 min-w-8"
+    data-slot="toggle"
+    data-state="off"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toggle > renders unpressed state properly 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Toggle"
+    aria-pressed="false"
+    class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-muted hover:text-muted-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground bg-transparent h-9 px-2 min-w-9"
+    data-slot="toggle"
+    data-state="off"
+    type="button"
+  >
+    Toggle
+  </button>
+</DocumentFragment>
+`;

@@ -71,6 +71,7 @@ const preview: Preview = {
             'Switch',
             'Table',
             'Tabs',
+            'Toggle',
             'Tooltip',
           ],
         ],
