@@ -68,6 +68,7 @@ const preview: Preview = {
             'Sidebar',
             'Skeleton',
             'Spinner',
+            'Switch',
             'Table',
             'Tabs',
             'Tooltip',
