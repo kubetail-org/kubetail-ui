@@ -17,17 +17,17 @@ const preview: Preview = {
     },
 
     backgrounds: {
-      default: 'white',
-      values: [
-        {
+      options: {
+        light: {
           name: 'light',
           value: colors.white,
         },
-        {
+
+        dark: {
           name: 'dark',
           value: colors.neutral[800],
-        },
-      ],
+        }
+      }
     },
     controls: {
       matchers: {
@@ -88,7 +88,13 @@ const preview: Preview = {
       dark: 'dark',
     },
     defaultTheme: 'light',
-  })]
+  })],
+
+  initialGlobals: {
+    backgrounds: {
+      value: 'white'
+    }
+  }
 };
 
 export default preview;
