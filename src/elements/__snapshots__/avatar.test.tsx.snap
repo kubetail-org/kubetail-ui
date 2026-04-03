@@ -1,0 +1,135 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar > renders AvatarImage with correct data-slot 1`] = `
+<DocumentFragment>
+  <span
+    class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+    data-size="default"
+    data-slot="avatar"
+  >
+    <span
+      class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+      data-slot="avatar-fallback"
+    >
+      AB
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Avatar > renders with badge 1`] = `
+<DocumentFragment>
+  <span
+    class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+    data-size="default"
+    data-slot="avatar"
+  >
+    <span
+      class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+      data-slot="avatar-fallback"
+    >
+      AB
+    </span>
+    <span
+      class="absolute right-0 bottom-0 z-10 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground ring-2 ring-background select-none group-data-[size=sm]/avatar:size-2 group-data-[size=sm]/avatar:[&>svg]:hidden group-data-[size=default]/avatar:size-2.5 group-data-[size=default]/avatar:[&>svg]:size-2 group-data-[size=lg]/avatar:size-3 group-data-[size=lg]/avatar:[&>svg]:size-2"
+      data-slot="avatar-badge"
+    />
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Avatar > renders with fallback properly 1`] = `
+<DocumentFragment>
+  <span
+    class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+    data-size="default"
+    data-slot="avatar"
+  >
+    <span
+      class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+      data-slot="avatar-fallback"
+    >
+      AB
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Avatar > renders with image properly 1`] = `
+<DocumentFragment>
+  <span
+    class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+    data-size="default"
+    data-slot="avatar"
+  >
+    <span
+      class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+      data-slot="avatar-fallback"
+    >
+      AB
+    </span>
+  </span>
+</DocumentFragment>
+`;
+
+exports[`AvatarGroup > renders group properly 1`] = `
+<DocumentFragment>
+  <div
+    class="group/avatar-group flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background"
+    data-slot="avatar-group"
+  >
+    <span
+      class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+      data-size="default"
+      data-slot="avatar"
+    >
+      <span
+        class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+        data-slot="avatar-fallback"
+      >
+        A
+      </span>
+    </span>
+    <span
+      class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+      data-size="default"
+      data-slot="avatar"
+    >
+      <span
+        class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+        data-slot="avatar-fallback"
+      >
+        B
+      </span>
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`AvatarGroup > renders group with count 1`] = `
+<DocumentFragment>
+  <div
+    class="group/avatar-group flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background"
+    data-slot="avatar-group"
+  >
+    <span
+      class="group/avatar relative flex size-8 shrink-0 rounded-full select-none data-[size=lg]:size-10 data-[size=sm]:size-6"
+      data-size="default"
+      data-slot="avatar"
+    >
+      <span
+        class="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+        data-slot="avatar-fallback"
+      >
+        A
+      </span>
+    </span>
+    <div
+      class="relative flex size-8 shrink-0 items-center justify-center rounded-full bg-muted text-sm text-muted-foreground ring-2 ring-background group-has-data-[size=lg]/avatar-group:size-10 group-has-data-[size=sm]/avatar-group:size-6 [&>svg]:size-4 group-has-data-[size=lg]/avatar-group:[&>svg]:size-5 group-has-data-[size=sm]/avatar-group:[&>svg]:size-3"
+      data-slot="avatar-group-count"
+    >
+      +3
+    </div>
+  </div>
+</DocumentFragment>
+`;
