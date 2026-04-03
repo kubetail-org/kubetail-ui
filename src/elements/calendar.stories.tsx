@@ -29,5 +29,3 @@ export function Default() {
 
   return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border border-border" />;
 }
-
-Default.storyName = 'Default';
