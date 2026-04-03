@@ -49,6 +49,7 @@ const preview: Preview = {
           'Elements',
           [
             'Overview',
+            'Avatar',
             'Button',
             'Calendar',
             'Card',
