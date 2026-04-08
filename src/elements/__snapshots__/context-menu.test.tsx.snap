@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContextMenu > Basic rendering > renders content when opened via right-click 1`] = `
+<DocumentFragment>
+  <span
+    class="select-none"
+    data-slot="context-menu-trigger"
+    data-state="open"
+  >
+    Right-click me
+  </span>
+</DocumentFragment>
+`;
+
+exports[`ContextMenu > Basic rendering > renders the trigger properly 1`] = `
+<DocumentFragment>
+  <span
+    class="select-none"
+    data-slot="context-menu-trigger"
+    data-state="closed"
+  >
+    Right-click me
+  </span>
+</DocumentFragment>
+`;
+
+exports[`ContextMenu > Complex context menu > renders all components together properly 1`] = `
+<DocumentFragment>
+  <span
+    class="select-none"
+    data-slot="context-menu-trigger"
+    data-state="open"
+  >
+    Complex Trigger
+  </span>
+</DocumentFragment>
+`;
+
+exports[`ContextMenu > ContextMenuCheckboxItem > renders checked state properly 1`] = `
+<DocumentFragment>
+  <span
+    class="select-none"
+    data-slot="context-menu-trigger"
+    data-state="open"
+  >
+    Trigger
+  </span>
+</DocumentFragment>
+`;
+
+exports[`ContextMenu > ContextMenuCheckboxItem > renders unchecked state properly 1`] = `
+<DocumentFragment>
+  <span
+    class="select-none"
+    data-slot="context-menu-trigger"
+    data-state="open"
+  >
+    Trigger
+  </span>
+</DocumentFragment>
+`;

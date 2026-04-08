@@ -54,6 +54,7 @@ const preview: Preview = {
             'Calendar',
             'Card',
             'Checkbox',
+            'Context Menu',
             'Dialog',
             'Dropdown Menu',
             'Form',
