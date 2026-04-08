@@ -38,6 +38,9 @@ dist-ssr
 # typescript
 *.tsbuildinfo
 
+# git
+.worktrees
+
 # misc
 .DS_Store
 *.pem
