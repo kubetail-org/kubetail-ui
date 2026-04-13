@@ -9,7 +9,7 @@
   --card-foreground: var(--color-zinc-950);
   --popover: var(--color-white);
   --popover-foreground: var(--color-zinc-950);
-  --primary: oklch(0.563 0.194 262.62);                       /* color-bg-primary */
+  --primary: oklch(0.563 0.194 262.62);                     /* color-bg-primary */
   --primary-foreground: var(--color-white);                   /* color-text-on-color */
   --secondary: var(--color-zinc-100);                         /* color-bg-secondary */
   --secondary-foreground: var(--color-zinc-950);              /* color-text */
@@ -43,7 +43,7 @@
   --foreground: var(--color-zinc-50);                        /* color-text */
   --card: var(--color-zinc-950);
   --card-foreground: var(--color-white);
-  --popover: var(--color-zinc-950);
+  --popover: var(--color-neutral-950);
   --popover-foreground: var(--color-white);
   --primary: var(--color-blue-500);                          /* color-bg-primary */
   --primary-foreground: var(--color-white);                  /* color-text-on-color */
@@ -53,10 +53,10 @@
   --muted-foreground: var(--color-zinc-400);                 /* color-text-muted */
   --accent: var(--color-blue-950);
   --accent-foreground: var(--color-white);
-  --destructive: var(--color-red-400);                       /* color-bg-error-strong */
+  --destructive: var(--color-red-700);                       /* color-bg-error-strong */
   --destructive-foreground: var(--color-zinc-50);            /* color-text */
-  --border: var(--color-zinc-700);                           /* color-border */
-  --input: var(--color-zinc-600);                            /* color-border-input */
+  --border: var(--color-zinc-800);                           /* color-border */
+  --input: var(--color-zinc-700);                            /* color-border-input */
   --ring: var(--color-blue-500);                             /* color-border-focusRing */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
