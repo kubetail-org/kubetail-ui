@@ -7,8 +7,6 @@ import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
 import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
-// @ts-ignore
-import dts from 'unplugin-dts/vite';
 import Unfonts from 'unplugin-fonts/vite';
 
 // https://vite.dev/config/
@@ -50,7 +48,6 @@ export default defineConfig({
     },
     rollupOptions: {
       plugins: [
-        dts({ tsconfigPath: './tsconfig.app.json' }),
         autoExternal(),
         copy({
           targets: [
