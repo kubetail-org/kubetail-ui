@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input > add a placeholder 1`] = `
+<DocumentFragment>
+  <input
+    class="w-full rounded-md focus-visible:ring-ring shadow-sm focus-visible:outline-0 border border-border/80 file:focus:ring-ring file:h-10 file:focus:outline-none file:focus:ring-0 file:border-0 file:bg-transparent file:text-foreground disabled:opacity-50 disabled:border-border/70 disabled:cursor-not-allowed text-foreground file:text-sm file:font-medium px-3"
+    placeholder="A placeholder"
+  />
+</DocumentFragment>
+`;
+
+exports[`Input > renders contents properly 1`] = `
+<DocumentFragment>
+  <input
+    class="w-full rounded-md focus-visible:ring-ring shadow-sm focus-visible:outline-0 border border-border/80 file:focus:ring-ring file:h-10 file:focus:outline-none file:focus:ring-0 file:border-0 file:bg-transparent file:text-foreground disabled:opacity-50 disabled:border-border/70 disabled:cursor-not-allowed text-foreground file:text-sm file:font-medium px-3"
+  />
+</DocumentFragment>
+`;
