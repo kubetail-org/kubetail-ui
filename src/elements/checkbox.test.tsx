@@ -131,7 +131,6 @@ describe('Checkbox', () => {
     const indicator = container.querySelector('[data-slot="checkbox-indicator"]');
     const checkIcon = indicator?.querySelector('svg');
     expect(checkIcon).toBeInTheDocument();
-    expect(checkIcon).toHaveClass('size-3.5');
   });
 
   it('forwards ref properly', () => {
@@ -159,8 +158,6 @@ describe('Checkbox', () => {
       'shrink-0',
       'rounded-[4px]',
       'border',
-      'shadow-xs',
-      'transition-shadow',
       'outline-none',
     );
   });
@@ -170,6 +167,6 @@ describe('Checkbox', () => {
     const indicator = container.querySelector('[data-slot="checkbox-indicator"]');
 
     expect(indicator).toBeInTheDocument();
-    expect(indicator).toHaveClass('flex', 'items-center', 'justify-center', 'text-current', 'transition-none');
+    expect(indicator).toHaveClass('grid', 'place-content-center', 'text-current', 'transition-none');
   });
 });
