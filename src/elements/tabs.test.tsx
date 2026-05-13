@@ -137,7 +137,7 @@ describe('Tabs', () => {
         </Tabs>,
       );
       const triggerElement = screen.getByRole('tab', { name: 'Disabled Tab' });
-      expect(triggerElement).toBeDisabled();
+      expect(triggerElement).toHaveAttribute('aria-disabled', 'true');
     });
 
     it('passes through additional props', () => {
@@ -366,7 +366,8 @@ describe('Tabs', () => {
     });
 
     it('handles content without corresponding trigger', () => {
-      render(
+      // Base UI Tabs doesn't render a panel whose value doesn't match any tab.
+      const { container } = render(
         <Tabs defaultValue="orphan">
           <TabsList>
             <TabsTrigger value="tab1">Tab 1</TabsTrigger>
@@ -375,7 +376,7 @@ describe('Tabs', () => {
         </Tabs>,
       );
 
-      expect(screen.getByText('Orphan Content')).toBeVisible();
+      expect(container.querySelector('[data-slot="tabs-content"]')).not.toBeInTheDocument();
     });
 
     it('handles multiple content panels with same value', () => {

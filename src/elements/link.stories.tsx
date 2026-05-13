@@ -14,14 +14,10 @@ const meta = {
 A reusable Link component with multiple abstraction levels:
 
 - **\`linkStyles\`** — low-level cva style string for custom usage
-- **\`Link\`** — styled \`<a>\` element with \`asChild\` support
+- **\`Link\`** — styled \`<a>\` element with \`render\` prop support
 - **\`RouterLink\`** — uses the component configured via \`setLinkComponent()\`
 
 Variants: \`default\` and \`external\` (adds \`target="_blank"\`). Override color via \`className\` (e.g. \`className="text-destructive"\`).
-
-**Peer Dependencies**
-
-- @radix-ui/react-slot ^1
 
 ## Using \`linkStyles\`
 
@@ -38,7 +34,7 @@ import { linkStyles } from '@kubetail/ui/elements/link';
 
 ## Using \`Link\`
 
-A styled \`<a>\` element that supports variants and \`asChild\` for composition:
+A styled \`<a>\` element that supports variants and \`render\` for composition:
 
 \`\`\`tsx
 import { Link } from '@kubetail/ui/elements/link';
@@ -47,10 +43,8 @@ import { Link } from '@kubetail/ui/elements/link';
 <Link href="https://example.com" variant="external">Opens in new tab</Link>
 <Link href="/delete" className="text-destructive">Delete</Link>
 
-// Compose with another element via asChild
-<Link asChild>
-  <span>Styled as a link</span>
-</Link>
+// Compose with another element via render
+<Link render={<span />}>Styled as a link</Link>
 \`\`\`
 
 ## Using \`RouterLink\`
@@ -107,8 +101,8 @@ export const CustomColor: Story = {
 };
 
 export const AsChild: Story = {
-  args: {
-    asChild: true,
-    children: <a href="/styled-span">I&apos;m composed via asChild</a>,
-  },
+  render: () => (
+    // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label, jsx-a11y/anchor-is-valid
+    <Link render={<a href="/styled-span" />}>I&apos;m composed via render</Link>
+  ),
 };

@@ -175,7 +175,7 @@ describe('ContextMenu', () => {
 
       openContextMenu('Trigger');
       fireEvent.click(screen.getByText('Toggle Item'));
-      expect(handleCheckedChange).toHaveBeenCalledWith(true);
+      expect(handleCheckedChange).toHaveBeenCalledWith(true, expect.anything());
     });
   });
 
@@ -214,7 +214,7 @@ describe('ContextMenu', () => {
 
       openContextMenu('Trigger');
       fireEvent.click(screen.getByText('Option 2'));
-      expect(handleValueChange).toHaveBeenCalledWith('option2');
+      expect(handleValueChange).toHaveBeenCalledWith('option2', expect.anything());
     });
   });
 

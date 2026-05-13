@@ -40,10 +40,10 @@ describe('Switch', () => {
     const { container, rerender } = render(<Switch checked={false} onCheckedChange={handleChange} />);
 
     const switchEl = container.querySelector('[data-slot="switch"]') as HTMLElement;
-    expect(switchEl).toHaveAttribute('data-state', 'unchecked');
+    expect(switchEl).toHaveAttribute('data-unchecked');
 
     rerender(<Switch checked onCheckedChange={handleChange} />);
-    expect(switchEl).toHaveAttribute('data-state', 'checked');
+    expect(switchEl).toHaveAttribute('data-checked');
   });
 
   it('calls onCheckedChange when clicked', () => {
@@ -54,7 +54,7 @@ describe('Switch', () => {
     fireEvent.click(switchEl);
 
     expect(handleChange).toHaveBeenCalledTimes(1);
-    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(handleChange).toHaveBeenCalledWith(true, expect.anything());
   });
 
   it('toggles state when clicked in uncontrolled mode', () => {
@@ -62,13 +62,13 @@ describe('Switch', () => {
 
     const switchEl = container.querySelector('[data-slot="switch"]') as HTMLElement;
 
-    expect(switchEl).toHaveAttribute('data-state', 'unchecked');
+    expect(switchEl).toHaveAttribute('data-unchecked');
 
     fireEvent.click(switchEl);
-    expect(switchEl).toHaveAttribute('data-state', 'checked');
+    expect(switchEl).toHaveAttribute('data-checked');
 
     fireEvent.click(switchEl);
-    expect(switchEl).toHaveAttribute('data-state', 'unchecked');
+    expect(switchEl).toHaveAttribute('data-unchecked');
   });
 
   it('does not respond to clicks when disabled', () => {
@@ -79,7 +79,7 @@ describe('Switch', () => {
     fireEvent.click(switchEl);
 
     expect(handleChange).not.toHaveBeenCalled();
-    expect(switchEl).toHaveAttribute('data-state', 'unchecked');
+    expect(switchEl).toHaveAttribute('data-unchecked');
   });
 
   it('is accessible and focusable', () => {
@@ -109,7 +109,7 @@ describe('Switch', () => {
   it('supports defaultChecked prop', () => {
     const { container } = render(<Switch defaultChecked />);
     const switchEl = container.querySelector('[data-slot="switch"]');
-    expect(switchEl).toHaveAttribute('data-state', 'checked');
+    expect(switchEl).toHaveAttribute('data-checked');
   });
 
   it('renders thumb element', () => {
@@ -121,14 +121,13 @@ describe('Switch', () => {
   it('forwards ref properly', () => {
     const ref = vi.fn();
     render(<Switch ref={ref} />);
-    expect(ref).toHaveBeenCalledWith(expect.any(HTMLButtonElement));
+    expect(ref).toHaveBeenCalledWith(expect.any(HTMLElement));
   });
 
   it('supports additional HTML attributes', () => {
-    const { container } = render(<Switch id="test-switch" data-testid="custom-switch" aria-label="Test switch" />);
+    const { container } = render(<Switch data-testid="custom-switch" aria-label="Test switch" />);
 
     const switchEl = container.querySelector('[data-slot="switch"]');
-    expect(switchEl).toHaveAttribute('id', 'test-switch');
     expect(switchEl).toHaveAttribute('data-testid', 'custom-switch');
     expect(switchEl).toHaveAttribute('aria-label', 'Test switch');
   });

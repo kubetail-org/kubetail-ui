@@ -26,9 +26,6 @@ const meta = {
         component: `
 A reusable Dialog component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-dialog ^1
         `,
       },
     },
@@ -57,9 +54,7 @@ export function Demo() {
 export function CustomCloseButton() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline">Share</Button>
-      </DialogTrigger>
+      <DialogTrigger render={<Button variant="outline" />}>Share</DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Share link</DialogTitle>
@@ -74,11 +69,7 @@ export function CustomCloseButton() {
           </div>
         </div>
         <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <Button type="button" variant="secondary">
-              Close
-            </Button>
-          </DialogClose>
+          <DialogClose render={<Button type="button" variant="secondary" />}>Close</DialogClose>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -2,20 +2,19 @@
 
 exports[`Checkbox > renders checked state properly 1`] = `
 <DocumentFragment>
-  <button
+  <span
     aria-checked="true"
-    class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    class="peer border-input dark:bg-input/30 data-[checked]:bg-primary data-[checked]:text-primary-foreground dark:data-[checked]:bg-primary data-[checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    data-checked=""
     data-slot="checkbox"
-    data-state="checked"
+    id="base-ui-_r_3_"
     role="checkbox"
-    type="button"
-    value="on"
+    tabindex="0"
   >
     <span
       class="flex items-center justify-center text-current transition-none"
+      data-checked=""
       data-slot="checkbox-indicator"
-      data-state="checked"
-      style="pointer-events: none;"
     >
       <svg
         aria-hidden="true"
@@ -35,43 +34,55 @@ exports[`Checkbox > renders checked state properly 1`] = `
         />
       </svg>
     </span>
-  </button>
+  </span>
+  <input
+    aria-hidden="true"
+    checked=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    tabindex="-1"
+    type="checkbox"
+  />
 </DocumentFragment>
 `;
 
 exports[`Checkbox > renders contents properly 1`] = `
 <DocumentFragment>
-  <button
+  <span
     aria-checked="false"
-    class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    class="peer border-input dark:bg-input/30 data-[checked]:bg-primary data-[checked]:text-primary-foreground dark:data-[checked]:bg-primary data-[checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
     data-slot="checkbox"
-    data-state="unchecked"
+    data-unchecked=""
+    id="base-ui-_r_0_"
     role="checkbox"
-    type="button"
-    value="on"
+    tabindex="0"
+  />
+  <input
+    aria-hidden="true"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    tabindex="-1"
+    type="checkbox"
   />
 </DocumentFragment>
 `;
 
 exports[`Checkbox > renders disabled and checked state properly 1`] = `
 <DocumentFragment>
-  <button
+  <span
     aria-checked="true"
-    class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    aria-disabled="true"
+    class="peer border-input dark:bg-input/30 data-[checked]:bg-primary data-[checked]:text-primary-foreground dark:data-[checked]:bg-primary data-[checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    data-checked=""
     data-disabled=""
     data-slot="checkbox"
-    data-state="checked"
-    disabled=""
+    id="base-ui-_r_c_"
     role="checkbox"
-    type="button"
-    value="on"
+    tabindex="-1"
   >
     <span
       class="flex items-center justify-center text-current transition-none"
+      data-checked=""
       data-disabled=""
       data-slot="checkbox-indicator"
-      data-state="checked"
-      style="pointer-events: none;"
     >
       <svg
         aria-hidden="true"
@@ -91,36 +102,57 @@ exports[`Checkbox > renders disabled and checked state properly 1`] = `
         />
       </svg>
     </span>
-  </button>
+  </span>
+  <input
+    aria-hidden="true"
+    checked=""
+    disabled=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    tabindex="-1"
+    type="checkbox"
+  />
 </DocumentFragment>
 `;
 
 exports[`Checkbox > renders disabled state properly 1`] = `
 <DocumentFragment>
-  <button
+  <span
     aria-checked="false"
-    class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    aria-disabled="true"
+    class="peer border-input dark:bg-input/30 data-[checked]:bg-primary data-[checked]:text-primary-foreground dark:data-[checked]:bg-primary data-[checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
     data-disabled=""
     data-slot="checkbox"
-    data-state="unchecked"
-    disabled=""
+    data-unchecked=""
+    id="base-ui-_r_9_"
     role="checkbox"
-    type="button"
-    value="on"
+    tabindex="-1"
+  />
+  <input
+    aria-hidden="true"
+    disabled=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    tabindex="-1"
+    type="checkbox"
   />
 </DocumentFragment>
 `;
 
 exports[`Checkbox > renders unchecked state properly 1`] = `
 <DocumentFragment>
-  <button
+  <span
     aria-checked="false"
-    class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+    class="peer border-input dark:bg-input/30 data-[checked]:bg-primary data-[checked]:text-primary-foreground dark:data-[checked]:bg-primary data-[checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
     data-slot="checkbox"
-    data-state="unchecked"
+    data-unchecked=""
+    id="base-ui-_r_6_"
     role="checkbox"
-    type="button"
-    value="on"
+    tabindex="0"
+  />
+  <input
+    aria-hidden="true"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    tabindex="-1"
+    type="checkbox"
   />
 </DocumentFragment>
 `;

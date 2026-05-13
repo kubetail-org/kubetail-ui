@@ -1,4 +1,4 @@
-import { Slot } from '@radix-ui/react-slot';
+import { useRender } from '@base-ui/react/use-render';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 import { cn } from '@/lib/utils';
@@ -45,31 +45,33 @@ function getLinkComponent(): LinkComponent | null {
 
 type LinkProps = React.ComponentProps<'a'> &
   LinkVariantProps & {
-    asChild?: boolean;
+    render?: useRender.RenderProp;
   };
 
 /**
  * `Link` renders a styled anchor element.
  *
- * Supports `asChild` via Radix UI Slot for composition with custom components.
+ * Supports `render` for composition with custom components.
  *
  * @param props.variant - "default" | "external" (adds target="_blank" and rel="noopener noreferrer")
- * @param props.asChild - render as child element via Radix Slot
+ * @param props.render - render as a different element (e.g. `render={<RouterLink to="..." />}`)
  */
-function Link({ className, variant, asChild = false, ...props }: LinkProps) {
-  const Comp = asChild ? Slot : 'a';
+function Link({ className, variant, render, ...props }: LinkProps) {
+  const externalProps = variant === 'external' && !render ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 
-  return (
-    <Comp
-      data-slot="link"
-      className={cn(linkStyles({ variant, className }))}
-      {...(variant === 'external' && !asChild ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      {...props}
-    />
-  );
+  return useRender({
+    render,
+    defaultTagName: 'a',
+    props: {
+      'data-slot': 'link',
+      className: cn(linkStyles({ variant, className })),
+      ...externalProps,
+      ...props,
+    },
+  });
 }
 
-type RouterLinkProps = Omit<LinkProps, 'asChild'> & Record<string, unknown>;
+type RouterLinkProps = Omit<LinkProps, 'render'> & Record<string, unknown>;
 
 /**
  * `RouterLink` renders using the component set via `setLinkComponent()`,

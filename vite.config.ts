@@ -61,7 +61,7 @@ export default defineConfig({
           hook: 'writeBundle',
         }),
       ],
-      external: ['@radix-ui/react-slot', 'react', 'react-dom', 'react/jsx-runtime'],
+      external: [/^@base-ui\/react($|\/)/, 'react', 'react-dom', 'react/jsx-runtime'],
       output: {
         // Preserve the directory structure
         preserveModules: true,
