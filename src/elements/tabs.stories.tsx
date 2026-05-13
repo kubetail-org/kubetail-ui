@@ -16,9 +16,6 @@ const meta = {
         component: `
 A reusable Tabs component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-tabs
         `,
       },
       source: {

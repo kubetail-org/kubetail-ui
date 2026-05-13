@@ -199,7 +199,7 @@ describe('DropdownMenu', () => {
       );
 
       fireEvent.click(screen.getByText('Toggle Item'));
-      expect(handleCheckedChange).toHaveBeenCalledWith(true);
+      expect(handleCheckedChange).toHaveBeenCalledWith(true, expect.anything());
     });
 
     it('applies custom className', () => {
@@ -250,7 +250,7 @@ describe('DropdownMenu', () => {
       );
 
       fireEvent.click(screen.getByText('Option 2'));
-      expect(handleValueChange).toHaveBeenCalledWith('option2');
+      expect(handleValueChange).toHaveBeenCalledWith('option2', expect.anything());
     });
 
     it('applies custom className to radio items', () => {

@@ -7,9 +7,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/elements/tooltip';
 function BasicTooltip() {
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Button variant="outline">Hover</Button>
-      </TooltipTrigger>
+      <TooltipTrigger render={<Button variant="outline" />}>Hover</TooltipTrigger>
       <TooltipContent>
         <p>Add to library</p>
       </TooltipContent>

@@ -23,7 +23,6 @@ A reusable Select component.
 
 **Peer Dependencies**
 
-- @radix-ui/react-select
 - lucide-react
         `,
       },
@@ -58,10 +57,8 @@ export const Demo = {
 export const AsChild = {
   render: () => (
     <Select>
-      <SelectTrigger asChild>
-        <Button>
-          <SelectValue placeholder="Select a fruit" />
-        </Button>
+      <SelectTrigger render={<Button />}>
+        <SelectValue placeholder="Select a fruit" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

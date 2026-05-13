@@ -39,8 +39,6 @@ A reusable Form component.
 
 **Peer Dependencies**
 
-- @radix-ui/react-label
-- @radix-ui/react-slot
 - react-hook-form
         `,
       },

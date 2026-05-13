@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import { Popover, PopoverTrigger, PopoverContent, PopoverAnchor, PopoverClose } from './popover';
+import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from './popover';
 
 const BasicPopover = ({ open = false, onOpenChange }: { open?: boolean; onOpenChange?: (open: boolean) => void }) => (
   <Popover open={open} onOpenChange={onOpenChange}>
@@ -12,11 +12,8 @@ const BasicPopover = ({ open = false, onOpenChange }: { open?: boolean; onOpenCh
   </Popover>
 );
 
-const PopoverWithAnchor = ({ open = false }: { open?: boolean }) => (
+const PopoverWithClose = ({ open = false }: { open?: boolean }) => (
   <Popover open={open}>
-    <PopoverAnchor>
-      <div>Anchor element</div>
-    </PopoverAnchor>
     <PopoverTrigger>Open Popover</PopoverTrigger>
     <PopoverContent>
       <div>Popover content</div>
@@ -74,12 +71,6 @@ describe('Popover', () => {
       const popoverTrigger = container.querySelector('[data-slot="popover-trigger"]');
       expect(popoverTrigger).toBeInTheDocument();
     });
-
-    it('applies data-slot to anchor when used', () => {
-      const { container } = render(<PopoverWithAnchor open />);
-      const popoverAnchor = container.querySelector('[data-slot="popover-anchor"]');
-      expect(popoverAnchor).toBeInTheDocument();
-    });
   });
 
   describe('Interactive behavior', () => {
@@ -90,7 +81,7 @@ describe('Popover', () => {
       const trigger = screen.getByText('Open Popover');
       fireEvent.click(trigger);
 
-      expect(onOpenChange).toHaveBeenCalledWith(true);
+      expect(onOpenChange).toHaveBeenCalledWith(true, expect.anything());
     });
   });
 
@@ -170,7 +161,7 @@ describe('Popover', () => {
     });
 
     it('renders with PopoverClose components', () => {
-      render(<PopoverWithAnchor open />);
+      render(<PopoverWithClose open />);
 
       expect(screen.getByText('Popover content')).toBeInTheDocument();
       expect(screen.getByText('Close')).toBeInTheDocument();
@@ -231,21 +222,6 @@ describe('Popover', () => {
       const trigger = screen.getByTestId('popover-trigger');
       expect(trigger).toBeInTheDocument();
     });
-
-    it('forwards props to PopoverAnchor', () => {
-      render(
-        <Popover open>
-          <PopoverAnchor data-testid="popover-anchor">
-            <div>Anchor</div>
-          </PopoverAnchor>
-          <PopoverTrigger>Trigger</PopoverTrigger>
-          <PopoverContent>Content</PopoverContent>
-        </Popover>,
-      );
-
-      const anchor = screen.getByTestId('popover-anchor');
-      expect(anchor).toBeInTheDocument();
-    });
   });
 
   describe('Component state management', () => {
@@ -263,12 +239,12 @@ describe('Popover', () => {
       const { container, rerender } = render(<BasicPopover open={false} />);
 
       let trigger = container.querySelector('[data-slot="popover-trigger"]');
-      expect(trigger).toHaveAttribute('data-state', 'closed');
+      expect(trigger).toHaveAttribute('aria-expanded', 'false');
 
       rerender(<BasicPopover open />);
 
       trigger = container.querySelector('[data-slot="popover-trigger"]');
-      expect(trigger).toHaveAttribute('data-state', 'open');
+      expect(trigger).toHaveAttribute('aria-expanded', 'true');
     });
   });
 });

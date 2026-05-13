@@ -13,9 +13,6 @@ const meta = {
         component: `
 A reusable Label component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-label
         `,
       },
     },
