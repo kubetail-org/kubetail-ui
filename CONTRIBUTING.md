@@ -1,6 +1,6 @@
 # Contributing to Kubetail-UI
 
-Thank you for your interest in contributing to Kubetail-UI! This is the React component library for the [Kubetail](https://github.com/kubetail-org/kubetail) project, built with React 19, TypeScript, Tailwind CSS v4, and Radix UI primitives. We'd love your help.
+Thank you for your interest in contributing to Kubetail-UI! This is the React component library for the [Kubetail](https://github.com/kubetail-org/kubetail) project, built with React 19, TypeScript, Tailwind CSS v4, and Base UI primitives. We'd love your help.
 
 This document will guide you through the contribution process.
 

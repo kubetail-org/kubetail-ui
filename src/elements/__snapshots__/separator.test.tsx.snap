@@ -9,7 +9,7 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
       <h4
         class="text-sm leading-none font-medium"
       >
-        Radix Primitives
+        Base UI Primitives
       </h4>
       <p
         class="text-muted-foreground text-sm"
