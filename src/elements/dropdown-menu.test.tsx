@@ -36,7 +36,9 @@ const ComplexDropdownMenu = ({ open = false }: { open?: boolean }) => (
   <DropdownMenu open={open}>
     <DropdownMenuTrigger>Complex Menu</DropdownMenuTrigger>
     <DropdownMenuContent>
-      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      <DropdownMenuGroup>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
@@ -277,7 +279,9 @@ describe('DropdownMenu', () => {
         <DropdownMenu open>
           <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel>Label Text</DropdownMenuLabel>
+            <DropdownMenuGroup>
+              <DropdownMenuLabel>Label Text</DropdownMenuLabel>
+            </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>,
       );
@@ -290,7 +294,9 @@ describe('DropdownMenu', () => {
         <DropdownMenu open>
           <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel inset>Inset Label</DropdownMenuLabel>
+            <DropdownMenuGroup>
+              <DropdownMenuLabel inset>Inset Label</DropdownMenuLabel>
+            </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>,
       );
@@ -304,7 +310,9 @@ describe('DropdownMenu', () => {
         <DropdownMenu open>
           <DropdownMenuTrigger>Menu</DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuLabel className="custom-label">Custom Label</DropdownMenuLabel>
+            <DropdownMenuGroup>
+              <DropdownMenuLabel className="custom-label">Custom Label</DropdownMenuLabel>
+            </DropdownMenuGroup>
           </DropdownMenuContent>
         </DropdownMenu>,
       );

@@ -5,6 +5,7 @@ import {
   ContextMenu,
   ContextMenuCheckboxItem,
   ContextMenuContent,
+  ContextMenuGroup,
   ContextMenuItem,
   ContextMenuLabel,
   ContextMenuRadioGroup,
@@ -85,7 +86,9 @@ export function Checkboxes() {
         Right-click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-56">
-        <ContextMenuLabel>Appearance</ContextMenuLabel>
+        <ContextMenuGroup>
+          <ContextMenuLabel>Appearance</ContextMenuLabel>
+        </ContextMenuGroup>
         <ContextMenuSeparator />
         <ContextMenuCheckboxItem checked={showBookmarks} onCheckedChange={setShowBookmarks}>
           Show Bookmarks Bar
@@ -107,7 +110,9 @@ export function RadioGroup() {
         Right-click here
       </ContextMenuTrigger>
       <ContextMenuContent className="w-56">
-        <ContextMenuLabel>View</ContextMenuLabel>
+        <ContextMenuGroup>
+          <ContextMenuLabel>View</ContextMenuLabel>
+        </ContextMenuGroup>
         <ContextMenuSeparator />
         <ContextMenuRadioGroup value={view} onValueChange={setView}>
           <ContextMenuRadioItem value="list">List</ContextMenuRadioItem>

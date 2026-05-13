@@ -52,11 +52,11 @@ exports[`DropdownMenu > Basic rendering > renders the trigger properly 1`] = `
 exports[`DropdownMenu > Complex dropdown menu > renders all components together properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_7h_"
+    aria-controls="_r_7k_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_7j_"
+    id="base-ui-_r_7m_"
     tabindex="0"
     type="button"
   >
@@ -70,7 +70,7 @@ exports[`DropdownMenu > Complex dropdown menu > renders all components together 
     tabindex="0"
   />
   <span
-    aria-owns="_r_7l_"
+    aria-owns="_r_7o_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -86,11 +86,11 @@ exports[`DropdownMenu > Complex dropdown menu > renders all components together 
 exports[`DropdownMenu > Content positioning > applies custom className to content 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_8e_"
+    aria-controls="_r_8i_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_8g_"
+    id="base-ui-_r_8k_"
     tabindex="0"
     type="button"
   >
@@ -104,7 +104,7 @@ exports[`DropdownMenu > Content positioning > applies custom className to conten
     tabindex="0"
   />
   <span
-    aria-owns="_r_8i_"
+    aria-owns="_r_8m_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -120,11 +120,11 @@ exports[`DropdownMenu > Content positioning > applies custom className to conten
 exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_85_"
+    aria-controls="_r_89_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_87_"
+    id="base-ui-_r_8b_"
     tabindex="0"
     type="button"
   >
@@ -138,7 +138,7 @@ exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`]
     tabindex="0"
   />
   <span
-    aria-owns="_r_89_"
+    aria-owns="_r_8d_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -392,11 +392,11 @@ exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_4u_"
+    aria-controls="_r_50_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_50_"
+    id="base-ui-_r_52_"
     tabindex="0"
     type="button"
   >
@@ -410,7 +410,7 @@ exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_52_"
+    aria-owns="_r_54_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -460,11 +460,11 @@ exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_4m_"
+    aria-controls="_r_4n_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_4o_"
+    id="base-ui-_r_4p_"
     tabindex="0"
     type="button"
   >
@@ -478,7 +478,7 @@ exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_4q_"
+    aria-owns="_r_4r_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -562,11 +562,11 @@ exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > rende
 exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_5g_"
+    aria-controls="_r_5j_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_5i_"
+    id="base-ui-_r_5l_"
     tabindex="0"
     type="button"
   >
@@ -580,7 +580,7 @@ exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_5k_"
+    aria-owns="_r_5n_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -596,11 +596,11 @@ exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_56_"
+    aria-controls="_r_59_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_58_"
+    id="base-ui-_r_5b_"
     tabindex="0"
     type="button"
   >
@@ -614,7 +614,7 @@ exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_5a_"
+    aria-owns="_r_5d_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -630,11 +630,11 @@ exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_61_"
+    aria-controls="_r_64_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_63_"
+    id="base-ui-_r_66_"
     tabindex="0"
     type="button"
   >
@@ -648,7 +648,7 @@ exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_65_"
+    aria-owns="_r_68_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -664,11 +664,11 @@ exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_5o_"
+    aria-controls="_r_5r_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_5q_"
+    id="base-ui-_r_5t_"
     tabindex="0"
     type="button"
   >
@@ -682,7 +682,7 @@ exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_5s_"
+    aria-owns="_r_5v_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -698,11 +698,11 @@ exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuSub components > applies custom className to sub components 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_74_"
+    aria-controls="_r_77_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_76_"
+    id="base-ui-_r_79_"
     tabindex="0"
     type="button"
   >
@@ -716,7 +716,7 @@ exports[`DropdownMenu > DropdownMenuSub components > applies custom className to
     tabindex="0"
   />
   <span
-    aria-owns="_r_78_"
+    aria-owns="_r_7b_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -732,11 +732,11 @@ exports[`DropdownMenu > DropdownMenuSub components > applies custom className to
 exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_6a_"
+    aria-controls="_r_6d_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_6c_"
+    id="base-ui-_r_6f_"
     tabindex="0"
     type="button"
   >
@@ -750,7 +750,7 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1
     tabindex="0"
   />
   <span
-    aria-owns="_r_6e_"
+    aria-owns="_r_6h_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -766,11 +766,11 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1
 exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with inset properly 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_6n_"
+    aria-controls="_r_6q_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_6p_"
+    id="base-ui-_r_6s_"
     tabindex="0"
     type="button"
   >
@@ -784,7 +784,7 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with in
     tabindex="0"
   />
   <span
-    aria-owns="_r_6r_"
+    aria-owns="_r_6u_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
@@ -800,11 +800,11 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with in
 exports[`DropdownMenu > Error handling > handles disabled state 1`] = `
 <DocumentFragment>
   <button
-    aria-controls="_r_9e_"
+    aria-controls="_r_9i_"
     aria-expanded="true"
     aria-haspopup="menu"
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_9g_"
+    id="base-ui-_r_9k_"
     tabindex="0"
     type="button"
   >
@@ -818,7 +818,7 @@ exports[`DropdownMenu > Error handling > handles disabled state 1`] = `
     tabindex="0"
   />
   <span
-    aria-owns="_r_9i_"
+    aria-owns="_r_9m_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
