@@ -44,6 +44,41 @@ export default function Page() {
 }
 ```
 
+### Base-UI
+
+### Portals
+
+Kubetail-UI is built on [Base UI](https://base-ui.com/), which uses portals for components that render popups (e.g. `DropdownMenu`, `Popover`, `Dialog`). For these to position correctly above the rest of the page, wrap your app in a root element that creates its own stacking context:
+
+```tsx
+// layout.tsx
+<body>
+  <div className="root">
+    {children}
+  </div>
+</body>
+```
+
+```css
+/* styles.css */
+.root {
+  isolation: isolate;
+}
+```
+
+This ensures popups always appear above the page contents and any `z-index` in your styles won't interfere with them.
+
+### iOS 26+ Safari
+
+Starting with iOS 26, Safari allows content beneath the UI chrome to be visible. Backdrops such as those used by dialogs must use `position: absolute` instead of `position: fixed` to cover the entire visual viewport. For this to work after the page is scrolled, add the following to your global styles:
+
+```css
+/* styles.css */
+body {
+  position: relative;
+}
+```
+
 ## Fonts
 
 When you import the `@kubetail/ui` css file it automatically applies the following font styles:
