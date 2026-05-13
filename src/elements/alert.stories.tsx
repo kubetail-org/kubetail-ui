@@ -1,8 +1,7 @@
-import { CircleAlert, Info, Terminal, TriangleAlert } from 'lucide-react';
+import { CircleAlert, Terminal, TriangleAlert } from 'lucide-react';
 import type { Meta } from '@storybook/react-vite';
 
-import { Alert, AlertTitle, AlertDescription, AlertAction } from '@/elements/alert';
-import { Button } from '@/elements/button';
+import { Alert, AlertTitle, AlertDescription } from '@/elements/alert';
 
 const meta = {
   title: 'Elements/Alert',
@@ -39,21 +38,6 @@ export function Destructive() {
   );
 }
 
-export function WithAction() {
-  return (
-    <Alert>
-      <Info />
-      <AlertTitle>Update available</AlertTitle>
-      <AlertDescription>A new version is available. Update now to get the latest features.</AlertDescription>
-      <AlertAction>
-        <Button variant="outline" size="sm">
-          Update
-        </Button>
-      </AlertAction>
-    </Alert>
-  );
-}
-
 export function TitleOnly() {
   return (
     <Alert>
@@ -75,16 +59,6 @@ export function Demo() {
         <CircleAlert />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>Your session has expired. Please log in again.</AlertDescription>
-      </Alert>
-      <Alert>
-        <Info />
-        <AlertTitle>Update available</AlertTitle>
-        <AlertDescription>A new version is available. Update now to get the latest features.</AlertDescription>
-        <AlertAction>
-          <Button variant="outline" size="sm">
-            Update
-          </Button>
-        </AlertAction>
       </Alert>
     </div>
   );
