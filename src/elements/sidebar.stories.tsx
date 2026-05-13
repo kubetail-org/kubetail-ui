@@ -27,12 +27,6 @@ const meta = {
         component: `
 A reusable Sidebar component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-dialog ^1
-- @radix-ui/react-separator ^1
-- @radix-ui/react-slot ^1
-- @radix-ui/react-tooltip ^1
         `,
       },
     },
@@ -95,11 +89,13 @@ export function FullyFeatured() {
               <SidebarMenu>
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton isActive={item.title === 'Home'} asChild>
-                      <a href={item.url}>
-                        <Atom />
-                        <span>{item.title}</span>
-                      </a>
+                    <SidebarMenuButton
+                      isActive={item.title === 'Home'}
+                      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+                      render={<a href={item.url} />}
+                    >
+                      <Atom />
+                      <span>{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -153,11 +149,13 @@ export function FloatingExample() {
               <SidebarMenu>
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton isActive={item.title === 'Home'} asChild>
-                      <a href={item.url}>
-                        <Atom />
-                        <span>{item.title}</span>
-                      </a>
+                    <SidebarMenuButton
+                      isActive={item.title === 'Home'}
+                      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+                      render={<a href={item.url} />}
+                    >
+                      <Atom />
+                      <span>{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}

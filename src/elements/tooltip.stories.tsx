@@ -13,9 +13,6 @@ const meta = {
         component: `
 A reusable Tooltip component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-tooltip ^1
         `,
       },
     },
@@ -27,9 +24,7 @@ export default meta;
 export function Demo() {
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
-        <Button variant="outline">Hover</Button>
-      </TooltipTrigger>
+      <TooltipTrigger render={<Button variant="outline" />}>Hover</TooltipTrigger>
       <TooltipContent>
         <p>Add to library</p>
       </TooltipContent>

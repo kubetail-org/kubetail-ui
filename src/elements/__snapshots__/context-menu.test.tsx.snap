@@ -2,60 +2,63 @@
 
 exports[`ContextMenu > Basic rendering > renders content when opened via right-click 1`] = `
 <DocumentFragment>
-  <span
+  <div
     class="select-none"
+    data-popup-open=""
+    data-pressed=""
     data-slot="context-menu-trigger"
-    data-state="open"
   >
     Right-click me
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`ContextMenu > Basic rendering > renders the trigger properly 1`] = `
 <DocumentFragment>
-  <span
+  <div
     class="select-none"
     data-slot="context-menu-trigger"
-    data-state="closed"
   >
     Right-click me
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`ContextMenu > Complex context menu > renders all components together properly 1`] = `
 <DocumentFragment>
-  <span
+  <div
     class="select-none"
+    data-popup-open=""
+    data-pressed=""
     data-slot="context-menu-trigger"
-    data-state="open"
   >
     Complex Trigger
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`ContextMenu > ContextMenuCheckboxItem > renders checked state properly 1`] = `
 <DocumentFragment>
-  <span
+  <div
     class="select-none"
+    data-popup-open=""
+    data-pressed=""
     data-slot="context-menu-trigger"
-    data-state="open"
   >
     Trigger
-  </span>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`ContextMenu > ContextMenuCheckboxItem > renders unchecked state properly 1`] = `
 <DocumentFragment>
-  <span
+  <div
     class="select-none"
+    data-popup-open=""
+    data-pressed=""
     data-slot="context-menu-trigger"
-    data-state="open"
   >
     Trigger
-  </span>
+  </div>
 </DocumentFragment>
 `;

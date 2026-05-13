@@ -1,5 +1,4 @@
 import type { Meta } from '@storybook/react-vite';
-import type { DropdownMenuCheckboxItemProps } from '@radix-ui/react-dropdown-menu';
 import { useState } from 'react';
 
 import { Button } from '@/elements/button';
@@ -14,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/elements/dropdown-menu';
 
-type Checked = DropdownMenuCheckboxItemProps['checked'];
+type Checked = React.ComponentProps<typeof DropdownMenuCheckboxItem>['checked'];
 
 const meta = {
   title: 'Elements/Dropdown Menu',
@@ -26,9 +25,6 @@ const meta = {
         component: `
 A reusable Dropdown Menu component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-dropdown-menu ^1
         `,
       },
     },
@@ -44,9 +40,7 @@ export function Checkboxes() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>Open</DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Appearance</DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -69,9 +63,7 @@ export function RadioGroup() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>Open</DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
         <DropdownMenuSeparator />

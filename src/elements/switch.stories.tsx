@@ -13,9 +13,6 @@ const meta = {
         component: `
 A reusable Switch component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-switch
         `,
       },
     },

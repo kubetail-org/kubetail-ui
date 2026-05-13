@@ -12,9 +12,6 @@ const meta = {
         component: `
 A reusable Separator component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-separator ^1
         `,
       },
     },

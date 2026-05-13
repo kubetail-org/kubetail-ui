@@ -12,18 +12,6 @@ exports[`Link > appends custom className 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Link > renders asChild properly 1`] = `
-<DocumentFragment>
-  <span
-    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
-    data-slot="link"
-    href="/test"
-  >
-    Child Content
-  </span>
-</DocumentFragment>
-`;
-
 exports[`Link > renders contents properly 1`] = `
 <DocumentFragment>
   <a
@@ -59,6 +47,18 @@ exports[`Link > renders variants properly 2`] = `
   >
     Link
   </a>
+</DocumentFragment>
+`;
+
+exports[`Link > renders with render prop properly 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-flex items-center gap-1 text-primary underline-offset-4 hover:underline transition-colors outline-none focus-visible:ring-ring/50 focus-visible:ring-[3px] rounded-sm cursor-pointer"
+    data-slot="link"
+    href="/test"
+  >
+    Child Content
+  </span>
 </DocumentFragment>
 `;
 

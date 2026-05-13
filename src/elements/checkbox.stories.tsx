@@ -13,9 +13,6 @@ const meta = {
         component: `
 A reusable Checkbox component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-checkbox
         `,
       },
     },

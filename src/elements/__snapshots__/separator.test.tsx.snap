@@ -18,10 +18,11 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
       </p>
     </div>
     <div
+      aria-orientation="horizontal"
       class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-4"
       data-orientation="horizontal"
       data-slot="separator"
-      role="none"
+      role="separator"
     />
     <div
       class="flex h-5 items-center space-x-4 text-sm"
@@ -30,19 +31,21 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
         Blog
       </div>
       <div
+        aria-orientation="vertical"
         class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
         data-orientation="vertical"
         data-slot="separator"
-        role="none"
+        role="separator"
       />
       <div>
         Docs
       </div>
       <div
+        aria-orientation="vertical"
         class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
         data-orientation="vertical"
         data-slot="separator"
-        role="none"
+        role="separator"
       />
       <div>
         Source

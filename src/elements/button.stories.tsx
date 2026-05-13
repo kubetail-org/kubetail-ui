@@ -13,9 +13,6 @@ const meta = {
         component: `
 A reusable Button component.
 
-**Peer Dependencies**
-
-- @radix-ui/react-slot ^1
         `,
       },
     },

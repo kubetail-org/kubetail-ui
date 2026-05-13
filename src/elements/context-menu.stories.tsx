@@ -27,9 +27,6 @@ const meta = {
         component: `
 A context menu component triggered by right-clicking.
 
-**Peer Dependencies**
-
-- @radix-ui/react-context-menu ^1
         `,
       },
     },
