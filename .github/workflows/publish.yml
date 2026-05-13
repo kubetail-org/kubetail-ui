@@ -22,7 +22,7 @@ permissions:
 jobs:
   config:
     name: Configure workflow
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-slim
     outputs:
       version: ${{ steps.config.outputs.version }}
       dry_run: ${{ steps.config.outputs.dry_run }}
@@ -45,16 +45,16 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: refs/tags/v${{ needs.config.outputs.version }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
-      - uses: pnpm/action-setup@v3
+      - uses: pnpm/action-setup@v6
 
       - run: pnpm install
 
@@ -62,5 +62,11 @@ jobs:
 
       - run: /bin/bash set-version.sh v${{ needs.config.outputs.version }}
 
-      - run: pnpm publish --no-git-checks --access public
+      - name: Publish
         if: ${{ needs.config.outputs.dry_run == 'false' }}
+        run: |
+          if [[ "${{ needs.config.outputs.version }}" == *-* ]]; then
+            pnpm publish --no-git-checks --access public --tag next
+          else
+            pnpm publish --no-git-checks --access public
+          fi
