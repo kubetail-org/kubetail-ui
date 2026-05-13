@@ -39,7 +39,7 @@ const ButtonTemplate: Story = {
           </tr>
         </thead>
         <tbody>
-          {(['default', 'sm', 'lg'] as ButtonVariantProps['size'][]).map((size) => (
+          {(['default', 'sm', 'xs', 'lg'] as ButtonVariantProps['size'][]).map((size) => (
             <tr key={size}>
               <td className="pr-3 pb-3">{size}</td>
               <td className="pr-3 pb-3">

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Alert, AlertTitle, AlertDescription, AlertAction } from './alert';
+import { Alert, AlertTitle, AlertDescription } from './alert';
 
 describe('Alert', () => {
   it('renders with children', () => {
@@ -33,7 +33,6 @@ describe('Alert', () => {
 describe.each([
   ['AlertTitle', AlertTitle, 'alert-title'],
   ['AlertDescription', AlertDescription, 'alert-description'],
-  ['AlertAction', AlertAction, 'alert-action'],
 ] as const)('%s', (_, Component, slot) => {
   it('renders with children', () => {
     const { getByTestId } = render(<Component data-testid="el">Content</Component>);
@@ -62,14 +61,10 @@ describe('Alert composition', () => {
       <Alert>
         <AlertTitle data-testid="title">Warning</AlertTitle>
         <AlertDescription data-testid="desc">Something happened.</AlertDescription>
-        <AlertAction data-testid="action">
-          <button type="button">Dismiss</button>
-        </AlertAction>
       </Alert>,
     );
     expect(getByRole('alert')).toBeInTheDocument();
     expect(getByTestId('title')).toHaveTextContent('Warning');
     expect(getByTestId('desc')).toHaveTextContent('Something happened.');
-    expect(getByTestId('action')).toHaveTextContent('Dismiss');
   });
 });

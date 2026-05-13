@@ -19,7 +19,8 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
     </div>
     <div
       aria-orientation="horizontal"
-      class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px my-4"
+      class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch my-4"
+      data-horizontal=""
       data-orientation="horizontal"
       data-slot="separator"
       role="separator"
@@ -32,9 +33,10 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
       </div>
       <div
         aria-orientation="vertical"
-        class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+        class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
         data-orientation="vertical"
         data-slot="separator"
+        data-vertical=""
         role="separator"
       />
       <div>
@@ -42,9 +44,10 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
       </div>
       <div
         aria-orientation="vertical"
-        class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px"
+        class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
         data-orientation="vertical"
         data-slot="separator"
+        data-vertical=""
         role="separator"
       />
       <div>

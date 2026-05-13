@@ -224,7 +224,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel>Label Text</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel>Label Text</ContextMenuLabel>
+            </ContextMenuGroup>
           </ContextMenuContent>
         </ContextMenu>,
       );
@@ -237,7 +239,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel inset>Inset Label</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel inset>Inset Label</ContextMenuLabel>
+            </ContextMenuGroup>
           </ContextMenuContent>
         </ContextMenu>,
       );
@@ -354,7 +358,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Complex Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel>Actions</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel>Actions</ContextMenuLabel>
+            </ContextMenuGroup>
             <ContextMenuSeparator />
             <ContextMenuGroup>
               <ContextMenuItem>
