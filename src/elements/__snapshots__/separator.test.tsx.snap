@@ -20,6 +20,7 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
     <div
       aria-orientation="horizontal"
       class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch my-4"
+      data-horizontal=""
       data-orientation="horizontal"
       data-slot="separator"
       role="separator"
@@ -35,6 +36,7 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
         class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
         data-orientation="vertical"
         data-slot="separator"
+        data-vertical=""
         role="separator"
       />
       <div>
@@ -45,6 +47,7 @@ exports[`Separator > Basic rendering > renders properly 1`] = `
         class="shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
         data-orientation="vertical"
         data-slot="separator"
+        data-vertical=""
         role="separator"
       />
       <div>

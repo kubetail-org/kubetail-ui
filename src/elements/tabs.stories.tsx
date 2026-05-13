@@ -82,3 +82,35 @@ export function Demo() {
     </div>
   );
 }
+
+export function Line() {
+  return (
+    <div className="flex w-full max-w-sm flex-col gap-6">
+      <Tabs defaultValue="overview">
+        <TabsList variant="line">
+          <TabsTrigger value="overview">Overview</TabsTrigger>
+          <TabsTrigger value="activity">Activity</TabsTrigger>
+          <TabsTrigger value="settings">Settings</TabsTrigger>
+        </TabsList>
+        <TabsContent value="overview">Overview content.</TabsContent>
+        <TabsContent value="activity">Activity content.</TabsContent>
+        <TabsContent value="settings">Settings content.</TabsContent>
+      </Tabs>
+    </div>
+  );
+}
+
+export function Vertical() {
+  return (
+    <Tabs defaultValue="general" orientation="vertical" className="w-full max-w-md">
+      <TabsList>
+        <TabsTrigger value="general">General</TabsTrigger>
+        <TabsTrigger value="billing">Billing</TabsTrigger>
+        <TabsTrigger value="team">Team</TabsTrigger>
+      </TabsList>
+      <TabsContent value="general">General settings.</TabsContent>
+      <TabsContent value="billing">Billing details.</TabsContent>
+      <TabsContent value="team">Team members.</TabsContent>
+    </Tabs>
+  );
+}
