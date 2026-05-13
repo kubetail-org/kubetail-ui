@@ -58,6 +58,7 @@ const preview: Preview = {
             'Context Menu',
             'Dialog',
             'Dropdown Menu',
+            'Field',
             'Form',
             'Input',
             'Label',
