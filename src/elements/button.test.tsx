@@ -36,7 +36,9 @@ describe('Button', () => {
   it('renders with render prop properly', () => {
     const { asFragment, getByText } = render(
       // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
-      <Button render={<a href="/test" />}>Child Link</Button>,
+      <Button render={<a href="/test" />} nativeButton={false}>
+        Child Link
+      </Button>,
     );
     expect(getByText('Child Link').tagName).toBe('A');
     expect(asFragment()).toMatchSnapshot();
@@ -68,7 +70,7 @@ describe('Button', () => {
   it('renders as link variant with href', () => {
     const { getByText } = render(
       // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
-      <Button render={<a href="/test" />} variant="link">
+      <Button render={<a href="/test" />} variant="link" nativeButton={false}>
         Link Btn
       </Button>,
     );
