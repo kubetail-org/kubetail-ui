@@ -7,7 +7,7 @@ exports[`Spinner > appends custom className 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-8 h-8 my-custom-class"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-8 h-8 my-custom-class"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ exports[`Spinner > renders all size variants properly 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-4 h-4"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-4 h-4"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ exports[`Spinner > renders all size variants properly 2`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-6 h-6"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-6 h-6"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ exports[`Spinner > renders all size variants properly 3`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-8 h-8"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-8 h-8"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@ exports[`Spinner > renders all size variants properly 4`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-10 h-10"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-10 h-10"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@ exports[`Spinner > renders with default props 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="animate-spin mr-2 text-chrome-200 fill-chrome-500 w-8 h-8"
+      class="animate-spin mr-2 text-muted-foreground/25 fill-primary w-8 h-8"
       fill="none"
       viewBox="0 0 100 101"
       xmlns="http://www.w3.org/2000/svg"

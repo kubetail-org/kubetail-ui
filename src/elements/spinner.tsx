@@ -14,7 +14,7 @@
 
 import { cn } from '@/lib/utils';
 
-const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';
+const baseCN = 'animate-spin mr-2 text-muted-foreground/25 fill-primary';
 
 type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg';
 

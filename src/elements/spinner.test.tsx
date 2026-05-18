@@ -58,8 +58,6 @@ describe('Spinner', () => {
 
     expect(svg).toHaveClass('animate-spin');
     expect(svg).toHaveClass('mr-2');
-    expect(svg).toHaveClass('text-chrome-200');
-    expect(svg).toHaveClass('fill-chrome-500');
   });
 
   it('merges custom className with base classes', () => {
