@@ -6,8 +6,9 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-# Assign the new version number from command line arguments
-NEW_VERSION=$1
+# Assign the new version number from command line arguments, stripping any
+# leading "v" so the version stays valid semver (e.g. "v3.0.0" -> "3.0.0")
+NEW_VERSION=${1#v}
 
 # Path to the local package.json file
 PACKAGE_JSON="./package.json"

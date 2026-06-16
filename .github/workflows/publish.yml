@@ -60,7 +60,7 @@ jobs:
 
       - run: pnpm build
 
-      - run: /bin/bash set-version.sh v${{ needs.config.outputs.version }}
+      - run: /bin/bash set-version.sh ${{ needs.config.outputs.version }}
 
       - name: Publish
         if: ${{ needs.config.outputs.dry_run == 'false' }}
