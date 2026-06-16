@@ -64,14 +64,14 @@ describe('Toggle', () => {
     );
 
     const toggleEl = container.querySelector('[data-slot="toggle"]') as HTMLElement;
-    expect(toggleEl).toHaveAttribute('data-state', 'off');
+    expect(toggleEl).not.toHaveAttribute('data-pressed');
 
     rerender(
       <Toggle aria-label="Toggle" pressed onPressedChange={handleChange}>
         Toggle
       </Toggle>,
     );
-    expect(toggleEl).toHaveAttribute('data-state', 'on');
+    expect(toggleEl).toHaveAttribute('data-pressed');
   });
 
   it('calls onPressedChange when clicked', () => {
@@ -86,7 +86,7 @@ describe('Toggle', () => {
     fireEvent.click(toggleEl);
 
     expect(handleChange).toHaveBeenCalledTimes(1);
-    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(handleChange).toHaveBeenCalledWith(true, expect.anything());
   });
 
   it('toggles state when clicked in uncontrolled mode', () => {
@@ -94,13 +94,13 @@ describe('Toggle', () => {
 
     const toggleEl = container.querySelector('[data-slot="toggle"]') as HTMLElement;
 
-    expect(toggleEl).toHaveAttribute('data-state', 'off');
+    expect(toggleEl).not.toHaveAttribute('data-pressed');
 
     fireEvent.click(toggleEl);
-    expect(toggleEl).toHaveAttribute('data-state', 'on');
+    expect(toggleEl).toHaveAttribute('data-pressed');
 
     fireEvent.click(toggleEl);
-    expect(toggleEl).toHaveAttribute('data-state', 'off');
+    expect(toggleEl).not.toHaveAttribute('data-pressed');
   });
 
   it('does not respond to clicks when disabled', () => {
@@ -115,7 +115,7 @@ describe('Toggle', () => {
     fireEvent.click(toggleEl);
 
     expect(handleChange).not.toHaveBeenCalled();
-    expect(toggleEl).toHaveAttribute('data-state', 'off');
+    expect(toggleEl).not.toHaveAttribute('data-pressed');
   });
 
   it('is accessible and has correct role', () => {
@@ -161,7 +161,7 @@ describe('Toggle', () => {
       </Toggle>,
     );
     const toggleEl = container.querySelector('[data-slot="toggle"]');
-    expect(toggleEl).toHaveAttribute('data-state', 'on');
+    expect(toggleEl).toHaveAttribute('data-pressed');
   });
 
   it('forwards ref properly', () => {

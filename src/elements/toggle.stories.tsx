@@ -13,9 +13,6 @@ const meta = {
         component: `
 A two-state button that can be either on or off.
 
-**Peer Dependencies**
-
-- @radix-ui/react-toggle
         `,
       },
     },

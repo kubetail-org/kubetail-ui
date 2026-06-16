@@ -40,10 +40,10 @@ describe('Checkbox', () => {
     const { container, rerender } = render(<Checkbox checked={false} onCheckedChange={handleChange} />);
 
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
-    expect(checkbox).toHaveAttribute('data-state', 'unchecked');
+    expect(checkbox).toHaveAttribute('data-unchecked');
 
     rerender(<Checkbox checked onCheckedChange={handleChange} />);
-    expect(checkbox).toHaveAttribute('data-state', 'checked');
+    expect(checkbox).toHaveAttribute('data-checked');
   });
 
   it('calls onCheckedChange when clicked', () => {
@@ -54,7 +54,7 @@ describe('Checkbox', () => {
     fireEvent.click(checkbox);
 
     expect(handleChange).toHaveBeenCalledTimes(1);
-    expect(handleChange).toHaveBeenCalledWith(true);
+    expect(handleChange).toHaveBeenCalledWith(true, expect.anything());
   });
 
   it('toggles state when clicked in uncontrolled mode', () => {
@@ -62,13 +62,13 @@ describe('Checkbox', () => {
 
     const checkbox = container.querySelector('[data-slot="checkbox"]') as HTMLElement;
 
-    expect(checkbox).toHaveAttribute('data-state', 'unchecked');
+    expect(checkbox).toHaveAttribute('data-unchecked');
 
     fireEvent.click(checkbox);
-    expect(checkbox).toHaveAttribute('data-state', 'checked');
+    expect(checkbox).toHaveAttribute('data-checked');
 
     fireEvent.click(checkbox);
-    expect(checkbox).toHaveAttribute('data-state', 'unchecked');
+    expect(checkbox).toHaveAttribute('data-unchecked');
   });
 
   it('does not respond to clicks when disabled', () => {
@@ -79,7 +79,7 @@ describe('Checkbox', () => {
     fireEvent.click(checkbox);
 
     expect(handleChange).not.toHaveBeenCalled();
-    expect(checkbox).toHaveAttribute('data-state', 'unchecked');
+    expect(checkbox).toHaveAttribute('data-unchecked');
   });
 
   it('is accessible and focusable', () => {
@@ -117,13 +117,13 @@ describe('Checkbox', () => {
   it('supports defaultChecked prop', () => {
     const { container } = render(<Checkbox defaultChecked />);
     const checkbox = container.querySelector('[data-slot="checkbox"]');
-    expect(checkbox).toHaveAttribute('data-state', 'checked');
+    expect(checkbox).toHaveAttribute('data-checked');
   });
 
   it('supports indeterminate state', () => {
-    const { container } = render(<Checkbox checked="indeterminate" />);
+    const { container } = render(<Checkbox indeterminate />);
     const checkbox = container.querySelector('[data-slot="checkbox"]');
-    expect(checkbox).toHaveAttribute('data-state', 'indeterminate');
+    expect(checkbox).toHaveAttribute('data-indeterminate');
   });
 
   it('renders check icon in checked state', () => {
@@ -131,22 +131,18 @@ describe('Checkbox', () => {
     const indicator = container.querySelector('[data-slot="checkbox-indicator"]');
     const checkIcon = indicator?.querySelector('svg');
     expect(checkIcon).toBeInTheDocument();
-    expect(checkIcon).toHaveClass('size-3.5');
   });
 
   it('forwards ref properly', () => {
     const ref = vi.fn();
     render(<Checkbox ref={ref} />);
-    expect(ref).toHaveBeenCalledWith(expect.any(HTMLButtonElement));
+    expect(ref).toHaveBeenCalledWith(expect.any(HTMLElement));
   });
 
   it('supports additional HTML attributes', () => {
-    const { container } = render(
-      <Checkbox id="test-checkbox" data-testid="custom-checkbox" aria-label="Test checkbox" />,
-    );
+    const { container } = render(<Checkbox data-testid="custom-checkbox" aria-label="Test checkbox" />);
 
     const checkbox = container.querySelector('[data-slot="checkbox"]');
-    expect(checkbox).toHaveAttribute('id', 'test-checkbox');
     expect(checkbox).toHaveAttribute('data-testid', 'custom-checkbox');
     expect(checkbox).toHaveAttribute('aria-label', 'Test checkbox');
   });
@@ -162,8 +158,6 @@ describe('Checkbox', () => {
       'shrink-0',
       'rounded-[4px]',
       'border',
-      'shadow-xs',
-      'transition-shadow',
       'outline-none',
     );
   });
@@ -173,6 +167,6 @@ describe('Checkbox', () => {
     const indicator = container.querySelector('[data-slot="checkbox-indicator"]');
 
     expect(indicator).toBeInTheDocument();
-    expect(indicator).toHaveClass('flex', 'items-center', 'justify-center', 'text-current', 'transition-none');
+    expect(indicator).toHaveClass('grid', 'place-content-center', 'text-current', 'transition-none');
   });
 });

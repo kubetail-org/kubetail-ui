@@ -29,10 +29,10 @@ describe('Link', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('renders asChild properly', () => {
+  it('renders with render prop properly', () => {
     const { asFragment, getByText } = render(
-      <Link asChild href="/test">
-        <span>Child Content</span>
+      <Link render={<span />} href="/test">
+        Child Content
       </Link>,
     );
     expect(getByText('Child Content').tagName).toBe('SPAN');
@@ -50,10 +50,10 @@ describe('Link', () => {
     expect(el).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  it('does not add target/rel for external variant with asChild', () => {
+  it('does not add target/rel for external variant with render prop', () => {
     const { getByText } = render(
-      <Link variant="external" asChild href="/test">
-        <span>Child</span>
+      <Link variant="external" render={<span />} href="/test">
+        Child
       </Link>,
     );
     const el = getByText('Child');

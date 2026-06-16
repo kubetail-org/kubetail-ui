@@ -175,7 +175,7 @@ describe('ContextMenu', () => {
 
       openContextMenu('Trigger');
       fireEvent.click(screen.getByText('Toggle Item'));
-      expect(handleCheckedChange).toHaveBeenCalledWith(true);
+      expect(handleCheckedChange).toHaveBeenCalledWith(true, expect.anything());
     });
   });
 
@@ -214,7 +214,7 @@ describe('ContextMenu', () => {
 
       openContextMenu('Trigger');
       fireEvent.click(screen.getByText('Option 2'));
-      expect(handleValueChange).toHaveBeenCalledWith('option2');
+      expect(handleValueChange).toHaveBeenCalledWith('option2', expect.anything());
     });
   });
 
@@ -224,7 +224,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel>Label Text</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel>Label Text</ContextMenuLabel>
+            </ContextMenuGroup>
           </ContextMenuContent>
         </ContextMenu>,
       );
@@ -237,7 +239,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel inset>Inset Label</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel inset>Inset Label</ContextMenuLabel>
+            </ContextMenuGroup>
           </ContextMenuContent>
         </ContextMenu>,
       );
@@ -354,7 +358,9 @@ describe('ContextMenu', () => {
         <ContextMenu>
           <ContextMenuTrigger>Complex Trigger</ContextMenuTrigger>
           <ContextMenuContent>
-            <ContextMenuLabel>Actions</ContextMenuLabel>
+            <ContextMenuGroup>
+              <ContextMenuLabel>Actions</ContextMenuLabel>
+            </ContextMenuGroup>
             <ContextMenuSeparator />
             <ContextMenuGroup>
               <ContextMenuItem>

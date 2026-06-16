@@ -11,7 +11,7 @@ exports[`Table Components > Complete Table Structure > renders complete table st
       data-slot="table"
     >
       <caption
-        class="text-muted-foreground mt-4 text-sm"
+        class="mt-4 text-sm text-muted-foreground"
         data-slot="table-caption"
       >
         A list of recent invoices
@@ -21,29 +21,29 @@ exports[`Table Components > Complete Table Structure > renders complete table st
         data-slot="table-header"
       >
         <tr
-          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          class="border-b transition-colors hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted"
           data-slot="table-row"
         >
           <th
-            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0"
             data-slot="table-head"
           >
             Invoice
           </th>
           <th
-            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0"
             data-slot="table-head"
           >
             Status
           </th>
           <th
-            class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0"
             data-slot="table-head"
           >
             Method
           </th>
           <th
-            class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            class="h-10 px-2 align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0 text-right"
             data-slot="table-head"
           >
             Amount
@@ -55,58 +55,58 @@ exports[`Table Components > Complete Table Structure > renders complete table st
         data-slot="table-body"
       >
         <tr
-          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          class="border-b transition-colors hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted"
           data-slot="table-row"
         >
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-medium"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 font-medium"
             data-slot="table-cell"
           >
             INV001
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
             data-slot="table-cell"
           >
             Paid
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
             data-slot="table-cell"
           >
             Credit Card
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 text-right"
             data-slot="table-cell"
           >
             $250.00
           </td>
         </tr>
         <tr
-          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          class="border-b transition-colors hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted"
           data-slot="table-row"
         >
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-medium"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 font-medium"
             data-slot="table-cell"
           >
             INV002
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
             data-slot="table-cell"
           >
             Pending
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
             data-slot="table-cell"
           >
             PayPal
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 text-right"
             data-slot="table-cell"
           >
             $150.00
@@ -114,22 +114,22 @@ exports[`Table Components > Complete Table Structure > renders complete table st
         </tr>
       </tbody>
       <tfoot
-        class="bg-muted/50 border-t font-medium [&>tr]:last:border-b-0"
+        class="border-t bg-muted/50 font-medium [&>tr]:last:border-b-0"
         data-slot="table-footer"
       >
         <tr
-          class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+          class="border-b transition-colors hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted"
           data-slot="table-row"
         >
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
             colspan="3"
             data-slot="table-cell"
           >
             Total
           </td>
           <td
-            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+            class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 text-right"
             data-slot="table-cell"
           >
             $400.00
@@ -184,7 +184,7 @@ exports[`Table Components > TableCaption > renders caption properly 1`] = `
 <DocumentFragment>
   <table>
     <caption
-      class="text-muted-foreground mt-4 text-sm"
+      class="mt-4 text-sm text-muted-foreground"
       data-slot="table-caption"
     >
       Table caption
@@ -206,7 +206,7 @@ exports[`Table Components > TableCell > renders td properly 1`] = `
     <tbody>
       <tr>
         <td
-          class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+          class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0"
           data-slot="table-cell"
         >
           Cell content
@@ -221,7 +221,7 @@ exports[`Table Components > TableFooter > renders tfoot properly 1`] = `
 <DocumentFragment>
   <table>
     <tfoot
-      class="bg-muted/50 border-t font-medium [&>tr]:last:border-b-0"
+      class="border-t bg-muted/50 font-medium [&>tr]:last:border-b-0"
       data-slot="table-footer"
     >
       <tr>
@@ -240,7 +240,7 @@ exports[`Table Components > TableHead > renders th properly 1`] = `
     <thead>
       <tr>
         <th
-          class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+          class="h-10 px-2 text-left align-middle font-medium whitespace-nowrap text-foreground [&:has([role=checkbox])]:pr-0"
           data-slot="table-head"
         >
           Header content
@@ -273,7 +273,7 @@ exports[`Table Components > TableRow > renders tr properly 1`] = `
   <table>
     <tbody>
       <tr
-        class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+        class="border-b transition-colors hover:bg-muted/50 has-aria-expanded:bg-muted/50 data-[state=selected]:bg-muted"
         data-slot="table-row"
       >
         <td>

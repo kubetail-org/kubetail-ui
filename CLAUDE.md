@@ -1,6 +1,6 @@
 # Kubetail-UI
 
-React component library for the Kubetail project (React 19, TypeScript, Tailwind CSS v4, Radix UI, Storybook).
+React component library for the Kubetail project (React 19, TypeScript, Tailwind CSS v4, Base UI, Storybook).
 
 ## Commands
 
@@ -18,14 +18,14 @@ After every set of changes to TypeScript files, run `pnpm lint --fix`.
 
 - Components live in `src/elements/` as `component-name.tsx` + `component-name.stories.tsx`
 - Use `cva` for variant-based styling, `cn()` for conditional class merging
-- Support `asChild` pattern via Radix UI Slot
+- Support polymorphic rendering via Base UI's `render` prop
 - Include `data-slot` attributes for styling composition
 
 ## Import Order
 
 Organize imports into three groups separated by blank lines, sorted alphabetically within each:
 
-1. **Third-party** — `node_modules` packages (e.g. `react`, `@radix-ui/*`)
+1. **Third-party** — `node_modules` packages (e.g. `react`, `@base-ui/react`)
 2. **First-party** — `@kubetail/*`
 3. **Local** — relative imports (`@/*`, `./*`)
 

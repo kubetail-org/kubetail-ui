@@ -1,4 +1,4 @@
-// Copyright 2024-2025 Andres Morey
+// Copyright 2024 The Kubetail Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 import { cn } from '@/lib/utils';
 
-const baseCN = 'animate-spin mr-2 text-chrome-200 fill-chrome-500';
+const baseCN = 'animate-spin mr-2 text-muted-foreground/25 fill-primary';
 
 type SpinnerSize = 'xs' | 'sm' | 'md' | 'lg';
 
