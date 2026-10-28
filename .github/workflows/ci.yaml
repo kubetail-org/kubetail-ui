@@ -65,3 +65,24 @@ jobs:
       - env:
           GH_TOKEN: ${{ github.token }}
         run: uv tool run zizmor@1.31.1 --config .github/ci-config/zizmor.yml .
+
+  # A pull request fails only for the advisories it brings in. audit.yml
+  # audits the whole tree daily and on main.
+  dependency-review:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+          sparse-checkout: |
+            package.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+          sparse-checkout-cone-mode: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - run: sh scripts/audit-npm-diff.sh base .
