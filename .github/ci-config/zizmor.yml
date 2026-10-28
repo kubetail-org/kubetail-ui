@@ -6,3 +6,8 @@ rules:
     config:
       policies:
         "*": hash-pin
+  # Matches minimumReleaseAge in pnpm-workspace.yaml; a longer Dependabot
+  # cooldown rolls back versions pnpm already accepted.
+  dependabot-cooldown:
+    config:
+      days: 1
