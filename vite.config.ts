@@ -28,7 +28,7 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': resolve(import.meta.dirname, 'src'),
     },
   },
   build: {
@@ -37,9 +37,9 @@ export default defineConfig({
     cssMinify: false,
     lib: {
       entry: [
-        resolve(__dirname, 'src/index.ts'),
-        resolve(__dirname, 'src/index.css'),
-        ...glob.sync(resolve(__dirname, 'src/elements/**/*.tsx'), {
+        resolve(import.meta.dirname, 'src/index.ts'),
+        resolve(import.meta.dirname, 'src/index.css'),
+        ...glob.sync(resolve(import.meta.dirname, 'src/elements/**/*.tsx'), {
           ignore: ['**/*.test.tsx', '**/*.stories.tsx'],
         }),
       ],
