@@ -99,7 +99,7 @@ exports[`Pagination > Basic rendering > renders properly 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="lucide lucide-ellipsis"
+            class="lucide lucide-ellipsis lucide-more-horizontal"
             fill="none"
             height="24"
             stroke="currentColor"
