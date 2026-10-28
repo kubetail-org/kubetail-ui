@@ -63,6 +63,21 @@ jobs:
           pnpm install --frozen-lockfile
           pnpm build
 
+  # Every tracked shell script, so a new one is checked without editing this.
+  shell-lint:
+    name: Shell · Lint
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+      - name: Run shellcheck
+        run: git ls-files -z '*.sh' | xargs -0 shellcheck
+
   # yamllint checks every YAML file. actionlint type-checks the workflows and
   # shellchecks their `run:` blocks. zizmor audits them against
   # .github/ci-config/zizmor.yml.
