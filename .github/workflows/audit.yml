@@ -1,0 +1,52 @@
+name: audit
+
+# Audits the whole dependency tree, so a newly published advisory fails a run
+# the maintainers own. A pull request is checked only for the advisories it
+# brings in, by ci.yaml's TypeScript · Dependency review job.
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  typescript-audit:
+    name: TypeScript · Audit
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - run: pnpm audit --audit-level moderate
+
+  # A failed audit on main opens an issue, or comments on the one still open,
+  # so it reaches a maintainer without anyone watching the Actions tab.
+  report:
+    name: Report failure
+    needs: typescript-audit
+    if: failure() && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      issues: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Fix the dependency audit failing on main"
+          number=$(gh issue list --state open \
+            --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "Failed again: $RUN_URL"
+          else
+            gh issue create --title "$title" --body "A dependency audit failed on main: $RUN_URL
+
+          A newly published advisory can fail it with no change on our side."
+          fi

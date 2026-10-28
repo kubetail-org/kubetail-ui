@@ -1,0 +1,8 @@
+# zizmor configuration. CI's `YAML · Lint` job fails on any finding not ignored
+# here.
+rules:
+  # Every action pinned to a commit SHA, first-party ones included.
+  unpinned-uses:
+    config:
+      policies:
+        "*": hash-pin

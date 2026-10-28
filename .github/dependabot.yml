@@ -1,0 +1,42 @@
+# Every ecosystem waits a week after a release (a week for a compromised
+# release to be caught and pulled first). Security updates skip the wait and
+# arrive grouped.
+version: 2
+updates:
+  # Every action is pinned to a commit SHA; this moves the pins and the
+  # version comments beside them.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
+  # Reads pnpm-lock.yaml. Minor and patch updates arrive in one weekly PR,
+  # each major in a PR of its own. This is a library, so a range in
+  # package.json moves only when the new version falls outside it; consumers
+  # keep the ranges they had.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore
+      include: scope
+    versioning-strategy: increase-if-necessary
+    groups:
+      npm:
+        update-types: [minor, patch]
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
