@@ -1,3 +1,15 @@
+# Supply-chain policies, also checked against pnpm-lock.yaml on every frozen
+# install. A release must be a day old before pnpm installs it, and a
+# version published with weaker trust evidence than an earlier one is
+# rejected. A security fix that can't wait goes in minimumReleaseAgeExclude
+# as an exact version.
+minimumReleaseAge: 1440
+trustPolicy: no-downgrade
+# Backports to old majors, published in 2023 without the provenance that
+# semver 7 had by then.
+trustPolicyExclude:
+  - semver@5.7.2
+  - semver@6.3.1
 allowBuilds:
   esbuild: true
   unrs-resolver: true
