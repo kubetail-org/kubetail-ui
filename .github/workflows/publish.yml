@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version to release"
+        description: "Version to release, without the v (e.g. 1.2.3)"
         required: true
         type: string
       dry_run:
@@ -34,12 +34,21 @@ jobs:
           INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
           if [ "$EVENT_NAME" == "workflow_dispatch" ]; then
-            echo "version=$INPUT_VERSION" >> "$GITHUB_OUTPUT"
-            echo "dry_run=$INPUT_DRY_RUN" >> "$GITHUB_OUTPUT"
+            version="$INPUT_VERSION"
+            dry_run="$INPUT_DRY_RUN"
           else
-            echo "version=${GITHUB_REF#refs/tags/v}" >> "$GITHUB_OUTPUT"
-            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+            version="${GITHUB_REF#refs/tags/v}"
+            dry_run=false
           fi
+          # The version reaches set-version.sh's sed command, so reject
+          # anything that isn't semver.
+          semver='^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(-[0-9A-Za-z.-]+)?(\+[0-9A-Za-z.-]+)?$'
+          if [[ ! "$version" =~ $semver ]]; then
+            echo "::error::Version is not semver: $version"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "dry_run=$dry_run" >> "$GITHUB_OUTPUT"
 
   publish:
     environment: production
