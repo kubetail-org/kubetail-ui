@@ -1,4 +1,4 @@
-# zizmor configuration. CI's `lint-yaml` job fails on any finding not ignored
+# zizmor configuration. CI's `YAML · Lint` job fails on any finding not ignored
 # here.
 rules:
   # Every action pinned to a commit SHA, first-party ones included.

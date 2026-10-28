@@ -2,7 +2,7 @@ name: audit
 
 # Audits the whole dependency tree, so a newly published advisory fails a run
 # the maintainers own. A pull request is checked only for the advisories it
-# brings in, by ci.yaml's dependency-review job.
+# brings in, by ci.yaml's TypeScript · Dependency review job.
 on:
   push:
     branches:
@@ -15,7 +15,8 @@ permissions:
   contents: read
 
 jobs:
-  audit:
+  typescript-audit:
+    name: TypeScript · Audit
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -27,7 +28,8 @@ jobs:
   # A failed audit on main opens an issue, or comments on the one still open,
   # so it reaches a maintainer without anyone watching the Actions tab.
   report:
-    needs: audit
+    name: Report failure
+    needs: typescript-audit
     if: failure() && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     permissions:
