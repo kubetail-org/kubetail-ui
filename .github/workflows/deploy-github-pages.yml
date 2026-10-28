@@ -1,5 +1,5 @@
 name: Build and Publish Storybook to GitHub Pages
- 
+
 on:
   push:
     branches:
@@ -9,7 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
- 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

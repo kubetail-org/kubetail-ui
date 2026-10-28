@@ -51,7 +51,10 @@ jobs:
           pnpm install
           pnpm build
 
-  zizmor:
+  # yamllint checks every YAML file. actionlint type-checks the workflows and
+  # shellchecks their `run:` blocks. zizmor audits them against
+  # .github/ci-config/zizmor.yml.
+  lint-yaml:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -60,6 +63,8 @@ jobs:
       - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
         with:
           enable-cache: false
+      - run: uv tool run yamllint@1.38.0 --strict .
+      - run: go run github.com/rhysd/actionlint/cmd/actionlint@v1.7.12
       # The token turns on zizmor's online audits, which check each pin's
       # commit and version comment against the action's repository.
       - env:
