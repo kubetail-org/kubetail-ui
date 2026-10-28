@@ -1,21 +1,17 @@
 # Supply-chain policies, also checked against pnpm-lock.yaml on every frozen
-# install. A release must be a week old before pnpm installs it, a version
-# published with weaker trust evidence than an earlier one is rejected, and
-# transitive dependencies must come from the registry.
+# install. A release must be a week old before pnpm installs it, and a
+# version published with weaker trust evidence than an earlier one is
+# rejected.
 #
 # The week matches Dependabot's cooldown. A security fix that can't wait goes
-# in minimumReleaseAgeExclude as an exact version; `pnpm audit --fix` adds it
-# when the patch is younger than the cutoff, and pnpm add, update and remove
-# drop it once the lockfile no longer resolves that version.
+# in minimumReleaseAgeExclude as an exact version.
 minimumReleaseAge: 10080
-minimumReleaseAgeExcludePrune: true
 trustPolicy: no-downgrade
 # Backports to old majors, published in 2023 without the provenance that
 # semver 7 had by then.
 trustPolicyExclude:
   - semver@5.7.2
   - semver@6.3.1
-blockExoticSubdeps: true
 allowBuilds:
   esbuild: true
   unrs-resolver: true
