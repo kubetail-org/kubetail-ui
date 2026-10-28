@@ -38,7 +38,8 @@ exports[`Checkbox > renders checked state properly 1`] = `
   <input
     aria-hidden="true"
     checked=""
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    id="base-ui-_r_4_"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     type="checkbox"
   />
@@ -58,7 +59,8 @@ exports[`Checkbox > renders contents properly 1`] = `
   />
   <input
     aria-hidden="true"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    id="base-ui-_r_1_"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     type="checkbox"
   />
@@ -107,7 +109,8 @@ exports[`Checkbox > renders disabled and checked state properly 1`] = `
     aria-hidden="true"
     checked=""
     disabled=""
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    id="base-ui-_r_d_"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     type="checkbox"
   />
@@ -130,7 +133,8 @@ exports[`Checkbox > renders disabled state properly 1`] = `
   <input
     aria-hidden="true"
     disabled=""
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    id="base-ui-_r_a_"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     type="checkbox"
   />
@@ -150,7 +154,8 @@ exports[`Checkbox > renders unchecked state properly 1`] = `
   />
   <input
     aria-hidden="true"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    id="base-ui-_r_7_"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     type="checkbox"
   />

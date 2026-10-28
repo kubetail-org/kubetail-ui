@@ -43,7 +43,7 @@ exports[`Select Components > Select > renders properly 1`] = `
   <input
     aria-hidden="true"
     id="base-ui-_r_0_-hidden-input"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="-1"
     value=""
   />

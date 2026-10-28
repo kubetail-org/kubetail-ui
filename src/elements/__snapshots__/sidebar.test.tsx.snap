@@ -76,7 +76,7 @@ exports[`Sidebar > Basic rendering > renders properly 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="lucide lucide-panel-left cn-rtl-flip"
+          class="lucide lucide-panel-left lucide-sidebar cn-rtl-flip"
           fill="none"
           height="24"
           stroke="currentColor"

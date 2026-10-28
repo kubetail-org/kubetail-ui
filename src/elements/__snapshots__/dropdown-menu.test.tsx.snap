@@ -3,14 +3,14 @@
 exports[`DropdownMenu > Basic rendering > renders content when open 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_6_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_6_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
@@ -22,16 +22,16 @@ exports[`DropdownMenu > Basic rendering > renders content when open 1`] = `
     Open Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
@@ -39,10 +39,10 @@ exports[`DropdownMenu > Basic rendering > renders content when open 1`] = `
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -66,46 +66,46 @@ exports[`DropdownMenu > Basic rendering > renders the trigger properly 1`] = `
 exports[`DropdownMenu > Complex dropdown menu > renders all components together properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_6n_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_5v_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_6p_"
+    id="base-ui-_r_61_"
     tabindex="0"
     type="button"
   >
     Complex Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_6r_"
+    aria-owns="_r_63_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -114,46 +114,46 @@ exports[`DropdownMenu > Complex dropdown menu > renders all components together 
 exports[`DropdownMenu > Content positioning > applies custom className to content 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_7i_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_6o_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_7k_"
+    id="base-ui-_r_6q_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_7m_"
+    aria-owns="_r_6s_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -162,46 +162,46 @@ exports[`DropdownMenu > Content positioning > applies custom className to conten
 exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_7a_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_6h_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_7c_"
+    id="base-ui-_r_6j_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_7e_"
+    aria-owns="_r_6l_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -210,46 +210,46 @@ exports[`DropdownMenu > Content positioning > renders with custom sideOffset 1`]
 exports[`DropdownMenu > DropdownMenuCheckboxItem > applies custom className 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_2s_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_2i_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_2u_"
+    id="base-ui-_r_2k_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_30_"
+    aria-owns="_r_2m_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -258,62 +258,14 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > applies custom className 1`] 
 exports[`DropdownMenu > DropdownMenuCheckboxItem > renders checked state properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_2c_"
-    aria-expanded="false"
-    aria-haspopup="menu"
-    data-popup-open=""
-    data-pressed=""
-    data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_2e_"
-    tabindex="0"
-    type="button"
-  >
-    Menu
-  </button>
-  <span
-    data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <span
-    data-base-ui-focus-guard=""
-    data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <span
-    aria-owns="_r_2g_"
-    style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
-  />
-  <span
-    data-base-ui-focus-guard=""
-    data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-</DocumentFragment>
-`;
-
-exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state properly 1`] = `
-<DocumentFragment>
-  <span
-    data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <button
-    aria-controls="_r_24_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_24_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
@@ -325,16 +277,16 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state prope
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
@@ -342,10 +294,58 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state prope
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state properly 1`] = `
+<DocumentFragment>
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <button
+    aria-controls="base-ui-_r_1t_"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-popup-open=""
+    data-pressed=""
+    data-slot="dropdown-menu-trigger"
+    id="base-ui-_r_1v_"
+    tabindex="0"
+    type="button"
+  >
+    Menu
+  </button>
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    data-type="outside"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <span
+    aria-owns="_r_21_"
+    style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+  />
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    data-type="outside"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -354,46 +354,46 @@ exports[`DropdownMenu > DropdownMenuCheckboxItem > renders unchecked state prope
 exports[`DropdownMenu > DropdownMenuItem > applies custom className 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_1s_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_1m_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_1u_"
+    id="base-ui-_r_1o_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_20_"
+    aria-owns="_r_1q_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -402,46 +402,46 @@ exports[`DropdownMenu > DropdownMenuItem > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuItem > renders default variant properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_q_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_o_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_s_"
+    id="base-ui-_r_q_"
     tabindex="0"
     type="button"
   >
     Open Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_u_"
+    aria-owns="_r_s_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -450,46 +450,46 @@ exports[`DropdownMenu > DropdownMenuItem > renders default variant properly 1`] 
 exports[`DropdownMenu > DropdownMenuItem > renders destructive variant properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_14_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_11_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_16_"
+    id="base-ui-_r_13_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_18_"
+    aria-owns="_r_15_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -498,46 +498,46 @@ exports[`DropdownMenu > DropdownMenuItem > renders destructive variant properly 
 exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_1c_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_18_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_1e_"
+    id="base-ui-_r_1a_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_1g_"
+    aria-owns="_r_1c_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -546,62 +546,14 @@ exports[`DropdownMenu > DropdownMenuItem > renders with inset properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > applies custom className 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_4e_"
-    aria-expanded="false"
-    aria-haspopup="menu"
-    data-popup-open=""
-    data-pressed=""
-    data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_4g_"
-    tabindex="0"
-    type="button"
-  >
-    Menu
-  </button>
-  <span
-    data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <span
-    data-base-ui-focus-guard=""
-    data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <span
-    aria-owns="_r_4i_"
-    style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
-  />
-  <span
-    data-base-ui-focus-guard=""
-    data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-</DocumentFragment>
-`;
-
-exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
-<DocumentFragment>
-  <span
-    data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
-    tabindex="0"
-  />
-  <button
-    aria-controls="_r_3u_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_3u_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
@@ -613,16 +565,16 @@ exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
@@ -630,10 +582,58 @@ exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+</DocumentFragment>
+`;
+
+exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
+<DocumentFragment>
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <button
+    aria-controls="base-ui-_r_3g_"
+    aria-expanded="true"
+    aria-haspopup="menu"
+    data-popup-open=""
+    data-pressed=""
+    data-slot="dropdown-menu-trigger"
+    id="base-ui-_r_3i_"
+    tabindex="0"
+    type="button"
+  >
+    Menu
+  </button>
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    data-type="outside"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
+    tabindex="0"
+  />
+  <span
+    aria-owns="_r_3k_"
+    style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
+  />
+  <span
+    aria-hidden="true"
+    data-base-ui-focus-guard=""
+    data-type="outside"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -642,46 +642,46 @@ exports[`DropdownMenu > DropdownMenuLabel > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_46_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_3n_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_48_"
+    id="base-ui-_r_3p_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_4a_"
+    aria-owns="_r_3r_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -690,46 +690,46 @@ exports[`DropdownMenu > DropdownMenuLabel > renders with inset properly 1`] = `
 exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > applies custom className to radio items 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_3m_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_39_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_3o_"
+    id="base-ui-_r_3b_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_3q_"
+    aria-owns="_r_3d_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -738,46 +738,46 @@ exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > appli
 exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > renders radio group properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_34_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_2p_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_36_"
+    id="base-ui-_r_2r_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_38_"
+    aria-owns="_r_2t_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -786,46 +786,46 @@ exports[`DropdownMenu > DropdownMenuRadioGroup and DropdownMenuRadioItem > rende
 exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_4v_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_4d_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_51_"
+    id="base-ui-_r_4f_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_53_"
+    aria-owns="_r_4h_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -834,46 +834,46 @@ exports[`DropdownMenu > DropdownMenuSeparator > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_4m_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_45_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_4o_"
+    id="base-ui-_r_47_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_4q_"
+    aria-owns="_r_49_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -882,46 +882,46 @@ exports[`DropdownMenu > DropdownMenuSeparator > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_5e_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_4q_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_5g_"
+    id="base-ui-_r_4s_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_5i_"
+    aria-owns="_r_4u_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -930,46 +930,46 @@ exports[`DropdownMenu > DropdownMenuShortcut > applies custom className 1`] = `
 exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_56_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_4j_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_58_"
+    id="base-ui-_r_4l_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_5a_"
+    aria-owns="_r_4n_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -978,46 +978,46 @@ exports[`DropdownMenu > DropdownMenuShortcut > renders properly 1`] = `
 exports[`DropdownMenu > DropdownMenuSub components > applies custom className to sub components 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_6c_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_5l_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_6e_"
+    id="base-ui-_r_5n_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_6g_"
+    aria-owns="_r_5p_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -1026,46 +1026,46 @@ exports[`DropdownMenu > DropdownMenuSub components > applies custom className to
 exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_5m_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_51_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_5o_"
+    id="base-ui-_r_53_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_5q_"
+    aria-owns="_r_55_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -1074,46 +1074,46 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub menu properly 1
 exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with inset properly 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_61_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_5b_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_63_"
+    id="base-ui-_r_5d_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_65_"
+    aria-owns="_r_5f_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
@@ -1122,46 +1122,46 @@ exports[`DropdownMenu > DropdownMenuSub components > renders sub trigger with in
 exports[`DropdownMenu > Error handling > handles disabled state 1`] = `
 <DocumentFragment>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <button
-    aria-controls="_r_8e_"
-    aria-expanded="false"
+    aria-controls="base-ui-_r_7i_"
+    aria-expanded="true"
     aria-haspopup="menu"
     data-popup-open=""
     data-pressed=""
     data-slot="dropdown-menu-trigger"
-    id="base-ui-_r_8g_"
+    id="base-ui-_r_7k_"
     tabindex="0"
     type="button"
   >
     Menu
   </button>
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
   <span
-    aria-owns="_r_8i_"
+    aria-owns="_r_7m_"
     style="clip-path: inset(50%); position: fixed; top: 0px; left: 0px;"
   />
   <span
+    aria-hidden="true"
     data-base-ui-focus-guard=""
     data-type="outside"
-    role="button"
-    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: -1px; position: fixed; top: 0px; left: 0px;"
+    style="clip-path: inset(50%); overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; width: 1px; height: 1px; margin: 0px; position: fixed; top: 0px; left: 0px;"
     tabindex="0"
   />
 </DocumentFragment>
