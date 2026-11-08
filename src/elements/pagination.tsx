@@ -36,7 +36,6 @@ function PaginationLink({ className, isActive, size = 'icon', ...props }: Pagina
       className={cn(className)}
       nativeButton={false}
       render={
-        // eslint-disable-next-line jsx-a11y/anchor-has-content
         <a aria-current={isActive ? 'page' : undefined} data-slot="pagination-link" data-active={isActive} {...props} />
       }
     />

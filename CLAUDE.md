@@ -8,11 +8,12 @@ React component library for the Kubetail project (React 19, TypeScript, Tailwind
 pnpm install            # Install dependencies
 pnpm storybook          # Storybook dev server (localhost:6006)
 pnpm build              # TypeScript check + Vite build
-pnpm lint               # ESLint (zero warnings policy)
+pnpm lint               # oxlint + oxfmt check (zero warnings policy)
+pnpm format             # Format with oxfmt
 pnpm test               # Vitest tests
 ```
 
-After every set of changes to TypeScript files, run `pnpm lint --fix`.
+After every set of changes to TypeScript files, run `pnpm format` and `pnpm lint`.
 
 ## Sandbox (sbx) Development
 
@@ -33,11 +34,13 @@ When running inside an `sbx` Linux sandbox with the repo mounted from a macOS ho
 
 ## Import Order
 
-Organize imports into three groups separated by blank lines, sorted alphabetically within each:
+`oxfmt` enforces this through `sortImports` in `.oxfmtrc.json`. Organize imports into three groups separated by blank lines, sorted alphabetically within each:
 
 1. **Third-party** — `node_modules` packages (e.g. `react`, `@base-ui/react`)
 2. **First-party** — `@kubetail/*`
 3. **Local** — relative imports (`@/*`, `./*`)
+
+Node built-ins (e.g. `path`) go in a group of their own before third-party imports.
 
 ## Dependencies
 

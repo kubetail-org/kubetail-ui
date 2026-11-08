@@ -71,10 +71,9 @@ describe('Calendar', () => {
         button.querySelector('svg') !== null,
     );
 
-    if (nextButton) {
-      fireEvent.click(nextButton);
-      expect(handleMonthChange).toHaveBeenCalled();
-    }
+    expect(nextButton).toBeDefined();
+    fireEvent.click(nextButton!);
+    expect(handleMonthChange).toHaveBeenCalled();
   });
 
   it('applies correct CSS classes for different day states', () => {

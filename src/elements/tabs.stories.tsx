@@ -1,10 +1,10 @@
 import type { Meta } from '@storybook/react-vite';
 
 import { Button } from '@/elements/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
 import { Input } from '@/elements/input';
 import { Label } from '@/elements/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/elements/tabs';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
 
 const meta = {
   title: 'Elements/Tabs',

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useForm } from 'react-hook-form';
 
-import { Input } from '@/elements/input';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/elements/form';
+import { Input } from '@/elements/input';
 
 const FormExample = () => {
   const form = useForm();

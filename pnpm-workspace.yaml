@@ -12,7 +12,6 @@ trustPolicyExclude:
   - semver@6.3.1
 allowBuilds:
   esbuild: true
-  unrs-resolver: true
 overrides:
   "@babel/core": ^7.29.6
   baseline-browser-mapping: ^2.11.0

@@ -35,7 +35,7 @@ describe('Button', () => {
 
   it('renders with render prop properly', () => {
     const { asFragment, getByText } = render(
-      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+      // oxlint-disable-next-line jsx-a11y/control-has-associated-label -- the render prop element gets its label from children
       <Button render={<a href="/test" />} nativeButton={false}>
         Child Link
       </Button>,
@@ -69,7 +69,7 @@ describe('Button', () => {
 
   it('renders as link variant with href', () => {
     const { getByText } = render(
-      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+      // oxlint-disable-next-line jsx-a11y/control-has-associated-label -- the render prop element gets its label from children
       <Button render={<a href="/test" />} variant="link" nativeButton={false}>
         Link Btn
       </Button>,

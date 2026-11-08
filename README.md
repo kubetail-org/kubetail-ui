@@ -35,7 +35,8 @@ Open [http://localhost:6006](http://localhost:6006) in your browser to see Story
 ## Scripts
 
 * build - Run the build script (`$ pnpm build`)
-* lint - Run the linter (`$ pnpm lint`)
+* lint - Run the linter and format check (`$ pnpm lint`)
+* format - Format the code (`$ pnpm format`)
 * test - Run the unit tests (`$ pnpm test`)
 * storybook - Run the storybook development server (`$ pnpm storybook`)
 * build-storybook - Run the storybook build script (`$ pnpm build-storybook`)

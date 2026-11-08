@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
 import { Search } from 'lucide-react';
+import { forwardRef } from 'react';
 
 import { Input } from '@/elements/input';
 import { cn } from '@/lib/utils';

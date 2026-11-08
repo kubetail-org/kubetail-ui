@@ -25,7 +25,7 @@ A reusable Calendar component.
 export default meta;
 
 export function Default() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [date, setDate] = useState<Date | undefined>(() => new Date());
 
   return <Calendar mode="single" selected={date} onSelect={setDate} className="rounded-md border border-border" />;
 }

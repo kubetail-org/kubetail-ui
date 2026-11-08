@@ -6,8 +6,8 @@ import react from '@vitejs/plugin-react';
 import { glob } from 'glob';
 import autoExternal from 'rollup-plugin-auto-external';
 import copy from 'rollup-plugin-copy';
-import { defineConfig } from 'vite';
 import Unfonts from 'unplugin-fonts/vite';
+import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -46,7 +46,7 @@ export default defineConfig({
       name: 'kubetail-ui',
       formats: ['es', 'cjs'],
     },
-    rollupOptions: {
+    rolldownOptions: {
       plugins: [
         autoExternal(),
         copy({

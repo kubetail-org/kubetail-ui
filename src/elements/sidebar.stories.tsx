@@ -91,7 +91,7 @@ export function FullyFeatured() {
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       isActive={item.title === 'Home'}
-                      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+                      // oxlint-disable-next-line jsx-a11y/control-has-associated-label -- the render prop element gets its label from children
                       render={<a href={item.url} />}
                     >
                       <Atom />
@@ -151,7 +151,7 @@ export function FloatingExample() {
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton
                       isActive={item.title === 'Home'}
-                      // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label
+                      // oxlint-disable-next-line jsx-a11y/control-has-associated-label -- the render prop element gets its label from children
                       render={<a href={item.url} />}
                     >
                       <Atom />
