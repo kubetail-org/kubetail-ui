@@ -8,10 +8,7 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: ['@storybook/addon-links', '@chromatic-com/storybook', '@storybook/addon-themes', '@storybook/addon-docs'],
   typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-    },
+    reactDocgen: 'react-docgen',
   },
 };
 export default config;
