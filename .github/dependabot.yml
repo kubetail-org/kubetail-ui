@@ -6,7 +6,9 @@ updates:
   # Every action is pinned to a commit SHA; this moves the pins and the
   # version comments beside them.
   - package-ecosystem: github-actions
-    directory: /
+    directories:
+      - /
+      - /.github/actions/*
     schedule:
       interval: weekly
     cooldown:

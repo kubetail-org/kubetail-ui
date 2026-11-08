@@ -1,9 +1,21 @@
 name: audit
 
-# Audits the whole dependency tree, so a newly published advisory fails a run
-# the maintainers own. A pull request is checked only for the advisories it
-# brings in, by ci.yaml's TypeScript · Dependency review job.
+# A pull request that changes a dependency fails only for the advisories it
+# brings in, through TypeScript · Dependency review. Main, the schedule and a
+# dispatch audit the whole tree instead, so a newly published advisory fails a
+# run the maintainers own.
 on:
+  pull_request:
+    branches:
+      - "**"
+    paths:
+      - package.json
+      - pnpm-lock.yaml
+      - pnpm-workspace.yaml
+      - scripts/audit-npm-diff.sh
+      - scripts/npm-dependency-snapshot.sh
+      - .github/actions/setup-environment/**
+      - .github/workflows/audit.yml
   push:
     branches:
       - main
@@ -14,16 +26,71 @@ on:
 permissions:
   contents: read
 
+# A PR's new push cancels its last run. Every other run has a group of its own.
+concurrency:
+  group: audit-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   typescript-audit:
     name: TypeScript · Audit
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+      - uses: ./.github/actions/setup-environment
       - run: pnpm audit --audit-level moderate
+
+  typescript-dependency-review:
+    name: TypeScript · Dependency review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+          sparse-checkout: |
+            package.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+          sparse-checkout-cone-mode: false
+      - uses: ./.github/actions/setup-environment
+      - name: Fail on advisories new to the head
+        run: sh scripts/audit-npm-diff.sh base .
+
+  # GitHub's dependency graph reads only pnpm-lock.yaml's first YAML document,
+  # which pins pnpm itself, and Dependabot's alerts and security updates read
+  # the graph. So main submits the npm packages the lockfile holds.
+  typescript-submit:
+    name: TypeScript · Submit dependencies
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/setup-environment
+      - name: Build the snapshot
+        env:
+          SHA: ${{ github.sha }}
+          REF: ${{ github.ref }}
+        run: sh scripts/npm-dependency-snapshot.sh "$SHA" "$REF" >"$RUNNER_TEMP/snapshot.json"
+      - name: Submit the snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api "repos/$GITHUB_REPOSITORY/dependency-graph/snapshots" --input "$RUNNER_TEMP/snapshot.json"
 
   # A failed audit on main opens an issue, or comments on the one still open,
   # so it reaches a maintainer without anyone watching the Actions tab.
@@ -32,6 +99,7 @@ jobs:
     needs: typescript-audit
     if: failure() && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     permissions:
       issues: write
     steps:
