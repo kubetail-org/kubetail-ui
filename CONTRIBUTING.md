@@ -8,6 +8,7 @@ This document will guide you through the contribution process.
 
 - [Where to Find Code](#where-to-find-code)
 - [How to Run Tests and Other Checks](#how-to-run-tests-and-other-checks)
+- [Developing Inside an sbx Sandbox](#developing-inside-an-sbx-sandbox)
 - [Commit Guidelines](#commit-guidelines)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Branch Naming Guidelines](#branch-naming-guidelines)
@@ -54,6 +55,24 @@ pnpm build
 # Start Storybook dev server (for visual testing)
 pnpm storybook
 ```
+
+## Developing Inside an sbx Sandbox
+
+If you run coding agents inside an [`sbx`](https://docs.docker.com/ai/sandboxes/) Linux sandbox with this repo mounted from a macOS host, run this once per sandbox boot, before installing:
+
+```bash
+scripts/sandbox-dev-setup.sh
+source /etc/sandbox-persistent.sh
+pnpm install
+```
+
+Claude Code runs it automatically through the `SessionStart` hook in `.claude/settings.json`. The script does nothing outside the sandbox and is safe to re-run. It:
+
+- Bind-mounts `node_modules` from the sandbox's own disk, and `dist` and `storybook-static` from `.sandbox-linux/` (gitignored), so the sandbox's Linux binaries and build output never overwrite the host's.
+- Points pnpm at one shared store using the global virtual store layout (`PNPM_CONFIG_STORE_DIR`, `PNPM_CONFIG_ENABLE_GLOBAL_VIRTUAL_STORE`), so each worktree's `node_modules` holds only symlinks and new worktrees install in seconds. These are environment variables only; the host and CI keep pnpm's default layout.
+- Checks that Node matches CI (Node 24) and that pnpm runs the version pinned in `package.json`.
+
+If something fails only in the sandbox, `unset PNPM_CONFIG_ENABLE_GLOBAL_VIRTUAL_STORE`, empty `node_modules` and reinstall. To view Storybook from the host, run `sbx ports <sandbox-name> --publish 6006:6006` on the host.
 
 ## Commit Guidelines
 
