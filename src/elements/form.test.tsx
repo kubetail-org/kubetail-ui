@@ -3,8 +3,8 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Input } from './input';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, useFormField } from './form';
+import { Input } from './input';
 
 const TestFormComponent = ({
   defaultValues = { testField: '' },

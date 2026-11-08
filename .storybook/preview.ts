@@ -1,11 +1,9 @@
-import type { Preview } from "@storybook/react-vite";
-import colors from 'tailwindcss/colors';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import type { Preview } from '@storybook/react-vite';
 
 import '../tailwind.css';
 import 'unfonts.css';
-
-import { withThemeByClassName } from "@storybook/addon-themes";
-
+import colors from 'tailwindcss/colors';
 
 const preview: Preview = {
   parameters: {
@@ -26,8 +24,8 @@ const preview: Preview = {
         dark: {
           name: 'dark',
           value: colors.neutral[800],
-        }
-      }
+        },
+      },
     },
     controls: {
       matchers: {
@@ -41,11 +39,7 @@ const preview: Preview = {
         order: [
           'Introduction',
           'Design System',
-          [
-            'Colors',
-            'Typography',
-            'Styles',
-          ],
+          ['Colors', 'Typography', 'Styles'],
           'Elements',
           [
             'Overview',
@@ -86,20 +80,22 @@ const preview: Preview = {
     },
   },
 
-  decorators: [withThemeByClassName({
-    themes: {
-      // nameOfTheme: 'classNameForTheme',
-      light: '',
-      dark: 'dark',
-    },
-    defaultTheme: 'light',
-  })],
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        // nameOfTheme: 'classNameForTheme',
+        light: '',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+    }),
+  ],
 
   initialGlobals: {
     backgrounds: {
-      value: 'white'
-    }
-  }
+      value: 'white',
+    },
+  },
 };
 
 export default preview;

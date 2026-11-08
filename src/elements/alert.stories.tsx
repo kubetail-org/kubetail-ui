@@ -1,5 +1,5 @@
-import { CircleAlert, Terminal, TriangleAlert } from 'lucide-react';
 import type { Meta } from '@storybook/react-vite';
+import { CircleAlert, Terminal, TriangleAlert } from 'lucide-react';
 
 import { Alert, AlertTitle, AlertDescription } from '@/elements/alert';
 

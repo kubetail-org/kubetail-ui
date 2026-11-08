@@ -1,9 +1,9 @@
 import type { Meta } from '@storybook/react-vite';
 
 import { Button } from '@/elements/button';
+import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
 import { Input } from '@/elements/input';
 import { Label } from '@/elements/label';
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/elements/card';
 
 const meta = {
   title: 'Elements/Card',

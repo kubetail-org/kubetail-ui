@@ -1,5 +1,5 @@
-import * as React from 'react';
 import type { Meta } from '@storybook/react-vite';
+import * as React from 'react';
 
 import { Button } from '@/elements/button';
 import {
