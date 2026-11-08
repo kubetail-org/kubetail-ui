@@ -1,8 +1,14 @@
 # zizmor configuration. CI's `YAML · Lint` job fails on any finding not ignored
-# here.
+# here. Every `ignore` or `disable` entry says why it's there.
 rules:
   # Every action pinned to a commit SHA, first-party ones included.
   unpinned-uses:
     config:
       policies:
         "*": hash-pin
+
+  # actionlint rejects GitHub's `uses: $/...` syntax until rhysd/actionlint#711
+  # lands. Until then every job checks out this repository at the commit under
+  # test before it uses a local action, so `./` names the same code `$/` would.
+  self-repository:
+    disable: true

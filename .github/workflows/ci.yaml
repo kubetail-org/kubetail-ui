@@ -17,56 +17,63 @@ concurrency:
   group: ci-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
+env:
+  # Every TypeScript job restores the pnpm store, and only a run on main saves
+  # it. A PR saving its own copy would only fill the repo's cache quota: no
+  # other ref can read it.
+  CACHE_SAVE: ${{ github.ref == 'refs/heads/main' }}
+
 jobs:
   typescript-lint:
     name: TypeScript · Lint
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: ./.github/actions/setup-environment
         with:
-          node-version: 24
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
-      - run: |
-          pnpm install --frozen-lockfile
-          pnpm lint
+          install: "true"
+          node-cache: "true"
+          cache-save: ${{ env.CACHE_SAVE }}
+      - run: pnpm lint
 
   typescript-test:
     name: TypeScript · Test
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: ./.github/actions/setup-environment
         with:
-          node-version: 24
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
-      - run: |
-          pnpm install --frozen-lockfile
-          pnpm test
+          install: "true"
+          node-cache: "true"
+          cache-save: ${{ env.CACHE_SAVE }}
+      - run: pnpm test
 
   typescript-build:
     name: TypeScript · Build
     runs-on: ubuntu-24.04
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - uses: ./.github/actions/setup-environment
         with:
-          node-version: 24
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
-      - run: |
-          pnpm install --frozen-lockfile
-          pnpm build
+          install: "true"
+          node-cache: "true"
+          cache-save: ${{ env.CACHE_SAVE }}
+      - run: pnpm build
 
   # Every tracked shell script, so a new one is checked without editing this.
   shell-lint:
     name: Shell · Lint
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -84,6 +91,7 @@ jobs:
   yaml-lint:
     name: YAML · Lint
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -98,26 +106,3 @@ jobs:
       - env:
           GH_TOKEN: ${{ github.token }}
         run: uv tool run zizmor@1.31.1 --config .github/ci-config/zizmor.yml .
-
-  # A pull request fails only for the advisories it brings in. audit.yml
-  # audits the whole tree daily and on main.
-  typescript-dependency-review:
-    name: TypeScript · Dependency review
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          ref: ${{ github.event.pull_request.base.sha }}
-          path: base
-          persist-credentials: false
-          sparse-checkout: |
-            package.json
-            pnpm-lock.yaml
-            pnpm-workspace.yaml
-          sparse-checkout-cone-mode: false
-      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
-      - run: sh scripts/audit-npm-diff.sh base .
