@@ -98,7 +98,6 @@
     "oxlint": "^1.92.0",
     "oxlint-tsgolint": "^7.0.2006",
     "react-day-picker": "^9.14.0",
-    "react-docgen-typescript": "^2.4.0",
     "react-hook-form": "^7.91.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-copy": "^3.5.0",
