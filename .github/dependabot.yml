@@ -35,10 +35,14 @@ updates:
       prefix: chore
       include: scope
     versioning-strategy: increase-if-necessary
-    # @types/node tracks the Node major the workflows run on, so its major
-    # moves by hand together with node-version.
+    # Majors these packages hold back on; they move by hand. @types/node
+    # tracks the Node major the workflows run on (node-version).
+    # react-day-picker stays on v9, the major the peerDependencies range
+    # allows.
     ignore:
       - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: react-day-picker
         update-types: ["version-update:semver-major"]
     groups:
       npm:
