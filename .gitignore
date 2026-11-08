@@ -47,5 +47,13 @@ dist-ssr
 *~
 \#*
 storybook-static
-.claude
 .docker_node_modules
+
+# claude code (commit shared settings only)
+CLAUDE.local.md
+.claude/*
+!.claude/settings.json
+
+# Linux build outputs when developing inside an sbx sandbox
+# (see scripts/sandbox-dev-setup.sh)
+.sandbox-linux/

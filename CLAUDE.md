@@ -14,6 +14,16 @@ pnpm test               # Vitest tests
 
 After every set of changes to TypeScript files, run `pnpm lint --fix`.
 
+## Sandbox (sbx) Development
+
+When running inside an `sbx` Linux sandbox with the repo mounted from a macOS host, `scripts/sandbox-dev-setup.sh` **must run before any install, build or test command**. The `SessionStart` hook in `.claude/settings.json` runs it; it is idempotent and no-ops outside the sandbox, so run it yourself if unsure, then `pnpm install`.
+
+- It bind-mounts `node_modules` from the sandbox overlay (`/home/agent/kubetail-ui-build/worktrees/...`) and `dist` / `storybook-static` from `.sandbox-linux/` (gitignored), so Linux artifacts never overwrite the host's macOS ones.
+- It sets `PNPM_CONFIG_STORE_DIR` and `PNPM_CONFIG_ENABLE_GLOBAL_VIRTUAL_STORE=true` in `/etc/sandbox-persistent.sh`: every worktree shares one pnpm store, and each `node_modules` holds only symlinks into it. **Never edit files under `node_modules`** — every worktree shares them. Keep these settings out of `pnpm-workspace.yaml` so the host and CI keep pnpm's default layout.
+- If something fails only in the sandbox, `unset PNPM_CONFIG_ENABLE_GLOBAL_VIRTUAL_STORE`, empty `node_modules` and reinstall to rule out the layout.
+- The overlay is capped at 20G; the script warns under 2G free.
+- Storybook listens on `0.0.0.0:6006`; the user publishes it from the host with `sbx ports <sandbox-name> --publish 6006:6006`.
+
 ## Component Conventions
 
 - Components live in `src/elements/` as `component-name.tsx` + `component-name.stories.tsx`
