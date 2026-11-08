@@ -1,9 +1,10 @@
 # Supply-chain policies, also checked against pnpm-lock.yaml on every frozen
-# install. A release must be a day old before pnpm installs it, and a
-# version published with weaker trust evidence than an earlier one is
-# rejected. A security fix that can't wait goes in minimumReleaseAgeExclude
-# as an exact version.
-minimumReleaseAge: 1440
+# install. A release must be a week old before pnpm installs it, matching
+# Dependabot's 7-day cooldown in .github/dependabot.yml, and a version
+# published with weaker trust evidence than an earlier one is rejected. A
+# security fix that can't wait goes in minimumReleaseAgeExclude as an exact
+# version.
+minimumReleaseAge: 10080
 trustPolicy: no-downgrade
 # Backports to old majors, published in 2023 without the provenance that
 # semver 7 had by then.
