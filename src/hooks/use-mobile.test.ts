@@ -22,7 +22,9 @@ beforeEach(() => {
           listeners[event]?.delete(handler as () => void);
         },
         dispatchEvent: () => true,
+        // oxlint-disable-next-line typescript/no-deprecated -- the stub implements all of MediaQueryList
         addListener: () => {},
+        // oxlint-disable-next-line typescript/no-deprecated -- the stub implements all of MediaQueryList
         removeListener: () => {},
       }) as MediaQueryList,
   );

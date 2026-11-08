@@ -43,8 +43,11 @@ Make sure your changes pass all tests and checks before submitting a pull reques
 # Install dependencies
 pnpm install
 
-# Run linter (zero warnings policy)
+# Run linter and format check (zero warnings policy)
 pnpm lint
+
+# Format code
+pnpm format
 
 # Run tests
 pnpm test
@@ -111,7 +114,7 @@ Signed-off-by: Your Name <you@example.com>
 
 1. **Check for duplicates**: Review existing [issues](https://github.com/kubetail-org/kubetail-ui/issues) and [pull requests](https://github.com/kubetail-org/kubetail-ui/pulls)
 2. **Run tests**: Execute all relevant tests for your changes and ensure they pass
-3. **Format code**: Run the linter and fix any issues
+3. **Format code**: Run `pnpm format`, then `pnpm lint` and fix any issues
 4. **Clean commits**: Ensure each commit is minimal, focused, and follows our [commit format](https://www.conventionalcommits.org)
 
 ### PR Title Format
@@ -155,8 +158,7 @@ For AI-assisted editors like Claude Code, Codex, Cursor or GitHub Copilot, refer
 ### Visual Studio Code
 
 Recommended extensions:
-- **ESLint**: `dbaeumer.vscode-eslint`
-- **Prettier**: `esbenp.prettier-vscode`
+- **Oxc** (oxlint and oxfmt): `oxc.oxc-vscode`
 - **Tailwind CSS IntelliSense**: `bradlc.vscode-tailwindcss`
 
 ## Bots and Automation
@@ -165,7 +167,7 @@ Recommended extensions:
 
 Our CI/CD pipeline automatically runs on every pull request:
 
-- **Lint**: ESLint with zero warnings policy
+- **Lint**: oxlint with zero warnings policy, plus an oxfmt format check
 - **Test**: Vitest unit tests
 - **Build**: TypeScript check + Vite build
 

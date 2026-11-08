@@ -102,7 +102,7 @@ export const CustomColor: Story = {
 
 export const AsChild: Story = {
   render: () => (
-    // eslint-disable-next-line jsx-a11y/anchor-has-content, jsx-a11y/control-has-associated-label, jsx-a11y/anchor-is-valid
+    // oxlint-disable-next-line jsx-a11y/control-has-associated-label -- the render prop element gets its label from children
     <Link render={<a href="/styled-span" />}>I&apos;m composed via render</Link>
   ),
 };

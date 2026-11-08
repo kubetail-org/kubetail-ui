@@ -17,9 +17,6 @@ const Calendar = ({ className, showOutsideDays = true, ...props }: CalendarProps
         root: cn(defaultClassNames.root, className),
         chevron: `${defaultClassNames.chevron} fill-amber-500`,
         weekday: 'text-muted-foreground font-normal text-sm',
-        day_selected:
-          'bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground',
-        day_today: 'bg-accent text-accent-foreground',
         outside: 'text-muted-foreground',
       }}
       {...props}

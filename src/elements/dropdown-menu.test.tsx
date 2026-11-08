@@ -501,6 +501,7 @@ describe('DropdownMenu', () => {
       expect(screen.getByRole('separator')).toBeInTheDocument(); // separator
     });
 
+    // oxlint-disable-next-line vitest/expect-expect -- smoke test: the key events must not throw
     it('supports keyboard navigation', () => {
       render(<BasicDropdownMenu />);
 

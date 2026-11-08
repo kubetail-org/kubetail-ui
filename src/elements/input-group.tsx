@@ -48,7 +48,7 @@ function InputGroupAddon({
   return (
     // The click handler is a pointer-only convenience that forwards focus to the sibling input,
     // which is itself the keyboard-accessible control — no keyboard handler is needed.
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+    // oxlint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
     <div
       role="group"
       data-slot="input-group-addon"

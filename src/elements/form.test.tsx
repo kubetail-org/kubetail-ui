@@ -160,6 +160,19 @@ const UseFormFieldErrorTestComponent = () => {
   return <div>{formField.name}</div>;
 };
 
+const HookConsumer = () => {
+  const formField = useFormField();
+  return (
+    <div>
+      <span data-testid="field-name">{formField.name}</span>
+      <span data-testid="form-item-id">{formField.formItemId}</span>
+      <span data-testid="form-description-id">{formField.formDescriptionId}</span>
+      <span data-testid="form-message-id">{formField.formMessageId}</span>
+      <span data-testid="has-error">{formField.error ? 'true' : 'false'}</span>
+    </div>
+  );
+};
+
 const UseFormFieldTestComponent = () => {
   const form = useForm();
 
@@ -168,25 +181,11 @@ const UseFormFieldTestComponent = () => {
       <FormField
         control={form.control}
         name="hookTest"
-        render={() => {
-          const HookConsumer = () => {
-            const formField = useFormField();
-            return (
-              <div>
-                <span data-testid="field-name">{formField.name}</span>
-                <span data-testid="form-item-id">{formField.formItemId}</span>
-                <span data-testid="form-description-id">{formField.formDescriptionId}</span>
-                <span data-testid="form-message-id">{formField.formMessageId}</span>
-                <span data-testid="has-error">{formField.error ? 'true' : 'false'}</span>
-              </div>
-            );
-          };
-          return (
-            <FormItem>
-              <HookConsumer />
-            </FormItem>
-          );
-        }}
+        render={() => (
+          <FormItem>
+            <HookConsumer />
+          </FormItem>
+        )}
       />
     </Form>
   );
@@ -386,9 +385,9 @@ describe('Form Components', () => {
     it('throws error when used outside FormField context', () => {
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
-      expect(() => {
-        render(<UseFormFieldErrorTestComponent />);
-      }).toThrow();
+      // Outside a <Form>, useFormContext() fails before the hook's own check, so the message isn't pinned.
+      // oxlint-disable-next-line vitest/require-to-throw-message
+      expect(() => render(<UseFormFieldErrorTestComponent />)).toThrow();
 
       consoleSpy.mockRestore();
     });

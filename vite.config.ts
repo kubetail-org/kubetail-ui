@@ -46,7 +46,7 @@ export default defineConfig({
       name: 'kubetail-ui',
       formats: ['es', 'cjs'],
     },
-    rollupOptions: {
+    rolldownOptions: {
       plugins: [
         autoExternal(),
         copy({

@@ -1,0 +1,140 @@
+// oxlint for `src/`, `.storybook/` and the root config files. Every rule is an error:
+// `denyWarnings` fails the run on a warning too, so nothing here is advisory.
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "react", "jsx-a11y", "import", "vitest"],
+  "options": {
+    "typeAware": true,
+    "denyWarnings": true,
+    "reportUnusedDisableDirectives": "error",
+    "respectEslintDisableDirectives": false
+  },
+  "categories": { "correctness": "error", "suspicious": "error", "perf": "error" },
+  "ignorePatterns": ["dist/**", "storybook-static/**"],
+  "rules": {
+    // The categories' rules, fitted to this code.
+    // The automatic JSX runtime imports React itself.
+    "react/react-in-jsx-scope": "off",
+    // Stylesheets and test setup are imported for their effect.
+    "import/no-unassigned-import": ["error", { "allow": ["**/*.css", "@testing-library/jest-dom"] }],
+    // `vi.fn()` infers its type from the implementation it is given.
+    "vitest/require-mock-type-parameters": "off",
+    // `as` narrows after a check the types cannot follow: a DOM lookup, a ref, a context value.
+    "typescript/no-unsafe-type-assertion": "off",
+    // The components draw ARIA widgets (`role="group"`, `role="status"`) on a `div` or `span`.
+    "jsx-a11y/prefer-tag-over-role": "off",
+
+    // Bugs the categories leave to `pedantic` and `restriction`.
+    "array-callback-return": "error",
+    "default-case-last": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "no-case-declarations": "error",
+    "no-constructor-return": "error",
+    "no-empty": "error",
+    "no-loop-func": "error",
+    "no-new-wrappers": "error",
+    "no-promise-executor-return": "error",
+    "no-prototype-builtins": "error",
+    "no-script-url": "error",
+    "no-self-compare": "error",
+    "no-template-curly-in-string": "error",
+    "radix": "error",
+    "import/no-cycle": "error",
+    "import/no-mutable-exports": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-unsafe-function-type": "error",
+    "typescript/only-throw-error": "error",
+
+    // Control flow and mutation a reader can follow.
+    "default-param-last": "error",
+    "no-alert": "error",
+    "no-else-return": ["error", { "allowElseIf": false }],
+    "no-labels": "error",
+    "no-lonely-if": "error",
+    "no-multi-assign": "error",
+    "no-nested-ternary": "error",
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["acc"] }],
+    "no-return-assign": ["error", "always"],
+    "no-sequences": "error",
+    "no-useless-return": "error",
+    "one-var": ["error", "never"],
+    // A DOM global that reads as a forgotten local: write `window.<name>`.
+    "no-restricted-globals": [
+      "error",
+      "blur",
+      "close",
+      "event",
+      "find",
+      "focus",
+      "history",
+      "length",
+      "location",
+      "name",
+      "open",
+      "parent",
+      "print",
+      "scroll",
+      "self",
+      "status",
+      "stop",
+      "top"
+    ],
+
+    // Modern syntax over its older spelling.
+    "arrow-body-style": "error",
+    "no-useless-computed-key": "error",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "operator-assignment": "error",
+    "prefer-arrow-callback": "error",
+    "prefer-const": ["error", { "ignoreReadBeforeAssign": true }],
+    "prefer-exponentiation-operator": "error",
+    "prefer-object-has-own": "error",
+    "prefer-object-spread": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "import/no-duplicates": "error",
+    "typescript/array-type": "error",
+    "typescript/dot-notation": "error",
+    "typescript/no-empty-object-type": "error",
+    "typescript/no-inferrable-types": "error",
+    "typescript/no-namespace": "error",
+    "typescript/prefer-function-type": "error",
+    "unicorn/prefer-number-properties": "error",
+    "unicorn/throw-new-error": "error",
+
+    "react/button-has-type": "error",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+    "react/jsx-fragments": "error",
+    "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+    "react/self-closing-comp": "error",
+    "react/rules-of-hooks": "error",
+
+    // Type-aware rules beyond the categories. `correctness` brings the promise rules
+    // (`no-floating-promises`, `await-thenable`).
+    "typescript/no-deprecated": "error",
+    "typescript/no-misused-promises": ["error", { "checksVoidReturn": { "attributes": false } }],
+    "typescript/prefer-promise-reject-errors": "error",
+    "typescript/restrict-plus-operands": "error"
+  },
+  "overrides": [
+    {
+      // The library entry point is empty; consumers import from `@kubetail/ui/elements`.
+      "files": ["src/index.ts"],
+      "rules": { "unicorn/no-empty-file": "off" }
+    },
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "rules": {
+        // A helper or test component sits in the `describe` that uses it.
+        "unicorn/consistent-function-scoping": "off",
+        // A test component renders once; a stable default would buy it nothing.
+        "react/no-object-type-as-default-prop": "off",
+        // Form test fixtures take arbitrary field values.
+        "typescript/no-explicit-any": "off"
+      }
+    }
+  ]
+}
