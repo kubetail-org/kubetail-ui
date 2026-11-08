@@ -25,6 +25,10 @@ permissions: {}
 jobs:
   config:
     name: Configure workflow
+    # GitHub starts tag-push runs in forks too, and a fork has nothing to
+    # publish, so this job, which every later job needs, runs only in
+    # kubetail-org/kubetail-ui.
+    if: github.repository == 'kubetail-org/kubetail-ui'
     runs-on: ubuntu-slim
     timeout-minutes: 5
     permissions: {}

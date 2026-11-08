@@ -24,8 +24,23 @@ env:
   CACHE_SAVE: ${{ github.ref == 'refs/heads/main' }}
 
 jobs:
+  # GitHub starts push runs in forks too. Outside
+  # kubetail-org/kubetail-ui this job runs only for a PR or a dispatch, and
+  # every other job needs it, so a fork's automatic run skips whole.
+  fork-gate:
+    name: Fork gate
+    if: >-
+      github.repository == 'kubetail-org/kubetail-ui'
+      || github.event_name == 'pull_request'
+      || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-slim
+    timeout-minutes: 1
+    steps:
+      - run: "true"
+
   typescript-lint:
     name: TypeScript · Lint
+    needs: fork-gate
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -41,6 +56,7 @@ jobs:
 
   typescript-test:
     name: TypeScript · Test
+    needs: fork-gate
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -56,6 +72,7 @@ jobs:
 
   typescript-build:
     name: TypeScript · Build
+    needs: fork-gate
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -72,6 +89,7 @@ jobs:
   # Every tracked shell script, so a new one is checked without editing this.
   shell-lint:
     name: Shell · Lint
+    needs: fork-gate
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -90,6 +108,7 @@ jobs:
   # .github/ci-config/zizmor.yml.
   yaml-lint:
     name: YAML · Lint
+    needs: fork-gate
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
