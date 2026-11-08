@@ -20,6 +20,10 @@ concurrency:
 jobs:
   # Dependency code runs here, so this job can't deploy to Pages.
   build:
+    # GitHub starts push runs in forks too, and a fork has no Pages site of
+    # ours, so this job, which the deploy needs, runs only in
+    # kubetail-org/kubetail-ui.
+    if: github.repository == 'kubetail-org/kubetail-ui'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:

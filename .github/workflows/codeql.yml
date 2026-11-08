@@ -22,6 +22,13 @@ concurrency:
 jobs:
   typescript:
     name: CodeQL · TypeScript
+    # GitHub starts push and schedule runs in forks too. Outside
+    # kubetail-org/kubetail-ui this job runs only for a PR or a dispatch, so a
+    # fork's automatic run skips.
+    if: >-
+      github.repository == 'kubetail-org/kubetail-ui'
+      || github.event_name == 'pull_request'
+      || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     permissions:

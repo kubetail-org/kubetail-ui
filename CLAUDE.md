@@ -50,6 +50,10 @@ Avoid introducing new external dependencies unless it materially improves readab
 
 `docs/adr/` records **why** things are the way they are; this file records **what is true now**. Write an ADR (copy `docs/adr/TEMPLATE.md`, add it to the index in `docs/adr/README.md`) when a change makes a design choice someone might later question: a new dependency, tool or build setup, a component or styling pattern, or anything where you weighed real alternatives. Update this file when a convention, command or trap changes. If a paragraph here starts explaining _why_ or listing options we didn't take, move it to an ADR and link it: `→ [ADR: <title>](docs/adr/<file>.md)`. Link only `Accepted` ADRs. ADRs are append-only; to change a decision, write a new one that supersedes it and update links here in the same commit.
 
+## Workflows
+
+**Automatic workflow runs happen only in `kubetail-org/kubetail-ui`.** GitHub starts `push` and `schedule` runs in forks too, so every job such an event can start carries an `if:`. CI's workflows (`ci.yaml`, `audit.yml`, `codeql.yml`) gate on `github.repository == 'kubetail-org/kubetail-ui' || github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'`, so a fork's PR or dispatch still runs; the release and deploy workflows (`publish.yml`, `deploy-github-pages.yml`) gate on the repository alone. The check sits once per workflow: in a `fork-gate` job every other job needs, on the first job when the rest already need it, or on the job itself in a one-job workflow (`codeql.yml`). A job whose `if:` uses `always()` checks that its needs succeeded too. A new workflow follows the same rule.
+
 ## Commits
 
 Use [conventional commit](https://www.conventionalcommits.org/) format: `<type>(<scope>): <description>`. Types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`. Description in imperative mood, lowercase, no period, under 72 chars. Add body only if the "why" isn't obvious; wrap at 72 chars. Always sign-off (`-s`). Only add "Co-authored-by" if a human was not in the loop or if the user requested it.

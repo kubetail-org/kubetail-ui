@@ -32,8 +32,23 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  # GitHub starts push and schedule runs in forks too. Outside
+  # kubetail-org/kubetail-ui this job runs only for a PR or a dispatch, and
+  # every other job needs it, so a fork's automatic run skips whole.
+  fork-gate:
+    name: Fork gate
+    if: >-
+      github.repository == 'kubetail-org/kubetail-ui'
+      || github.event_name == 'pull_request'
+      || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-slim
+    timeout-minutes: 1
+    steps:
+      - run: "true"
+
   typescript-audit:
     name: TypeScript · Audit
+    needs: fork-gate
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -46,6 +61,7 @@ jobs:
 
   typescript-dependency-review:
     name: TypeScript · Dependency review
+    needs: fork-gate
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -72,6 +88,7 @@ jobs:
   # the graph. So main submits the npm packages the lockfile holds.
   typescript-submit:
     name: TypeScript · Submit dependencies
+    needs: fork-gate
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
