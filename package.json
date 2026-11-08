@@ -91,7 +91,7 @@
     "@types/rollup-plugin-auto-external": "^2.0.5",
     "@vitejs/plugin-react": "^6.2.1",
     "@vueless/storybook-dark-mode": "^10.0.8",
-    "glob": "^13.0.7",
+    "glob": "^14.0.4",
     "jsdom": "^31.0.0",
     "lucide-react": "^1.70.0",
     "oxfmt": "^0.77.0",
