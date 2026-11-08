@@ -46,6 +46,10 @@ Node built-ins (e.g. `path`) go in a group of their own before third-party impor
 
 Avoid introducing new external dependencies unless it materially improves readability or performance. Consider bundle size impact. State the reason clearly if adding one.
 
+## Architecture Decisions
+
+`docs/adr/` records **why** things are the way they are; this file records **what is true now**. Write an ADR (copy `docs/adr/TEMPLATE.md`, add it to the index in `docs/adr/README.md`) when a change makes a design choice someone might later question: a new dependency, tool or build setup, a component or styling pattern, or anything where you weighed real alternatives. Update this file when a convention, command or trap changes. If a paragraph here starts explaining _why_ or listing options we didn't take, move it to an ADR and link it: `→ [ADR: <title>](docs/adr/<file>.md)`. Link only `Accepted` ADRs. ADRs are append-only; to change a decision, write a new one that supersedes it and update links here in the same commit.
+
 ## Commits
 
 Use [conventional commit](https://www.conventionalcommits.org/) format: `<type>(<scope>): <description>`. Types: `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test`. Description in imperative mood, lowercase, no period, under 72 chars. Add body only if the "why" isn't obvious; wrap at 72 chars. Always sign-off (`-s`). Only add "Co-authored-by" if a human was not in the loop or if the user requested it.
