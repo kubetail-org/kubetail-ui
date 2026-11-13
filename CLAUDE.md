@@ -32,6 +32,10 @@ When running inside an `sbx` Linux sandbox with the repo mounted from a macOS ho
 - Support polymorphic rendering via Base UI's `render` prop
 - Include `data-slot` attributes for styling composition
 
+## Figma
+
+The [kubetail-ui Figma library](https://www.figma.com/design/KoHFVSSKfENrqPidIkJfpO/kubetail-ui) is a port of `src/elements/` and `src/index.css`. [`docs/figma.md`](docs/figma.md) says how the two map: source links and sync lines, translucent colors, icons, descriptions and Kstack's modes. Read it before syncing either side.
+
 ## Import Order
 
 `oxfmt` enforces this through `sortImports` in `.oxfmtrc.json`. Organize imports into three groups separated by blank lines, sorted alphabetically within each:
