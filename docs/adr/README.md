@@ -65,3 +65,4 @@ Add a row to the index below in the same commit.
 | ---------- | ---------------------------------------------------------------------------------------------------- | ----- | -------- |
 | 2026-11-08 | [Record architecture decisions](2026-11-08-record-architecture-decisions.md)                         | repo  | Accepted |
 | 2026-11-08 | [Generate Storybook docs with react-docgen](2026-11-08-generate-storybook-docs-with-react-docgen.md) | build | Accepted |
+| 2026-11-08 | [Wait a week before installing a release](2026-11-08-wait-a-week-before-installing-a-release.md)     | repo  | Accepted |
