@@ -61,7 +61,8 @@ Add a row to the index below in the same commit.
 
 ## Index
 
-| Date       | ADR                                                                                                  | Scope | Status   |
-| ---------- | ---------------------------------------------------------------------------------------------------- | ----- | -------- |
-| 2026-11-08 | [Record architecture decisions](2026-11-08-record-architecture-decisions.md)                         | repo  | Accepted |
-| 2026-11-08 | [Generate Storybook docs with react-docgen](2026-11-08-generate-storybook-docs-with-react-docgen.md) | build | Accepted |
+| Date       | ADR                                                                                                  | Scope   | Status   |
+| ---------- | ---------------------------------------------------------------------------------------------------- | ------- | -------- |
+| 2026-11-08 | [Record architecture decisions](2026-11-08-record-architecture-decisions.md)                         | repo    | Accepted |
+| 2026-11-08 | [Generate Storybook docs with react-docgen](2026-11-08-generate-storybook-docs-with-react-docgen.md) | build   | Accepted |
+| 2026-11-17 | [Give text sizes fixed line heights](2026-11-17-give-text-sizes-fixed-line-heights.md)               | styling | Accepted |

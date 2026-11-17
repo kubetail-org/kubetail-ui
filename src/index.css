@@ -134,19 +134,19 @@
 @theme inline {
   /* text */
   --text-base: 1rem;
-  --text-base--line-height: calc(1.5 / 1);
+  --text-base--line-height: 1.5rem;
   --text-xs: 0.75rem;
-  --text-xs--line-height: calc(1 / 0.75);
+  --text-xs--line-height: 1rem;
   --text-sm: 0.875rem;
-  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-sm--line-height: 1.25rem;
   --text-md: var(--text-base);
   --text-md--line-height: var(--text-base--line-height);
   --text-lg: 1.125rem;
-  --text-lg--line-height: calc(1.875 / 1.125);
+  --text-lg--line-height: 1.875rem;
   --text-xl: 1.25rem;
-  --text-xl--line-height: calc(2 / 1.25);
+  --text-xl--line-height: 2rem;
   --text-2xl: 1.5rem;
-  --text-2xl--line-height: calc(2.375 / 1.5);
+  --text-2xl--line-height: 2.375rem;
 
   /* text-heading */
   --text-heading-base: 1rem;
