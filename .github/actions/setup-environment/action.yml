@@ -13,7 +13,7 @@ inputs:
   node-version:
     description: "Node.js version to install"
     required: false
-    default: "24"
+    default: "26"
   install:
     description: "Whether to run pnpm install --frozen-lockfile"
     required: false
