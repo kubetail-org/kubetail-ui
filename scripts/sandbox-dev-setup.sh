@@ -111,10 +111,11 @@ EOF
 echo "✓ env vars written to $PERSIST"
 
 # --- 3. toolchain check against CI -----------------------------------------
-# CI pins Node's major in ci.yaml. pnpm itself switches to the packageManager
-# pin in package.json (manage-package-manager-versions, on by default), so any
-# pnpm on PATH runs the pinned version.
-ci_node="$(awk '/node-version:/ { gsub(/[^0-9]/, "", $2); print $2; exit }' "$REPO/.github/workflows/ci.yaml")"
+# CI pins Node's major as the node-version input's default in the
+# setup-environment composite action. pnpm itself switches to the
+# packageManager pin in package.json (manage-package-manager-versions, on by
+# default), so any pnpm on PATH runs the pinned version.
+ci_node="$(awk '/^  node-version:/ { f = 1 } f && /default:/ { gsub(/[^0-9]/, "", $2); print $2; exit }' "$REPO/.github/actions/setup-environment/action.yml")"
 if ! command -v node >/dev/null; then
   echo "⚠ node not found; install Node $ci_node (e.g. 'sudo apt-get install -y nodejs-$ci_node')."
 else
