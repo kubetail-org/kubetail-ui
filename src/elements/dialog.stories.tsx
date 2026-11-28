@@ -15,6 +15,7 @@ import {
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/elements/dropdown-menu';
 import { Input } from '@/elements/input';
 import { Label } from '@/elements/label';
+import { Popover, PopoverContent, PopoverTrigger } from '@/elements/popover';
 
 const meta = {
   title: 'Elements/Dialog',
@@ -95,5 +96,23 @@ export function InsideDropdownMenu() {
         </DialogContent>
       </Dialog>
     </>
+  );
+}
+
+export function WithPopover() {
+  return (
+    <Dialog>
+      <DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Edit settings</DialogTitle>
+          <DialogDescription>The popover below should draw above this dialog.</DialogDescription>
+        </DialogHeader>
+        <Popover>
+          <PopoverTrigger render={<Button variant="outline" />}>Open popover</PopoverTrigger>
+          <PopoverContent>Popover content</PopoverContent>
+        </Popover>
+      </DialogContent>
+    </Dialog>
   );
 }

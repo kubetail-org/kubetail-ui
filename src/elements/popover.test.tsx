@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+import { Dialog, DialogContent, DialogTitle } from './dialog';
 import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from './popover';
 
 const BasicPopover = ({ open = false, onOpenChange }: { open?: boolean; onOpenChange?: (open: boolean) => void }) => (
@@ -147,6 +148,34 @@ describe('Popover', () => {
       expect(content).toBeInTheDocument();
 
       expect(content.closest('[role="dialog"]')).toBeInTheDocument();
+    });
+  });
+
+  describe('Stacking', () => {
+    it('puts the positioner on the same layer as the popup', () => {
+      render(<BasicPopover open />);
+
+      const positioner = screen.getByText('Popover content').closest('[data-slot="popover-content"]')?.parentElement;
+      expect(positioner).toHaveClass('isolate', 'z-50');
+    });
+
+    it('opens from inside a dialog on the dialog layer', () => {
+      render(
+        <Dialog open>
+          <DialogContent>
+            <DialogTitle>Dialog</DialogTitle>
+            <Popover>
+              <PopoverTrigger>Open Popover</PopoverTrigger>
+              <PopoverContent>Popover in dialog</PopoverContent>
+            </Popover>
+          </DialogContent>
+        </Dialog>,
+      );
+
+      fireEvent.click(screen.getByText('Open Popover'));
+
+      const positioner = screen.getByText('Popover in dialog').closest('[data-slot="popover-content"]')?.parentElement;
+      expect(positioner).toHaveClass('isolate', 'z-50');
     });
   });
 
